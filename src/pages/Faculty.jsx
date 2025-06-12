@@ -1,3 +1,5 @@
+import { COLORS } from '../constants/colors'
+
 const Faculty = () => {
   const facultyMembers = [
     {
@@ -83,7 +85,7 @@ const Faculty = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-16">
+      <section className="bg-blue-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Faculty</h1>

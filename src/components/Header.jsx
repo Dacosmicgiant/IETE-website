@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { COLORS } from '../constants/colors'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

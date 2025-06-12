@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { COLORS } from '../constants/colors'
 
 const Footer = () => {
   return (

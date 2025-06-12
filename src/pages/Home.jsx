@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom'
+import { COLORS } from '../constants/colors'
 
 const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 via-blue-800 to-red-600 text-white">
+      <section className="bg-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <div className="mb-8">
