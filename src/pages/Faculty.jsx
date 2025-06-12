@@ -6,67 +6,19 @@ const Faculty = () => {
       id: 1,
       name: "Dr. Faculty Name",
       position: "Principal",
-      department: "Pillai College of Engineering",
-      education: "Ph.D. in Electronics Engineering",
-      experience: "25+ years",
-      specialization: ["Engineering Education", "Research Administration", "Academic Leadership"],
-      email: "principal@pce.ac.in",
-      description: "Leading the institution with a vision for excellence in technical education and research."
+      department: "Pillai College of Engineering"
     },
     {
       id: 2,
       name: "Dr. Faculty Name",
       position: "Head of Department",
-      department: "Electronics & Telecommunication Engineering",
-      education: "Ph.D. in Communication Systems",
-      experience: "20+ years",
-      specialization: ["Wireless Communication", "Signal Processing", "IoT Applications"],
-      email: "hod.etc@pce.ac.in",
-      description: "Expertise in wireless communication systems and modern telecommunication technologies."
+      department: "Electronics & Telecommunication Engineering"
     },
     {
       id: 3,
       name: "Prof. Faculty Name",
       position: "Professor",
-      department: "Electronics & Computer Science Engineering",
-      education: "M.Tech in VLSI Design",
-      experience: "15+ years",
-      specialization: ["VLSI Design", "Embedded Systems", "Digital Signal Processing"],
-      email: "prof.vlsi@pce.ac.in",
-      description: "Leading research in VLSI design and embedded system applications."
-    },
-    {
-      id: 4,
-      name: "Dr. Faculty Name",
-      position: "Associate Professor",
-      department: "Computer Engineering",
-      education: "Ph.D. in Computer Science",
-      experience: "12+ years",
-      specialization: ["Machine Learning", "Data Science", "Artificial Intelligence"],
-      email: "prof.ai@pce.ac.in",
-      description: "Research focus on AI applications and machine learning algorithms."
-    },
-    {
-      id: 5,
-      name: "Prof. Faculty Name",
-      position: "Assistant Professor",
-      department: "Information Technology",
-      education: "M.Tech in Information Technology",
-      experience: "8+ years",
-      specialization: ["Cybersecurity", "Network Programming", "Cloud Computing"],
-      email: "prof.cyber@pce.ac.in",
-      description: "Expertise in cybersecurity and modern IT infrastructure."
-    },
-    {
-      id: 6,
-      name: "Dr. Faculty Name",
-      position: "Professor",
-      department: "Electronics & Telecommunication Engineering",
-      education: "Ph.D. in Antenna Design",
-      experience: "18+ years",
-      specialization: ["Antenna Design", "Microwave Engineering", "RF Systems"],
-      email: "prof.antenna@pce.ac.in",
-      description: "Leading expert in antenna design and microwave communication systems."
+      department: "Electronics & Computer Science Engineering"
     }
   ]
 
@@ -77,7 +29,6 @@ const Faculty = () => {
   const getDepartmentColor = (department) => {
     if (department.includes('Electronics & Telecommunication')) return 'bg-blue-900'
     if (department.includes('Computer')) return 'bg-red-600'
-    if (department.includes('Information Technology')) return 'bg-green-600'
     if (department.includes('Electronics & Computer')) return 'bg-purple-600'
     return 'bg-gray-600'
   }
@@ -108,7 +59,7 @@ const Faculty = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {facultyMembers.map((faculty) => (
               <div key={faculty.id} className="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                 <div className="p-6">
@@ -116,38 +67,10 @@ const Faculty = () => {
                     {getInitials(faculty.name)}
                   </div>
                   
-                  <div className="text-center mb-4">
-                    <h3 className="text-xl font-bold text-gray-900 mb-1">{faculty.name}</h3>
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{faculty.name}</h3>
                     <p className="text-red-600 font-semibold mb-2">{faculty.position}</p>
                     <p className="text-gray-600 text-sm">{faculty.department}</p>
-                  </div>
-                  
-                  <div className="space-y-3 text-sm">
-                    <div>
-                      <span className="font-semibold text-gray-900">Education: </span>
-                      <span className="text-gray-600">{faculty.education}</span>
-                    </div>
-                    <div>
-                      <span className="font-semibold text-gray-900">Experience: </span>
-                      <span className="text-gray-600">{faculty.experience}</span>
-                    </div>
-                  </div>
-                  
-                  <div className="mt-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Specialization:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {faculty.specialization.map((spec, index) => (
-                        <span key={index} className="bg-gray-100 text-gray-700 px-2 py-1 rounded-md text-xs">
-                          {spec}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-600 text-sm mt-4">{faculty.description}</p>
-                  
-                  <div className="mt-4 pt-4 border-t text-center">
-                    <span className="text-sm text-gray-500">📧 {faculty.email}</span>
                   </div>
                 </div>
               </div>
@@ -210,104 +133,7 @@ const Faculty = () => {
         </div>
       </section>
 
-      {/* Research Areas */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Research Areas</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Our faculty members are actively involved in cutting-edge research across various domains
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-blue-50 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-blue-900 mb-4">Communication Systems</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>• Wireless Communication</li>
-                <li>• 5G Technology</li>
-                <li>• Antenna Design</li>
-                <li>• Signal Processing</li>
-              </ul>
-            </div>
-            
-            <div className="bg-red-50 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-red-900 mb-4">Computer Science & AI</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>• Machine Learning</li>
-                <li>• Data Science</li>
-                <li>• Deep Learning</li>
-                <li>• Computer Vision</li>
-              </ul>
-            </div>
-            
-            <div className="bg-green-50 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-green-900 mb-4">Electronics & VLSI</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>• VLSI Design</li>
-                <li>• Embedded Systems</li>
-                <li>• IoT Applications</li>
-                <li>• Digital Systems</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Faculty Achievements */}
-      <section className="py-16 bg-blue-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Faculty Achievements</h2>
-            <p className="text-xl opacity-90 max-w-2xl mx-auto">
-              Recognition and accomplishments of our esteemed faculty members
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">150+</div>
-              <div className="text-lg opacity-90">Research Papers</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">25+</div>
-              <div className="text-lg opacity-90">Patents Filed</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">50+</div>
-              <div className="text-lg opacity-90">Industry Projects</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">10+</div>
-              <div className="text-lg opacity-90">Awards & Honors</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Faculty */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Connect with Faculty</h2>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Interested in research collaboration or seeking academic guidance? Our faculty members are always ready to help.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:faculty@pce.ac.in"
-              className="bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition-colors"
-            >
-              Contact Faculty
-            </a>
-            <a
-              href="/about"
-              className="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors"
-            >
-              Learn More About IETE-PCE
-            </a>
-          </div>
-        </div>
-      </section>
+      
     </div>
   )
 }

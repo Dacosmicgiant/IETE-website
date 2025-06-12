@@ -37,27 +37,7 @@ const About = () => {
                 Scientific and Industrial Research Organization (SIRO).
               </p>
             </div>
-            <div className="bg-gray-100 p-8 rounded-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-6">Key Statistics</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Founded:</span>
-                  <span className="font-semibold">1953</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Total Members:</span>
-                  <span className="font-semibold">1,25,000+</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Centres:</span>
-                  <span className="font-semibold">63+</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Recognition:</span>
-                  <span className="font-semibold">SIRO Status</span>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
       </section>

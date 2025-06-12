@@ -20,15 +20,6 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
-      {/* Top Bar */}
-      <div className="bg-blue-900 text-white py-2">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between text-sm">
-            <span>📧 iete.pce@mes.ac.in</span>
-            <span>📞 +91 9920321421</span>
-          </div>
-        </div>
-      </div>
 
       {/* Main Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

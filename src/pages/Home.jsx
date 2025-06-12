@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-blue-900 text-white">
+      <section className="bg-blue-900 text-white min-h-screen flex items-center justify-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <div className="mb-8">
@@ -63,26 +63,7 @@ const Home = () => {
                 Read More
               </Link>
             </div>
-            <div className="bg-gray-100 p-8 rounded-lg">
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-900 mb-2">1953</div>
-                  <div className="text-gray-600">Founded</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-red-600 mb-2">125K+</div>
-                  <div className="text-gray-600">Members Nationwide</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-900 mb-2">63+</div>
-                  <div className="text-gray-600">Centers Across India</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-red-600 mb-2">500+</div>
-                  <div className="text-gray-600">PCE Members</div>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
       </section>
@@ -241,29 +222,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Call to Action Section */}
-      <section className="py-16 bg-blue-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Join IETE-PCE?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Become part of India's leading professional society for Electronics and Telecommunication Engineers
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/join"
-              className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Become a Member
-            </Link>
-            <Link
-              to="/contact"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Contact Us
-            </Link>
-          </div>
-        </div>
-      </section>
+      
     </div>
   )
 }
