@@ -8,6 +8,24 @@ export const COLORS = {
   accentLight: '#ef4444',   // red-500
   accentDark: '#b91c1c',    // red-700
 
+  // Modern gradient colors for the new design
+  gradientPrimary: 'linear-gradient(135deg, #1e1b4b 0%, #312e81 25%, #4c1d95 50%, #7c2d12 75%, #dc2626 100%)',
+  gradientSecondary: 'linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 50%, #475569 75%, #64748b 100%)',
+  gradientCard: 'linear-gradient(135deg, rgba(30, 27, 75, 0.8) 0%, rgba(49, 46, 129, 0.8) 50%, rgba(76, 29, 149, 0.8) 100%)',
+  
+  // Accent colors for modern design
+  cyan: '#06b6d4',          // cyan-500
+  cyanLight: '#67e8f9',     // cyan-300
+  coral: '#f97316',         // orange-500
+  coralLight: '#fb923c',    // orange-400
+  pink: '#ec4899',          // pink-500
+  pinkLight: '#f472b6',     // pink-400
+  
+  // Purple theme colors
+  purple: '#7c3aed',        // purple-600
+  purpleLight: '#a855f7',   // purple-500
+  purpleDark: '#6d28d9',    // purple-700
+  
   // Neutral colors
   white: '#ffffff',
   black: '#000000',
@@ -24,8 +42,12 @@ export const COLORS = {
   info: '#2563eb',          // blue-600
 
   // Specialty colors
-  purple: '#7c3aed',        // purple-600
   indigo: '#4f46e5',        // indigo-600
   teal: '#0d9488',          // teal-600
   orange: '#ea580c',        // orange-600
+  
+  // Glass morphism effect
+  glassBg: 'rgba(255, 255, 255, 0.1)',
+  glassBlur: 'blur(10px)',
+  glassBorder: 'rgba(255, 255, 255, 0.2)'
 }
