@@ -10,8 +10,6 @@ const Header = () => {
     { name: 'Events', href: '#events', id: 'events' },
     { name: 'Committee', href: '#committee', id: 'committee' },
     { name: 'Faculty', href: '#faculty', id: 'faculty' },
-    { name: 'Join', href: '#join', id: 'join' },
-    { name: 'Contact', href: '#contact', id: 'contact' },
   ]
 
   // Handle smooth scrolling to sections
@@ -87,12 +85,7 @@ const Header = () => {
 
           {/* Join Button & Mobile Menu */}
           <div className="flex items-center space-x-4">
-            <button 
-              onClick={() => scrollToSection('join')}
-              className="hidden sm:inline-flex px-6 py-2 bg-gradient-to-r from-pink-500 to-orange-600 rounded-xl font-semibold text-white hover:shadow-lg hover:shadow-pink-500/25 transition-all duration-300"
-            >
-              Join
-            </button>
+            
             
             {/* Mobile Menu Button */}
             <button
@@ -127,12 +120,7 @@ const Header = () => {
                   {item.name}
                 </button>
               ))}
-              <button 
-                onClick={() => scrollToSection('join')}
-                className="mt-4 px-4 py-3 bg-gradient-to-r from-pink-500 to-orange-600 rounded-xl font-semibold text-white"
-              >
-                Join IETE-PCE
-              </button>
+              
             </nav>
           </div>
         )}

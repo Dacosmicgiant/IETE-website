@@ -7,21 +7,24 @@ const FacultySection = () => {
       name: "Dr. Faculty Name",
       position: "Principal",
       department: "Pillai College of Engineering",
-      description: "Providing institutional leadership and strategic direction"
+      description: "Providing institutional leadership and strategic direction",
+      color: "cyan"
     },
     {
       id: 2,
       name: "Dr. Faculty Name",
       position: "Head of Department",
       department: "Electronics & Telecommunication Engineering",
-      description: "Leading academic excellence in E&TC department"
+      description: "Leading academic excellence in E&TC department",
+      color: "blue"
     },
     {
       id: 3,
       name: "Prof. Faculty Name",
       position: "Professor",
       department: "Electronics & Computer Science Engineering",
-      description: "Mentoring students in advanced technical areas"
+      description: "Mentoring students in advanced technical areas",
+      color: "purple"
     }
   ]
 
@@ -29,11 +32,13 @@ const FacultySection = () => {
     return name.split(' ').slice(0, 2).map(n => n[0]).join('').toUpperCase()
   }
 
-  const getDepartmentColor = (department) => {
-    if (department.includes('Electronics & Telecommunication')) return 'from-blue-500 to-cyan-600'
-    if (department.includes('Computer')) return 'from-pink-500 to-red-600'
-    if (department.includes('Electronics & Computer')) return 'from-purple-500 to-indigo-600'
-    return 'from-gray-500 to-gray-600'
+  const getColorClass = (color) => {
+    switch (color) {
+      case 'cyan': return 'bg-cyan-500'
+      case 'blue': return 'bg-blue-500'
+      case 'purple': return 'bg-purple-500'
+      default: return 'bg-slate-500'
+    }
   }
 
   const contributions = [
@@ -60,104 +65,54 @@ const FacultySection = () => {
   ]
 
   return (
-    <section id="faculty" className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <span className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-cyan-300 text-sm font-medium mb-6">
-            👨‍🏫 Faculty Mentors
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Faculty</h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+    <section id="faculty" className="min-h-screen bg-slate-950 px-4 py-12">
+      <div className="max-w-7xl mx-auto py-12 sm:py-16">
+        <div className="text-center mb-12 sm:mb-16">
+          
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 sm:mb-6 tracking-tight">Our Faculty</h2>
+          <p className="text-base sm:text-lg md:text-xl text-slate-400 max-w-3xl mx-auto font-light">
             Meet our experienced faculty members who guide and mentor IETE-PCE activities with their expertise and dedication
           </p>
         </div>
 
-        {/* Faculty Introduction */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-white mb-6">Faculty Mentors</h3>
-            <p className="text-lg text-gray-400 max-w-4xl mx-auto">
-              Our distinguished faculty members bring decades of academic and industry experience to guide 
-              IETE-PCE activities. They provide invaluable mentorship, technical expertise, and help bridge 
-              the gap between theoretical knowledge and practical applications.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {facultyMembers.map((faculty) => (
-              <div key={faculty.id} className="group">
-                <div className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-lg border border-white/10 rounded-3xl p-8 text-center text-white hover:scale-105 transition-all duration-300">
-                  <div className={`w-20 h-20 bg-gradient-to-br ${getDepartmentColor(faculty.department)} rounded-3xl flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl group-hover:scale-110 transition-transform duration-300 shadow-2xl`}>
-                    {getInitials(faculty.name)}
-                  </div>
-                  
-                  <h4 className="text-xl font-bold mb-2">{faculty.name}</h4>
-                  <p className="text-cyan-400 font-semibold mb-2">{faculty.position}</p>
-                  <p className="text-gray-400 text-sm mb-4">{faculty.department}</p>
-                  <p className="text-gray-300 text-sm">{faculty.description}</p>
+        {/* Faculty Members */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto mb-12 sm:mb-16">
+          {facultyMembers.map((faculty) => (
+            <div key={faculty.id} className="group">
+              <div className="bg-slate-800/30 backdrop-blur-xl border border-slate-700/50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-center text-white hover:bg-slate-800/50 transition-all duration-300">
+                <div className={`w-20 h-20 sm:w-24 sm:h-24 ${getColorClass(faculty.color)} rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-6 sm:mb-8 text-white font-bold text-xl sm:text-2xl group-hover:scale-110 transition-transform duration-300 shadow-2xl`}>
+                  {getInitials(faculty.name)}
                 </div>
+                
+                <h4 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">{faculty.name}</h4>
+                <p className="text-cyan-400 font-semibold mb-2 sm:mb-3 text-sm sm:text-base">{faculty.position}</p>
+                <p className="text-slate-400 text-xs sm:text-sm mb-3 sm:mb-4 font-light leading-tight">{faculty.department}</p>
+                <p className="text-slate-300 text-xs sm:text-sm font-light">{faculty.description}</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
 
-        {/* Faculty Contributions */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-white mb-4">Faculty Contributions</h3>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              Our faculty members actively contribute to IETE-PCE through various roles and responsibilities
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {contributions.map((contribution, index) => (
-              <div key={index} className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-lg border border-white/10 rounded-3xl p-6 text-center text-white hover:scale-105 transition-all duration-300">
-                <div className="text-4xl mb-4">{contribution.icon}</div>
-                <h4 className="text-lg font-bold mb-3">{contribution.title}</h4>
-                <p className="text-gray-400 text-sm">{contribution.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+        
 
         {/* Faculty Support Message */}
-        <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-lg border border-white/10 rounded-3xl p-8 text-center text-white">
-          <div className="max-w-3xl mx-auto">
-            <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+        <div className="bg-slate-800/30 backdrop-blur-xl border border-slate-700/50 rounded-2xl sm:rounded-3xl p-8 sm:p-12 text-center text-white">
+          <div className="max-w-4xl mx-auto">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-cyan-500 rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-6 sm:mb-8">
+              <svg className="w-8 h-8 sm:w-10 sm:h-10 text-slate-950" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
               </svg>
             </div>
-            <h3 className="text-2xl font-bold mb-4">Faculty Message</h3>
-            <p className="text-lg text-gray-300 mb-6">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Faculty Message</h3>
+            <p className="text-base sm:text-lg md:text-xl text-slate-300 mb-6 sm:mb-8 font-light leading-relaxed">
               "At IETE-PCE, we believe in nurturing not just technical competence but also professional ethics 
               and leadership qualities. Our role is to guide students in their journey from learners to innovators, 
               helping them become the technology leaders of tomorrow."
             </p>
-            <div className="text-gray-400">
-              <p className="font-semibold">Faculty Advisory Committee</p>
-              <p className="text-sm">IETE-PCE, Pillai College of Engineering</p>
+            <div className="text-slate-400">
+              <p className="font-semibold text-base sm:text-lg">Faculty Advisory Committee</p>
+              <p className="text-sm font-light">IETE-PCE, Pillai College of Engineering</p>
             </div>
-          </div>
-        </div>
-
-        {/* Contact Faculty */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-lg border border-white/10 rounded-3xl p-6 text-center text-white">
-            <div className="text-3xl mb-3">📧</div>
-            <h4 className="font-semibold mb-2">Email Faculty</h4>
-            <p className="text-gray-400 text-sm">faculty.advisor@iete.pce.edu</p>
-          </div>
-          <div className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-lg border border-white/10 rounded-3xl p-6 text-center text-white">
-            <div className="text-3xl mb-3">🏢</div>
-            <h4 className="font-semibold mb-2">Office Hours</h4>
-            <p className="text-gray-400 text-sm">Mon-Fri: 10:00 AM - 4:00 PM</p>
-          </div>
-          <div className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-lg border border-white/10 rounded-3xl p-6 text-center text-white">
-            <div className="text-3xl mb-3">📍</div>
-            <h4 className="font-semibold mb-2">Location</h4>
-            <p className="text-gray-400 text-sm">Faculty Lounge, PCE Building</p>
           </div>
         </div>
       </div>
