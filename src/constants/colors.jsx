@@ -4,26 +4,26 @@ export const COLORS = {
   // Primary colors
   primary: {
     bg: 'bg-slate-950',
-    bgSecondary: 'bg-slate-900',
-    bgTertiary: 'bg-slate-800',
-    bgCard: 'bg-slate-800/30',
-    bgCardHover: 'bg-slate-800/50',
+    bgSecondary: 'bg-purple-950',
+    bgTertiary: 'bg-purple-900',
+    bgCard: 'bg-purple-900/30',
+    bgCardHover: 'bg-purple-800/50',
     text: 'text-white',
-    textSecondary: 'text-slate-300',
-    textMuted: 'text-slate-400',
-    textLight: 'text-slate-500',
-    border: 'border-slate-700/50',
-    borderLight: 'border-slate-800'
+    textSecondary: 'text-purple-100',
+    textMuted: 'text-purple-300',
+    textLight: 'text-purple-400',
+    border: 'border-purple-700/50',
+    borderLight: 'border-purple-800'
   },
 
   // Accent colors
   accent: {
-    primary: 'bg-cyan-500',
-    primaryHover: 'bg-cyan-400',
+    primary: 'bg-pink-500',
+    primaryHover: 'bg-pink-400',
     primaryText: 'text-cyan-400',
     primaryTextHover: 'text-cyan-300',
-    secondary: 'bg-blue-500',
-    secondaryText: 'text-blue-400',
+    secondary: 'bg-cyan-500',
+    secondaryText: 'text-cyan-400',
     tertiary: 'bg-purple-500',
     tertiaryText: 'text-purple-400',
     quaternary: 'bg-emerald-500',
@@ -32,21 +32,21 @@ export const COLORS = {
 
   // Interactive elements
   interactive: {
-    buttonPrimary: 'bg-cyan-500 hover:bg-cyan-400 text-slate-950',
-    buttonSecondary: 'bg-slate-800/50 hover:bg-slate-700/50 border border-slate-700 text-white',
-    buttonGhost: 'hover:bg-white/10 text-slate-300 hover:text-white',
-    cardHover: 'hover:bg-slate-800/50 transition-all duration-300',
+    buttonPrimary: 'bg-cyan-500 hover:bg-cyan-400 text-white',
+    buttonSecondary: 'bg-purple-800/50 hover:bg-purple-700/50 border border-purple-600 text-white',
+    buttonGhost: 'hover:bg-purple-800/30 text-purple-300 hover:text-white',
+    cardHover: 'hover:bg-purple-800/50 transition-all duration-300',
     linkHover: 'hover:text-cyan-400 transition-colors'
   },
 
   // Effects
   effects: {
     backdrop: 'backdrop-blur-xl',
-    glass: 'bg-slate-800/30 backdrop-blur-xl border border-slate-700/50',
-    glassHover: 'hover:bg-slate-800/50 transition-all duration-300',
+    glass: 'bg-purple-900/30 backdrop-blur-xl border border-purple-700/50',
+    glassHover: 'hover:bg-purple-800/50 transition-all duration-300',
     shadow: 'shadow-2xl',
-    gradient: 'bg-gradient-to-br from-pink-500 to-orange-600',
-    gradientText: 'bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent',
+    gradient: 'bg-gradient-to-br from-pink-500 to-orange-500',
+    gradientText: 'bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent',
     rounded: 'rounded-2xl',
     roundedLg: 'rounded-3xl'
   },
@@ -88,12 +88,12 @@ export const COLORS = {
 
   // Component specific
   header: {
-    bg: 'bg-slate-900/95',
+    bg: 'bg-purple-950/95',
     backdrop: 'backdrop-blur-lg',
-    border: 'border-b border-white/10',
-    logo: 'bg-gradient-to-br from-pink-500 to-orange-600',
-    navActive: 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg',
-    navInactive: 'text-gray-300 hover:text-white hover:bg-white/10'
+    border: 'border-b border-purple-800/30',
+    logo: 'bg-gradient-to-br from-pink-500 to-orange-500',
+    navActive: 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg',
+    navInactive: 'text-purple-300 hover:text-white hover:bg-purple-800/30'
   },
 
   // Color variants for dynamic content
