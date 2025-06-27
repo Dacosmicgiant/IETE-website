@@ -3,7 +3,6 @@ const Footer = () => {
     { name: 'About Us', href: '/about' },
     { name: 'Events', href: '/events' },
     { name: 'Committee', href: '/committee' },
-    { name: 'Membership', href: '/join' }
   ]
 
   const activities = [
@@ -100,13 +99,9 @@ const Footer = () => {
         <div className="border-t border-slate-800 mt-12 sm:mt-16 pt-6 sm:pt-8 text-center">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-3 sm:space-y-4 md:space-y-0">
             <p className="text-slate-400 text-xs sm:text-sm font-light">
-              © 2024 IETE-PCE, Pillai College of Engineering. All rights reserved.
+              © 2025 IETE-PCE, Pillai College of Engineering. All rights reserved.
             </p>
-            <div className="flex items-center space-x-2 text-slate-400 text-xs sm:text-sm font-light">
-              <span>Designed with</span>
-              <span className="text-red-500">❤</span>
-              <span>for the future of technology</span>
-            </div>
+            
           </div>
         </div>
       </div>
