@@ -5,89 +5,44 @@ const FacultySection = () => {
     {
       id: 1,
       name: "Dr. Faculty Name",
-      position: "Principal",
-      department: "Pillai College of Engineering",
-      description: "Providing institutional leadership and strategic direction",
-      color: "cyan"
+      position: "Principal"
     },
     {
       id: 2,
-      name: "Dr. Faculty Name",
-      position: "Head of Department",
-      department: "Electronics & Telecommunication Engineering",
-      description: "Leading academic excellence in E&TC department",
-      color: "blue"
+      name: "Dr. Faculty Name", 
+      position: "Head of Department"
     },
     {
       id: 3,
       name: "Prof. Faculty Name",
-      position: "Professor",
-      department: "Electronics & Computer Science Engineering",
-      description: "Mentoring students in advanced technical areas",
-      color: "purple"
-    }
-  ]
-
-  const getInitials = (name) => {
-    return name.split(' ').slice(0, 2).map(n => n[0]).join('').toUpperCase()
-  }
-
-  const getColorClass = (color) => {
-    switch (color) {
-      case 'cyan': return 'bg-cyan-500'
-      case 'blue': return 'bg-blue-500'
-      case 'purple': return 'bg-purple-500'
-      default: return 'bg-slate-500'
-    }
-  }
-
-  const contributions = [
-    {
-      icon: "🎓",
-      title: "Academic Guidance",
-      description: "Providing academic direction and curriculum support for IETE-PCE activities"
-    },
-    {
-      icon: "🔬",
-      title: "Research Mentorship",
-      description: "Guiding student research projects and facilitating innovation in technology"
-    },
-    {
-      icon: "🤝",
-      title: "Industry Connect",
-      description: "Facilitating industry partnerships and professional networking opportunities"
-    },
-    {
-      icon: "📅",
-      title: "Event Coordination",
-      description: "Supporting and organizing technical events, workshops, and symposiums"
+      position: "Professor"
     }
   ]
 
   return (
-    <section id="faculty" className="min-h-screen bg-slate-950 px-4 py-12">
-      <div className="max-w-7xl mx-auto py-12 sm:py-16">
-        <div className="text-center mb-12 sm:mb-16">
-          
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 sm:mb-6 tracking-tight">Our Faculty</h2>
-          <p className="text-base sm:text-lg md:text-xl text-slate-400 max-w-3xl mx-auto font-light">
-            Meet our experienced faculty members who guide and mentor IETE-PCE activities with their expertise and dedication
-          </p>
+    <section id="faculty" className={`min-h-screen ${COLORS.primary.bg} px-4 ${COLORS.layout.section}`}>
+      <div className={`${COLORS.layout.container} ${COLORS.layout.section}`}>
+        <div className="text-center mb-6 sm:mb-8">
+          <h2 className={`${COLORS.typography.heading.xl} ${COLORS.primary.text} mb-2 sm:mb-3`}>Our Faculty</h2>
         </div>
 
-        {/* Faculty Members */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto mb-12 sm:mb-16">
+        <div className={`${COLORS.layout.grid.cols3} gap-8 sm:gap-12 lg:gap-16 max-w-4xl mx-auto`}>
           {facultyMembers.map((faculty) => (
-            <div key={faculty.id} className="group">
-              <div className="bg-slate-800/30 backdrop-blur-xl border border-slate-700/50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-center text-white hover:bg-slate-800/50 transition-all duration-300">
-                <div className={`w-20 h-20 sm:w-24 sm:h-24 ${getColorClass(faculty.color)} rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-6 sm:mb-8 text-white font-bold text-xl sm:text-2xl group-hover:scale-110 transition-transform duration-300 shadow-2xl`}>
-                  {getInitials(faculty.name)}
+            <div key={faculty.id} className="group text-center">
+              {/* Placeholder Image - 3:4 Aspect Ratio */}
+              <div className={`aspect-[3/4] w-full ${COLORS.primary.bgTertiary}/20 ${COLORS.effects.roundedLg} flex items-center justify-center ${COLORS.primary.border} border-2 border-dashed mb-3 sm:mb-4 group-hover:scale-105 transition-transform duration-300`}>
+                <div className="text-center p-4">
+                  <div className="text-3xl mb-2">👤</div>
+                  <p className={`${COLORS.primary.textMuted} text-xs`}>
+                    Replace with photo<br/>
+                    <span className="text-xs">3:4 Ratio</span>
+                  </p>
                 </div>
-                
-                <h4 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">{faculty.name}</h4>
-                <p className="text-cyan-400 font-semibold mb-2 sm:mb-3 text-sm sm:text-base">{faculty.position}</p>
-                <p className="text-slate-400 text-xs sm:text-sm mb-3 sm:mb-4 font-light leading-tight">{faculty.department}</p>
-                <p className="text-slate-300 text-xs sm:text-sm font-light">{faculty.description}</p>
+              </div>
+              
+              <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-4 sm:p-6 ${COLORS.primary.text} ${COLORS.interactive.cardHover}`}>
+                <h4 className={`${COLORS.typography.heading.sm} mb-1 sm:mb-2`}>{faculty.name}</h4>
+                <p className={`${COLORS.accent.primaryText} font-semibold text-sm sm:text-base`}>{faculty.position}</p>
               </div>
             </div>
           ))}

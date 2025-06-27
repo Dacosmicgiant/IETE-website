@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { COLORS } from '../constants/colors'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -45,52 +46,54 @@ const Header = () => {
   }, [])
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-lg border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className={`fixed top-0 left-0 right-0 z-50 ${COLORS.header.bg} ${COLORS.header.backdrop} ${COLORS.header.border}`}>
+      <div className={COLORS.layout.container}>
         <div className="flex justify-between items-center py-4">
-          {/* Logo and Title */}
+          {/* Logo and Title - Left Side */}
           <div 
             className="flex items-center space-x-4 cursor-pointer"
             onClick={() => scrollToSection('home')}
           >
-            <div className="bg-gradient-to-br from-pink-500 to-orange-600 p-3 rounded-2xl">
-              <div className="w-8 h-8 flex items-center justify-center font-bold text-xl text-white">
-                I
+            {/* Logo Placeholder - 1:1 Aspect Ratio */}
+            <div className={`aspect-square w-12 h-12 ${COLORS.primary.bgTertiary}/20 ${COLORS.effects.rounded} flex items-center justify-center ${COLORS.primary.border} border-2 border-dashed`}>
+              <div className="text-center">
+                <div className="text-lg">🏢</div>
+                <p className={`${COLORS.primary.textMuted} text-xs leading-none`}>
+                  1:1
+                </p>
               </div>
             </div>
             <div>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              <h1 className={`text-2xl font-bold ${COLORS.effects.gradientText}`}>
                 IETE-PCE
               </h1>
-              <p className="text-sm text-gray-400 hidden sm:block">Institution of Electronics and Telecommunication Engineers</p>
+              <p className={`text-sm ${COLORS.primary.textMuted} hidden sm:block`}>Institution of Electronics and Telecommunication Engineers</p>
             </div>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-2">
-            {navigation.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.id)}
-                className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
-                  activeSection === item.id
-                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
-                    : 'text-gray-300 hover:text-white hover:bg-white/10'
-                }`}
-              >
-                {item.name}
-              </button>
-            ))}
-          </nav>
-
-          {/* Join Button & Mobile Menu */}
+          {/* Right Side - Navigation and Mobile Menu */}
           <div className="flex items-center space-x-4">
-            
-            
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex space-x-2">
+              {navigation.map((item) => (
+                <button
+                  key={item.name}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`px-4 py-2 ${COLORS.effects.rounded} text-sm font-medium transition-all duration-300 ${
+                    activeSection === item.id
+                      ? COLORS.header.navActive
+                      : COLORS.header.navInactive
+                  }`}
+                >
+                  {item.name}
+                </button>
+              ))}
+            </nav>
+
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+              className={`md:hidden p-2 ${COLORS.effects.rounded} ${COLORS.interactive.buttonGhost} transition-colors`}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {isMenuOpen ? (
@@ -105,22 +108,21 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden pb-4 border-t border-white/10 mt-4 pt-4">
-            <nav className="flex flex-col space-y-2">
+          <div className={`md:hidden pb-4 ${COLORS.primary.borderLight} border-t mt-4 pt-4`}>
+            <nav className={COLORS.layout.spacing.xs}>
               {navigation.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.id)}
-                  className={`px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 text-left ${
+                  className={`px-4 py-3 ${COLORS.effects.rounded} text-sm font-medium transition-all duration-300 text-left w-full ${
                     activeSection === item.id
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-                      : 'text-gray-300 hover:text-white hover:bg-white/10'
+                      ? COLORS.header.navActive
+                      : COLORS.header.navInactive
                   }`}
                 >
                   {item.name}
                 </button>
               ))}
-              
             </nav>
           </div>
         )}

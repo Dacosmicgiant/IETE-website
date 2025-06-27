@@ -6,95 +6,60 @@ const CommitteeSection = () => {
       id: 1,
       name: "Student Name",
       position: "President",
-      year: "Final Year",
-      branch: "Electronics & Telecommunication",
-      description: "Leading the organization toward excellence",
-      color: "cyan"
+      year: "Final Year"
     },
     {
       id: 2,
       name: "Student Name",
       position: "Vice President",
-      year: "Third Year",
-      branch: "Electronics & Computer Science",
-      description: "Supporting strategic initiatives",
-      color: "blue"
+      year: "Third Year"
     },
     {
       id: 3,
       name: "Student Name",
       position: "Secretary",
-      year: "Third Year",
-      branch: "Information Technology",
-      description: "Managing operations and communications",
-      color: "purple"
+      year: "Third Year"
     },
     {
       id: 4,
       name: "Student Name",
       position: "Treasurer",
-      year: "Second Year",
-      branch: "Computer Engineering",
-      description: "Managing finances and resources",
-      color: "emerald"
+      year: "Second Year"
     }
   ]
 
-  const getColorClass = (color) => {
-    switch (color) {
-      case 'cyan': return 'bg-cyan-500'
-      case 'blue': return 'bg-blue-500'
-      case 'purple': return 'bg-purple-500'
-      case 'emerald': return 'bg-emerald-500'
-      default: return 'bg-slate-500'
-    }
-  }
-
-  const getInitials = (name) => {
-    return name.split(' ').map(n => n[0]).join('').toUpperCase()
-  }
-
   return (
-    <section id="committee" className="min-h-screen bg-slate-900 px-4 py-12">
-      <div className="max-w-7xl mx-auto py-12 sm:py-16">
+    <section id="committee" className={`min-h-screen ${COLORS.primary.bgSecondary} px-4 ${COLORS.layout.section}`}>
+      <div className={`${COLORS.layout.container} ${COLORS.layout.section}`}>
         <div className="text-center mb-12 sm:mb-16">
-          
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 sm:mb-6 tracking-tight">Leadership Team</h2>
-          <p className="text-base sm:text-lg md:text-xl text-slate-400 max-w-3xl mx-auto font-light">
-            Meet the dedicated team leading IETE-PCE toward excellence and innovation
-          </p>
+          <h2 className={`${COLORS.typography.heading.xl} ${COLORS.primary.text} mb-4 sm:mb-6`}>Leadership Team</h2>
+         
         </div>
 
         {/* Executive Committee */}
-        <div className="mb-12 sm:mb-16">
-          <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 sm:mb-12 text-center">Executive Committee</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {executiveCommittee.map((member) => (
-              <div key={member.id} className="group text-center">
-                <div className="relative mb-4 sm:mb-6">
-                  <div className={`w-20 h-20 sm:w-24 sm:h-24 ${getColorClass(member.color)} rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto text-white font-bold text-xl sm:text-2xl group-hover:scale-110 transition-transform duration-300 shadow-2xl`}>
-                    {getInitials(member.name)}
-                  </div>
-                  <div className="absolute -top-1 -right-1 w-5 h-5 sm:w-6 sm:h-6 bg-amber-400 rounded-full"></div>
-                </div>
-                
-                <div className="bg-slate-800/30 backdrop-blur-xl border border-slate-700/50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 text-white hover:bg-slate-800/50 transition-all duration-300">
-                  <h4 className="text-lg sm:text-xl font-bold mb-1 sm:mb-2">{member.name}</h4>
-                  <p className="text-cyan-400 font-semibold mb-2 sm:mb-3 text-sm sm:text-base">{member.position}</p>
-                  <div className="text-xs sm:text-sm text-slate-400 mb-3 sm:mb-4">
-                    <p>{member.year}</p>
-                    <p className="leading-tight">{member.branch}</p>
-                  </div>
-                  <p className="text-slate-300 text-xs sm:text-sm font-light">{member.description}</p>
+        <div className={`${COLORS.layout.grid.cols4} ${COLORS.layout.grid.gap} max-w-4xl mx-auto`}>
+          {executiveCommittee.map((member) => (
+            <div key={member.id} className="group text-center">
+              {/* Placeholder Image - Replace with actual photos */}
+              {/* Aspect Ratio: 3:4 (Portrait) */}
+              <div className={`aspect-[3/4] w-full ${COLORS.primary.bgTertiary}/20 ${COLORS.effects.roundedLg} flex items-center justify-center ${COLORS.primary.border} border-2 border-dashed mb-3 sm:mb-4 group-hover:scale-105 transition-transform duration-300 overflow-hidden`}>
+                <div className="text-center p-4">
+                  <div className="text-3xl mb-2">👤</div>
+                  <p className={`${COLORS.primary.textMuted} text-xs`}>
+                    Replace with photo<br/>
+                    <span className="text-xs">3:4 Ratio</span>
+                  </p>
                 </div>
               </div>
-            ))}
-          </div>
+              
+              <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-4 sm:p-6 ${COLORS.primary.text} ${COLORS.interactive.cardHover}`}>
+                <h4 className={`${COLORS.typography.heading.sm} mb-1 sm:mb-2`}>{member.name}</h4>
+                <p className={`${COLORS.accent.primaryText} font-semibold text-sm sm:text-base mb-2`}>{member.position}</p>
+                <p className={`${COLORS.primary.textMuted} ${COLORS.typography.body.sm}`}>{member.year}</p>
+              </div>
+            </div>
+          ))}
         </div>
-
-        
-
-        
       </div>
     </section>
   )

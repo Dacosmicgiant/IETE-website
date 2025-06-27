@@ -1,53 +1,108 @@
 // src/constants/colors.js
 
 export const COLORS = {
-  // Primary brand colors
-  primary: '#1e3a8a',      // blue-900
-  primaryLight: '#1e40af',  // blue-800
-  accent: '#dc2626',        // red-600
-  accentLight: '#ef4444',   // red-500
-  accentDark: '#b91c1c',    // red-700
+  // Primary colors
+  primary: {
+    bg: 'bg-slate-950',
+    bgSecondary: 'bg-slate-900',
+    bgTertiary: 'bg-slate-800',
+    bgCard: 'bg-slate-800/30',
+    bgCardHover: 'bg-slate-800/50',
+    text: 'text-white',
+    textSecondary: 'text-slate-300',
+    textMuted: 'text-slate-400',
+    textLight: 'text-slate-500',
+    border: 'border-slate-700/50',
+    borderLight: 'border-slate-800'
+  },
 
-  // Modern gradient colors for the new design
-  gradientPrimary: 'linear-gradient(135deg, #1e1b4b 0%, #312e81 25%, #4c1d95 50%, #7c2d12 75%, #dc2626 100%)',
-  gradientSecondary: 'linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 50%, #475569 75%, #64748b 100%)',
-  gradientCard: 'linear-gradient(135deg, rgba(30, 27, 75, 0.8) 0%, rgba(49, 46, 129, 0.8) 50%, rgba(76, 29, 149, 0.8) 100%)',
-  
-  // Accent colors for modern design
-  cyan: '#06b6d4',          // cyan-500
-  cyanLight: '#67e8f9',     // cyan-300
-  coral: '#f97316',         // orange-500
-  coralLight: '#fb923c',    // orange-400
-  pink: '#ec4899',          // pink-500
-  pinkLight: '#f472b6',     // pink-400
-  
-  // Purple theme colors
-  purple: '#7c3aed',        // purple-600
-  purpleLight: '#a855f7',   // purple-500
-  purpleDark: '#6d28d9',    // purple-700
-  
-  // Neutral colors
-  white: '#ffffff',
-  black: '#000000',
-  grayLight: '#f9fafb',     // gray-50
-  gray: '#f3f4f6',          // gray-100
-  grayMedium: '#6b7280',    // gray-500
-  grayDark: '#374151',      // gray-700
-  grayDarker: '#1f2937',    // gray-800
+  // Accent colors
+  accent: {
+    primary: 'bg-cyan-500',
+    primaryHover: 'bg-cyan-400',
+    primaryText: 'text-cyan-400',
+    primaryTextHover: 'text-cyan-300',
+    secondary: 'bg-blue-500',
+    secondaryText: 'text-blue-400',
+    tertiary: 'bg-purple-500',
+    tertiaryText: 'text-purple-400',
+    quaternary: 'bg-emerald-500',
+    quaternaryText: 'text-emerald-400'
+  },
 
-  // Status colors
-  success: '#059669',       // green-600
-  warning: '#d97706',       // yellow-600
-  error: '#dc2626',         // red-600
-  info: '#2563eb',          // blue-600
+  // Interactive elements
+  interactive: {
+    buttonPrimary: 'bg-cyan-500 hover:bg-cyan-400 text-slate-950',
+    buttonSecondary: 'bg-slate-800/50 hover:bg-slate-700/50 border border-slate-700 text-white',
+    buttonGhost: 'hover:bg-white/10 text-slate-300 hover:text-white',
+    cardHover: 'hover:bg-slate-800/50 transition-all duration-300',
+    linkHover: 'hover:text-cyan-400 transition-colors'
+  },
 
-  // Specialty colors
-  indigo: '#4f46e5',        // indigo-600
-  teal: '#0d9488',          // teal-600
-  orange: '#ea580c',        // orange-600
-  
-  // Glass morphism effect
-  glassBg: 'rgba(255, 255, 255, 0.1)',
-  glassBlur: 'blur(10px)',
-  glassBorder: 'rgba(255, 255, 255, 0.2)'
+  // Effects
+  effects: {
+    backdrop: 'backdrop-blur-xl',
+    glass: 'bg-slate-800/30 backdrop-blur-xl border border-slate-700/50',
+    glassHover: 'hover:bg-slate-800/50 transition-all duration-300',
+    shadow: 'shadow-2xl',
+    gradient: 'bg-gradient-to-br from-pink-500 to-orange-600',
+    gradientText: 'bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent',
+    rounded: 'rounded-2xl',
+    roundedLg: 'rounded-3xl'
+  },
+
+  // Layout
+  layout: {
+    container: 'max-w-7xl mx-auto px-4',
+    section: 'py-12 sm:py-16',
+    grid: {
+      cols1: 'grid grid-cols-1',
+      cols2: 'grid grid-cols-1 md:grid-cols-2',
+      cols3: 'grid grid-cols-1 md:grid-cols-3',
+      cols4: 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4',
+      gap: 'gap-6 sm:gap-8'
+    },
+    spacing: {
+      xs: 'space-y-3 sm:space-y-4',
+      sm: 'space-y-4 sm:space-y-6', 
+      md: 'space-y-6 sm:space-y-8',
+      lg: 'space-y-8 sm:space-y-12',
+      xl: 'space-y-12 sm:space-y-16'
+    }
+  },
+
+  // Typography
+  typography: {
+    heading: {
+      xl: 'text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight',
+      lg: 'text-2xl sm:text-3xl md:text-4xl font-bold',
+      md: 'text-xl sm:text-2xl font-bold',
+      sm: 'text-lg sm:text-xl font-bold'
+    },
+    body: {
+      lg: 'text-base sm:text-lg md:text-xl font-light leading-relaxed',
+      md: 'text-sm sm:text-base md:text-lg font-light leading-relaxed',
+      sm: 'text-xs sm:text-sm font-light'
+    }
+  },
+
+  // Component specific
+  header: {
+    bg: 'bg-slate-900/95',
+    backdrop: 'backdrop-blur-lg',
+    border: 'border-b border-white/10',
+    logo: 'bg-gradient-to-br from-pink-500 to-orange-600',
+    navActive: 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg',
+    navInactive: 'text-gray-300 hover:text-white hover:bg-white/10'
+  },
+
+  // Color variants for dynamic content
+  variants: {
+    cyan: 'bg-cyan-500',
+    blue: 'bg-blue-500', 
+    purple: 'bg-purple-500',
+    emerald: 'bg-emerald-500',
+    orange: 'bg-orange-500',
+    pink: 'bg-pink-500'
+  }
 }
