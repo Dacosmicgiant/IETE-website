@@ -60,15 +60,7 @@ const EventsSection = () => {
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-12 sm:mt-16">
-          <button 
-            onClick={() => navigate('/events')}
-            className={`${COLORS.interactive.buttonPrimary} px-8 py-4 ${COLORS.effects.roundedLg} font-semibold hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/25`}
-          >
-            View All Events →
-          </button>
-        </div>
+        
       </div>
     </section>
   )

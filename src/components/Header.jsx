@@ -11,9 +11,8 @@ const Header = () => {
   const navigation = [
     { name: 'Home', href: '/#home', id: 'home', type: 'scroll' },
     { name: 'About', href: '#about', id: 'about', type: 'scroll' },
-    
-    { name: 'Committee', href: '#committee', id: 'committee', type: 'scroll' },
     { name: 'Faculty', href: '#faculty', id: 'faculty', type: 'scroll' },
+    { name: 'Committee', href: '/committee', id: 'committee', type: 'route' },
     { name: 'Events', href: '/events', id: 'events', type: 'route' },
   ]
 
@@ -54,6 +53,8 @@ const Header = () => {
     if (location.pathname !== '/') {
       if (location.pathname === '/events') {
         setActiveSection('events')
+      } else if (location.pathname === '/committee') {
+        setActiveSection('committee')
       }
       return
     }
@@ -81,6 +82,8 @@ const Header = () => {
       setActiveSection('home')
     } else if (location.pathname.startsWith('/events')) {
       setActiveSection('events')
+    } else if (location.pathname === '/committee') {
+      setActiveSection('committee')
     }
   }, [location.pathname])
 
