@@ -5,17 +5,17 @@ const FacultySection = () => {
     {
       id: 1,
       name: "Dr. Faculty Name",
-      position: "Principal"
+      position: "HOD"
     },
     {
       id: 2,
       name: "Dr. Faculty Name", 
-      position: "Head of Department"
+      position: "Coordinator"
     },
     {
       id: 3,
       name: "Prof. Faculty Name",
-      position: "Professor"
+      position: "Co-Coordinator"
     }
   ]
 

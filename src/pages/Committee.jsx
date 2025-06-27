@@ -57,7 +57,6 @@ const Committee = () => {
   return (
     <div className={`min-h-screen ${COLORS.primary.bg} pt-20 px-4 sm:px-6 lg:px-8`}>
       <div className="w-full py-12 sm:py-16">
-        
 
         {/* Committee Group Photo - Full Width with Height Constraint */}
         <div className="mb-16 sm:mb-20">
@@ -77,15 +76,15 @@ const Committee = () => {
         {/* Committee Members Grid - Full Width */}
         <div className="mb-12">
           <h2 className={`${COLORS.typography.heading.lg} ${COLORS.primary.text} mb-12 text-center`}>
-            Our Committee Members
+            Leadership Team
           </h2>
           
-          {/* Responsive Grid: 1 col on mobile, 2 on tablet, 3 on laptop, 4 on desktop, 5 on large screens */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 lg:gap-8">
+          {/* 2 Columns x 5 Rows Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 max-w-6xl mx-auto">
             {committeeMembers.map((member) => (
               <div key={member.id} className="group text-center">
                 {/* Member Photo Placeholder - 3:4 Aspect Ratio */}
-                <div className={`aspect-[3/4] w-full ${COLORS.primary.bgTertiary}/20 ${COLORS.effects.roundedLg} flex items-center justify-center ${COLORS.primary.border} border-2 border-dashed mb-3 sm:mb-4 group-hover:scale-105 transition-transform duration-300 overflow-hidden`}>
+                <div className={`aspect-[3/4] w-full max-w-xs mx-auto ${COLORS.primary.bgTertiary}/20 ${COLORS.effects.roundedLg} flex items-center justify-center ${COLORS.primary.border} border-2 border-dashed mb-4 sm:mb-6 group-hover:scale-105 transition-transform duration-300 overflow-hidden`}>
                   <div className="text-center p-4">
                     <div className="text-3xl mb-2">👤</div>
                     <p className={`${COLORS.primary.textMuted} text-xs`}>
@@ -105,7 +104,6 @@ const Committee = () => {
           </div>
         </div>
 
-        
       </div>
     </div>
   )
