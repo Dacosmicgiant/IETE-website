@@ -1,17 +1,41 @@
 import { useState, useEffect } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { COLORS } from '../constants/colors'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
+  const navigate = useNavigate()
+  const location = useLocation()
 
   const navigation = [
-    { name: 'Home', href: '#home', id: 'home' },
-    { name: 'About', href: '#about', id: 'about' },
-    { name: 'Events', href: '#events', id: 'events' },
-    { name: 'Committee', href: '#committee', id: 'committee' },
-    { name: 'Faculty', href: '#faculty', id: 'faculty' },
+    { name: 'Home', href: '/#home', id: 'home', type: 'scroll' },
+    { name: 'About', href: '#about', id: 'about', type: 'scroll' },
+    
+    { name: 'Committee', href: '#committee', id: 'committee', type: 'scroll' },
+    { name: 'Faculty', href: '#faculty', id: 'faculty', type: 'scroll' },
+    { name: 'Events', href: '/events', id: 'events', type: 'route' },
   ]
+
+  // Handle navigation - either route navigation or smooth scrolling
+  const handleNavigation = (item) => {
+    if (item.type === 'route') {
+      navigate(item.href)
+      setActiveSection(item.id)
+    } else {
+      // Only scroll if we're on the home page
+      if (location.pathname === '/') {
+        scrollToSection(item.id)
+      } else {
+        // Navigate to home first, then scroll
+        navigate('/')
+        setTimeout(() => {
+          scrollToSection(item.id)
+        }, 100)
+      }
+    }
+    setIsMenuOpen(false)
+  }
 
   // Handle smooth scrolling to sections
   const scrollToSection = (sectionId) => {
@@ -23,13 +47,19 @@ const Header = () => {
       })
     }
     setActiveSection(sectionId)
-    setIsMenuOpen(false)
   }
 
-  // Track active section based on scroll position
+  // Track active section based on scroll position (only on home page)
   useEffect(() => {
+    if (location.pathname !== '/') {
+      if (location.pathname === '/events') {
+        setActiveSection('events')
+      }
+      return
+    }
+
     const handleScroll = () => {
-      const sections = navigation.map(nav => nav.id)
+      const sections = navigation.filter(nav => nav.type === 'scroll').map(nav => nav.id)
       const scrollPosition = window.scrollY + 100 // Offset for header height
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -43,7 +73,16 @@ const Header = () => {
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [location.pathname])
+
+  // Update active section based on current route
+  useEffect(() => {
+    if (location.pathname === '/') {
+      setActiveSection('home')
+    } else if (location.pathname.startsWith('/events')) {
+      setActiveSection('events')
+    }
+  }, [location.pathname])
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 ${COLORS.header.bg} ${COLORS.header.backdrop} ${COLORS.header.border}`}>
@@ -52,7 +91,7 @@ const Header = () => {
           {/* Logo and Title - Left Side */}
           <div 
             className="flex items-center space-x-4 cursor-pointer"
-            onClick={() => scrollToSection('home')}
+            onClick={() => navigate('/')}
           >
             {/* Logo Placeholder - 1:1 Aspect Ratio */}
             <div className={`aspect-square w-12 h-12 ${COLORS.primary.bgTertiary}/20 ${COLORS.effects.rounded} flex items-center justify-center ${COLORS.primary.border} border-2 border-dashed`}>
@@ -78,7 +117,7 @@ const Header = () => {
               {navigation.map((item) => (
                 <button
                   key={item.name}
-                  onClick={() => scrollToSection(item.id)}
+                  onClick={() => handleNavigation(item)}
                   className={`px-4 py-2 ${COLORS.effects.rounded} text-sm font-medium transition-all duration-300 ${
                     activeSection === item.id
                       ? COLORS.header.navActive
@@ -113,7 +152,7 @@ const Header = () => {
               {navigation.map((item) => (
                 <button
                   key={item.name}
-                  onClick={() => scrollToSection(item.id)}
+                  onClick={() => handleNavigation(item)}
                   className={`px-4 py-3 ${COLORS.effects.rounded} text-sm font-medium transition-all duration-300 text-left w-full ${
                     activeSection === item.id
                       ? COLORS.header.navActive

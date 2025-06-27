@@ -44,7 +44,7 @@ const Footer = () => {
             </div>
             <p className={`${COLORS.primary.textMuted} mb-6 sm:mb-8 leading-relaxed ${COLORS.typography.body.md}`}>
               The Institution of Electronics and Telecommunication Engineers student chapter at PCE, 
-              advancing technology education since 1953.
+              advancing technology education since 2024.
             </p>
             <div className="flex space-x-3 sm:space-x-4">
               <button className={`w-10 h-10 sm:w-12 sm:h-12 ${COLORS.primary.bgTertiary} ${COLORS.accent.primaryHover} ${COLORS.effects.rounded} flex items-center justify-center ${COLORS.primary.textMuted} hover:text-slate-950 transition-all duration-300`}>

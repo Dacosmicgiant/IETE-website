@@ -1,6 +1,36 @@
+import { useNavigate } from 'react-router-dom'
 import { COLORS } from '../../constants/colors'
 
 const EventsSection = () => {
+  const navigate = useNavigate()
+
+  const eventCategories = [
+    {
+      icon: '🛠️',
+      title: 'Workshops',
+      description: 'Hands-on learning',
+      route: '/events/workshops'
+    },
+    {
+      icon: '🏆',
+      title: 'Competitions',
+      description: 'Technical challenges',
+      route: '/events/competitions'
+    },
+    {
+      icon: '🎤',
+      title: 'Seminars',
+      description: 'Expert talks',
+      route: '/events/seminars'
+    },
+    {
+      icon: '📚',
+      title: 'Training',
+      description: 'Skill development',
+      route: '/events/training'
+    }
+  ]
+
   return (
     <section id="events" className={`min-h-screen ${COLORS.primary.bg} px-4 ${COLORS.layout.section}`}>
       <div className={`${COLORS.layout.container} ${COLORS.layout.section}`}>
@@ -13,26 +43,31 @@ const EventsSection = () => {
 
         {/* Event Categories */}
         <div className={`${COLORS.layout.grid.cols4} ${COLORS.layout.grid.gap} max-w-6xl mx-auto`}>
-          <div className={`text-center p-6 sm:p-8 ${COLORS.effects.glass} ${COLORS.effects.roundedLg} ${COLORS.interactive.cardHover} group`}>
-            <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🛠️</div>
-            <h4 className={`${COLORS.primary.text} font-bold text-sm sm:text-base md:text-lg mb-1 sm:mb-2`}>Workshops</h4>
-            <p className={`${COLORS.primary.textMuted} ${COLORS.typography.body.sm}`}>Hands-on learning</p>
-          </div>
-          <div className={`text-center p-6 sm:p-8 ${COLORS.effects.glass} ${COLORS.effects.roundedLg} ${COLORS.interactive.cardHover} group`}>
-            <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🏆</div>
-            <h4 className={`${COLORS.primary.text} font-bold text-sm sm:text-base md:text-lg mb-1 sm:mb-2`}>Competitions</h4>
-            <p className={`${COLORS.primary.textMuted} ${COLORS.typography.body.sm}`}>Technical challenges</p>
-          </div>
-          <div className={`text-center p-6 sm:p-8 ${COLORS.effects.glass} ${COLORS.effects.roundedLg} ${COLORS.interactive.cardHover} group`}>
-            <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎤</div>
-            <h4 className={`${COLORS.primary.text} font-bold text-sm sm:text-base md:text-lg mb-1 sm:mb-2`}>Seminars</h4>
-            <p className={`${COLORS.primary.textMuted} ${COLORS.typography.body.sm}`}>Expert talks</p>
-          </div>
-          <div className={`text-center p-6 sm:p-8 ${COLORS.effects.glass} ${COLORS.effects.roundedLg} ${COLORS.interactive.cardHover} group`}>
-            <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📚</div>
-            <h4 className={`${COLORS.primary.text} font-bold text-sm sm:text-base md:text-lg mb-1 sm:mb-2`}>Training</h4>
-            <p className={`${COLORS.primary.textMuted} ${COLORS.typography.body.sm}`}>Skill development</p>
-          </div>
+          {eventCategories.map((category, index) => (
+            <div 
+              key={index}
+              className={`text-center p-6 sm:p-8 ${COLORS.effects.glass} ${COLORS.effects.roundedLg} ${COLORS.interactive.cardHover} group cursor-pointer transition-all duration-300 hover:scale-105`}
+              onClick={() => navigate(category.route)}
+            >
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">{category.icon}</div>
+              <h4 className={`${COLORS.primary.text} font-bold text-sm sm:text-base md:text-lg mb-1 sm:mb-2 group-hover:${COLORS.accent.primaryText} transition-colors`}>
+                {category.title}
+              </h4>
+              <p className={`${COLORS.primary.textMuted} ${COLORS.typography.body.sm}`}>
+                {category.description}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-12 sm:mt-16">
+          <button 
+            onClick={() => navigate('/events')}
+            className={`${COLORS.interactive.buttonPrimary} px-8 py-4 ${COLORS.effects.roundedLg} font-semibold hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/25`}
+          >
+            View All Events →
+          </button>
         </div>
       </div>
     </section>

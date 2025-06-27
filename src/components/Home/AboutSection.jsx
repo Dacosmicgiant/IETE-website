@@ -16,7 +16,7 @@ const AboutSection = () => {
             <p className={`${COLORS.typography.body.lg} ${COLORS.primary.textSecondary} mb-6 sm:mb-8`}>
               The Institution of Electronics and Telecommunication Engineers (IETE) is India's leading 
               recognised professional society devoted to the advancement of Science and Technology of 
-              Electronics, Telecommunication & IT. Founded in 1953.
+              Electronics, Telecommunication. Founded in 2024.
             </p>
             <p className={`${COLORS.typography.body.md} ${COLORS.primary.textMuted} mb-6 sm:mb-8`}>
               IETE is the National Apex Professional body of Electronics and Telecommunication, Computer 
