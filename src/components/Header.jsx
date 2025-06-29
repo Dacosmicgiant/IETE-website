@@ -106,7 +106,7 @@ const Header = () => {
               </div>
             </div>
             <div>
-              <h1 className={`text-2xl font-bold ${COLORS.effects.gradientText}`}>
+              <h1 className={`text-2xl font-bold ${COLORS.primary.text}`}>
                 IETE-PCE
               </h1>
               <p className={`text-sm ${COLORS.primary.textMuted} hidden sm:block`}>Institution of Electronics and Telecommunication Engineers</p>

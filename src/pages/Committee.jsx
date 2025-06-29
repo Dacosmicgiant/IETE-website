@@ -135,7 +135,7 @@ const Committee = () => {
         {/* Committee Members Grid - Full Width */}
         <div className="mb-12">
           <h2 className={`${COLORS.typography.heading.lg} ${COLORS.primary.text} mb-12 text-center`}>
-            Leadership Team
+            Core Team
           </h2>
           
           {/* 2 Columns Grid */}

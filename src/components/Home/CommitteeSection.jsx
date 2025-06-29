@@ -32,7 +32,7 @@ const CommitteeSection = () => {
     <section id="committee" className={`min-h-screen ${COLORS.primary.bgSecondary} px-4 ${COLORS.layout.section}`}>
       <div className={`${COLORS.layout.container} ${COLORS.layout.section}`}>
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className={`${COLORS.typography.heading.xl} ${COLORS.primary.text} mb-4 sm:mb-6`}>Leadership Team</h2>
+          <h2 className={`${COLORS.typography.heading.xl} ${COLORS.primary.text} mb-4 sm:mb-6`}>Core Team</h2>
          
         </div>
 

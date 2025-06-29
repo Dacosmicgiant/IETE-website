@@ -16,27 +16,27 @@ export const COLORS = {
     borderLight: 'border-slate-800'
   },
 
-  // Accent colors
+  // Accent colors - Red-emphasized theme
   accent: {
-    primary: 'bg-cyan-500',
-    primaryHover: 'bg-cyan-400',
-    primaryText: 'text-cyan-400',
-    primaryTextHover: 'text-cyan-300',
-    secondary: 'bg-blue-500',
-    secondaryText: 'text-blue-400',
-    tertiary: 'bg-purple-500',
-    tertiaryText: 'text-purple-400',
-    quaternary: 'bg-emerald-500',
-    quaternaryText: 'text-emerald-400'
+    primary: 'bg-red-500',
+    primaryHover: 'bg-red-400',
+    primaryText: 'text-red-400',
+    primaryTextHover: 'text-red-300',
+    secondary: 'bg-orange-500',
+    secondaryText: 'text-red-400',
+    tertiary: 'bg-pink-500',
+    tertiaryText: 'text-red-400',
+    quaternary: 'bg-rose-500',
+    quaternaryText: 'text-red-400'
   },
 
   // Interactive elements
   interactive: {
-    buttonPrimary: 'bg-cyan-500 hover:bg-cyan-400 text-slate-950',
+    buttonPrimary: 'bg-red-500 hover:bg-red-400 text-white',
     buttonSecondary: 'bg-slate-800/50 hover:bg-slate-700/50 border border-slate-700 text-white',
     buttonGhost: 'hover:bg-white/10 text-slate-300 hover:text-white',
     cardHover: 'hover:bg-slate-800/50 transition-all duration-300',
-    linkHover: 'hover:text-cyan-400 transition-colors'
+    linkHover: 'hover:text-red-400 transition-colors'
   },
 
   // Effects
@@ -45,8 +45,8 @@ export const COLORS = {
     glass: 'bg-slate-800/30 backdrop-blur-xl border border-slate-700/50',
     glassHover: 'hover:bg-slate-800/50 transition-all duration-300',
     shadow: 'shadow-2xl',
-    gradient: 'bg-gradient-to-br from-pink-500 to-orange-600',
-    gradientText: 'bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent',
+    gradient: 'bg-gradient-to-br from-red-500 to-orange-600',
+    gradientText: 'bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent',
     rounded: 'rounded-2xl',
     roundedLg: 'rounded-3xl'
   },
@@ -91,18 +91,18 @@ export const COLORS = {
     bg: 'bg-slate-900/95',
     backdrop: 'backdrop-blur-lg',
     border: 'border-b border-white/10',
-    logo: 'bg-gradient-to-br from-pink-500 to-orange-600',
-    navActive: 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg',
+    logo: 'bg-gradient-to-br from-red-500 to-orange-600',
+    navActive: 'bg-gradient-to-r from-red-500 to-orange-600 text-white shadow-lg',
     navInactive: 'text-gray-300 hover:text-white hover:bg-white/10'
   },
 
   // Color variants for dynamic content
   variants: {
-    cyan: 'bg-cyan-500',
-    blue: 'bg-blue-500', 
-    purple: 'bg-purple-500',
-    emerald: 'bg-emerald-500',
-    orange: 'bg-orange-500',
-    pink: 'bg-pink-500'
+    red: 'bg-red-500',
+    orange: 'bg-orange-500', 
+    pink: 'bg-pink-500',
+    rose: 'bg-rose-500',
+    amber: 'bg-amber-500',
+    yellow: 'bg-yellow-500'
   }
 }
