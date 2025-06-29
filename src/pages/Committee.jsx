@@ -1,7 +1,8 @@
 import { COLORS } from '../constants/colors'
 
 const Committee = () => {
-  const committeeMembers = [
+  // Regular committee members (individual cards)
+  const regularMembers = [
     {
       id: 1,
       name: "Saniya Mahadik",
@@ -39,20 +40,78 @@ const Committee = () => {
     },
     {
       id: 8,
-      name: "Reva Patil",
-      position: "Social Media Head"
+      name: "Aayush Gupta",
+      position: "Technical Head"
     },
     {
       id: 9,
-      name: "Pratiksha Chaudhari",
-      position: "Coordinator Nominated Member"
-    },
-    {
-      id: 10,
-      name: "Narayan Yadav",
+      name: "Reva Patil",
       position: "Coordinator Nominated Member"
     }
   ]
+
+  // Combined card for Coordinator Nominated Members
+  const combinedMembers = {
+    id: 'combined',
+    members: [
+      {
+        name: "Pratiksha Chaudhari",
+        position: "Coordinator Nominated Member"
+      },
+      {
+        name: "Narayan Yadav", 
+        position: "Coordinator Nominated Member"
+      }
+    ]
+  }
+
+  // Individual Member Card Component
+  const IndividualMemberCard = ({ member }) => (
+    <div className="group text-center">
+      {/* Member Photo Placeholder - 3:4 Aspect Ratio */}
+      <div className={`aspect-[3/4] w-full max-w-xs mx-auto ${COLORS.primary.bgTertiary}/20 ${COLORS.effects.roundedLg} flex items-center justify-center ${COLORS.primary.border} border-2 border-dashed mb-4 sm:mb-6 group-hover:scale-105 transition-transform duration-300 overflow-hidden`}>
+        <div className="text-center p-4">
+          <div className="text-3xl mb-2">👤</div>
+          <p className={`${COLORS.primary.textMuted} text-xs`}>
+            Replace with photo<br/>
+            <span className="text-xs">3:4 Ratio</span>
+          </p>
+        </div>
+      </div>
+      
+      {/* Member Info */}
+      <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-4 sm:p-6 ${COLORS.primary.text} ${COLORS.interactive.cardHover}`}>
+        <h4 className={`${COLORS.typography.heading.sm} mb-1 sm:mb-2 leading-tight`}>{member.name}</h4>
+        <p className={`${COLORS.accent.primaryText} font-semibold text-sm sm:text-base leading-tight`}>{member.position}</p>
+      </div>
+    </div>
+  )
+
+  // Combined Member Card Component
+  const CombinedMemberCard = ({ combinedData }) => (
+    <div className="group text-center">
+      {/* Shared Photo Placeholder - 3:4 Aspect Ratio */}
+      <div className={`aspect-[3/4] w-full max-w-xs mx-auto ${COLORS.primary.bgTertiary}/20 ${COLORS.effects.roundedLg} flex items-center justify-center ${COLORS.primary.border} border-2 border-dashed mb-4 sm:mb-6 group-hover:scale-105 transition-transform duration-300 overflow-hidden`}>
+        <div className="text-center p-4">
+          <div className="text-3xl mb-2">👥</div>
+          <p className={`${COLORS.primary.textMuted} text-xs`}>
+            Combined photo<br/>
+            <span className="text-xs">3:4 Ratio</span>
+          </p>
+        </div>
+      </div>
+      
+      {/* Combined Member Info */}
+      <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-4 sm:p-6 ${COLORS.primary.text} ${COLORS.interactive.cardHover}`}>
+        {combinedData.members.map((member, index) => (
+          <div key={index} className={index > 0 ? "mt-3 pt-3 border-t border-slate-700/50" : ""}>
+            <h4 className={`${COLORS.typography.heading.sm} mb-1 leading-tight`}>{member.name}</h4>
+            <p className={`${COLORS.accent.primaryText} font-semibold text-sm sm:text-base leading-tight`}>{member.position}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
 
   return (
     <div className={`min-h-screen ${COLORS.primary.bg} pt-20 px-4 sm:px-6 lg:px-8`}>
@@ -79,28 +138,15 @@ const Committee = () => {
             Leadership Team
           </h2>
           
-          {/* 2 Columns x 5 Rows Grid */}
+          {/* 2 Columns Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 max-w-6xl mx-auto">
-            {committeeMembers.map((member) => (
-              <div key={member.id} className="group text-center">
-                {/* Member Photo Placeholder - 3:4 Aspect Ratio */}
-                <div className={`aspect-[3/4] w-full max-w-xs mx-auto ${COLORS.primary.bgTertiary}/20 ${COLORS.effects.roundedLg} flex items-center justify-center ${COLORS.primary.border} border-2 border-dashed mb-4 sm:mb-6 group-hover:scale-105 transition-transform duration-300 overflow-hidden`}>
-                  <div className="text-center p-4">
-                    <div className="text-3xl mb-2">👤</div>
-                    <p className={`${COLORS.primary.textMuted} text-xs`}>
-                      Replace with photo<br/>
-                      <span className="text-xs">3:4 Ratio</span>
-                    </p>
-                  </div>
-                </div>
-                
-                {/* Member Info */}
-                <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-4 sm:p-6 ${COLORS.primary.text} ${COLORS.interactive.cardHover}`}>
-                  <h4 className={`${COLORS.typography.heading.sm} mb-1 sm:mb-2 leading-tight`}>{member.name}</h4>
-                  <p className={`${COLORS.accent.primaryText} font-semibold text-sm sm:text-base leading-tight`}>{member.position}</p>
-                </div>
-              </div>
+            {/* Render regular members */}
+            {regularMembers.map((member) => (
+              <IndividualMemberCard key={member.id} member={member} />
             ))}
+            
+            {/* Render combined card */}
+            <CombinedMemberCard combinedData={combinedMembers} />
           </div>
         </div>
 
