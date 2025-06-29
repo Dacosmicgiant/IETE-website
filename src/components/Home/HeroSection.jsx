@@ -1,4 +1,5 @@
 import { COLORS } from '../../constants/colors'
+import Image from '../ui/Image'
 
 const HeroSection = () => {
   const scrollToSection = (sectionId) => {
@@ -55,26 +56,15 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right Section - Placeholder Image */}
+          {/* Right Section - Hero Image */}
           <div className={`${COLORS.layout.spacing.md} order-1 lg:order-2`}>
-            {/* Placeholder Image - Replace with your own image */}
-            {/* Aspect Ratio: 16:9 (Landscape/Video) */}
-            <div className={`aspect-video w-full ${COLORS.primary.bgTertiary}/20 ${COLORS.effects.roundedLg} flex items-center justify-center ${COLORS.primary.border} border-2 border-dashed transition-transform duration-300`}>
-              <div className="text-center p-6">
-                <div className="text-4xl mb-3">🖼️</div>
-                <p className={`${COLORS.primary.textMuted} text-base font-medium`}>
-                  Replace with your image
-                </p>
-                <p className={`${COLORS.primary.textLight} text-sm mt-2`}>
-                  Aspect Ratio: 16:9
-                </p>
-              </div>
-            </div>
+            <Image 
+              imagePath="hero.main"
+              containerClassName="transition-transform duration-300 hover:scale-[1.02]"
+            />
           </div>
         </div>
       </div>
-
-
     </section>
   )
 }

@@ -1,88 +1,91 @@
 import { COLORS } from '../constants/colors'
+import Image from '../components/ui/Image'
+import { 
+  committeeMembers, 
+  combinedMembers, 
+  committeeConfig,
+  getAllMembersOrdered 
+} from '../data/committeeData'
 
 const Committee = () => {
-  // Regular committee members (individual cards)
-  const regularMembers = [
-    {
-      id: 1,
-      name: "Saniya Mahadik",
-      position: "President"
-    },
-    {
-      id: 2,
-      name: "Shravani Margaj",
-      position: "Vice President"
-    },
-    {
-      id: 3,
-      name: "Riddhi Samarth",
-      position: "Secretary"
-    },
-    {
-      id: 4,
-      name: "Akanksha Rakshe",
-      position: "Treasurer"
-    },
-    {
-      id: 5,
-      name: "Nikita Ekunde",
-      position: "Publicity Head"
-    },
-    {
-      id: 6,
-      name: "Aditi Patil",
-      position: "Content Head"
-    },
-    {
-      id: 7,
-      name: "Chinmay Dabholkar",
-      position: "Graphics Head"
-    },
-    {
-      id: 8,
-      name: "Aayush Gupta",
-      position: "Technical Head"
-    },
-    {
-      id: 9,
-      name: "Reva Patil",
-      position: "Coordinator Nominated Member"
-    }
-  ]
-
-  // Combined card for Coordinator Nominated Members
-  const combinedMembers = {
-    id: 'combined',
-    members: [
-      {
-        name: "Pratiksha Chaudhari",
-        position: "Coordinator Nominated Member"
-      },
-      {
-        name: "Narayan Yadav", 
-        position: "Coordinator Nominated Member"
-      }
-    ]
-  }
+  const allMembers = getAllMembersOrdered()
+  const config = committeeConfig.displaySettings
 
   // Individual Member Card Component
   const IndividualMemberCard = ({ member }) => (
     <div className="group text-center">
-      {/* Member Photo Placeholder - 3:4 Aspect Ratio */}
-      <div className={`aspect-[3/4] w-full max-w-xs mx-auto ${COLORS.primary.bgTertiary}/20 ${COLORS.effects.roundedLg} flex items-center justify-center ${COLORS.primary.border} border-2 border-dashed mb-4 sm:mb-6 group-hover:scale-105 transition-transform duration-300 overflow-hidden`}>
-        <div className="text-center p-4">
-          <div className="text-3xl mb-2">👤</div>
-          <p className={`${COLORS.primary.textMuted} text-xs`}>
-            Replace with photo<br/>
-            <span className="text-xs">3:4 Ratio</span>
-          </p>
-        </div>
+      {/* Member Photo using centralized image system */}
+      <div className="max-w-xs mx-auto mb-4 sm:mb-6">
+        <Image 
+          imagePath={member.imageKey}
+          containerClassName="group-hover:scale-105 transition-transform duration-300"
+        />
       </div>
       
       {/* Member Info */}
       <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-4 sm:p-6 ${COLORS.primary.text} ${COLORS.interactive.cardHover}`}>
-        <h4 className={`${COLORS.typography.heading.sm} mb-1 sm:mb-2 leading-tight`}>{member.name}</h4>
-        <p className={`${COLORS.accent.primaryText} font-semibold text-sm sm:text-base leading-tight`}>{member.position}</p>
+        <h4 className={`${COLORS.typography.heading.sm} mb-1 sm:mb-2 leading-tight`}>
+          {member.name}
+        </h4>
+        <p className={`${COLORS.accent.primaryText} font-semibold text-sm sm:text-base leading-tight mb-2`}>
+          {member.position}
+        </p>
+        
+        {member.year && (
+          <p className={`${COLORS.primary.textMuted} ${COLORS.typography.body.sm} mb-2`}>
+            {member.year}
+          </p>
+        )}
+        
+        {config.showBios && member.bio && (
+          <p className={`${COLORS.primary.textSecondary} text-xs sm:text-sm mb-3 italic`}>
+            "{member.bio}"
+          </p>
+        )}
+        
+        {config.showSpecializations && member.specialization && (
+          <div className="mb-3">
+            <span className={`text-xs px-2 py-1 ${COLORS.effects.rounded} bg-slate-700/50 ${COLORS.primary.textSecondary}`}>
+              {member.specialization}
+            </span>
+          </div>
+        )}
+        
+        {config.showAchievements && member.achievements && (
+          <div className="mb-3">
+            <p className={`${COLORS.primary.textMuted} text-xs font-medium mb-1`}>Achievements:</p>
+            <ul className="text-xs text-left">
+              {member.achievements.slice(0, 2).map((achievement, index) => (
+                <li key={index} className={`${COLORS.primary.textSecondary} mb-1`}>
+                  • {achievement}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+        
+        {config.showEmails && member.email && (
+          <p className={`${COLORS.primary.textMuted} text-xs mt-2`}>
+            ✉️ {member.email}
+          </p>
+        )}
+        
+        {config.showPhones && member.phone && (
+          <p className={`${COLORS.primary.textMuted} text-xs mt-1`}>
+            📞 {member.phone}
+          </p>
+        )}
+        
+        {config.showSocialLinks && member.linkedIn && (
+          <a 
+            href={member.linkedIn} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className={`inline-block mt-2 text-xs ${COLORS.accent.primaryText} hover:underline`}
+          >
+            🔗 LinkedIn
+          </a>
+        )}
       </div>
     </div>
   )
@@ -90,23 +93,48 @@ const Committee = () => {
   // Combined Member Card Component
   const CombinedMemberCard = ({ combinedData }) => (
     <div className="group text-center">
-      {/* Shared Photo Placeholder - 3:4 Aspect Ratio */}
-      <div className={`aspect-[3/4] w-full max-w-xs mx-auto ${COLORS.primary.bgTertiary}/20 ${COLORS.effects.roundedLg} flex items-center justify-center ${COLORS.primary.border} border-2 border-dashed mb-4 sm:mb-6 group-hover:scale-105 transition-transform duration-300 overflow-hidden`}>
-        <div className="text-center p-4">
-          <div className="text-3xl mb-2">👥</div>
-          <p className={`${COLORS.primary.textMuted} text-xs`}>
-            Combined photo<br/>
-            <span className="text-xs">3:4 Ratio</span>
-          </p>
-        </div>
+      {/* Combined Photo using centralized image system */}
+      <div className="max-w-xs mx-auto mb-4 sm:mb-6">
+        <Image 
+          imagePath={combinedData.imageKey}
+          containerClassName="group-hover:scale-105 transition-transform duration-300"
+        />
       </div>
       
       {/* Combined Member Info */}
       <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-4 sm:p-6 ${COLORS.primary.text} ${COLORS.interactive.cardHover}`}>
+        {combinedData.title && (
+          <h4 className={`${COLORS.typography.heading.sm} mb-3 leading-tight`}>
+            {combinedData.title}
+          </h4>
+        )}
+        
         {combinedData.members.map((member, index) => (
           <div key={index} className={index > 0 ? "mt-3 pt-3 border-t border-slate-700/50" : ""}>
-            <h4 className={`${COLORS.typography.heading.sm} mb-1 leading-tight`}>{member.name}</h4>
-            <p className={`${COLORS.accent.primaryText} font-semibold text-sm sm:text-base leading-tight`}>{member.position}</p>
+            <h4 className={`${COLORS.typography.heading.sm} mb-1 leading-tight`}>
+              {member.name}
+            </h4>
+            <p className={`${COLORS.accent.primaryText} font-semibold text-sm sm:text-base leading-tight mb-1`}>
+              {member.position}
+            </p>
+            
+            {member.year && (
+              <p className={`${COLORS.primary.textMuted} ${COLORS.typography.body.sm} mb-2`}>
+                {member.year}
+              </p>
+            )}
+            
+            {config.showSpecializations && member.specialization && (
+              <p className={`${COLORS.primary.textSecondary} text-xs mb-2`}>
+                {member.specialization}
+              </p>
+            )}
+            
+            {config.showEmails && member.email && (
+              <p className={`${COLORS.primary.textMuted} text-xs`}>
+                ✉️ {member.email}
+              </p>
+            )}
           </div>
         ))}
       </div>
@@ -119,17 +147,22 @@ const Committee = () => {
 
         {/* Committee Group Photo - Full Width with Height Constraint */}
         <div className="mb-16 sm:mb-20">
-          <div className={`aspect-video w-full max-h-[70vh] ${COLORS.primary.bgTertiary}/20 ${COLORS.effects.roundedLg} flex items-center justify-center ${COLORS.primary.border} border-2 border-dashed`}>
-            <div className="text-center p-8">
-              <div className="text-5xl mb-4">📸</div>
-              <p className={`${COLORS.primary.textMuted} text-lg font-medium`}>
-                Committee Group Photo
-              </p>
-              <p className={`${COLORS.primary.textLight} text-sm mt-2`}>
-                Aspect Ratio: 16:9 - Max Height: 70vh
-              </p>
+          <Image 
+            imagePath={committeeConfig.groupPhoto.imageKey}
+            containerClassName="max-h-[70vh]"
+          />
+          {committeeConfig.groupPhoto.title && (
+            <div className="text-center mt-4">
+              <h3 className={`${COLORS.typography.heading.md} ${COLORS.primary.text} mb-2`}>
+                {committeeConfig.groupPhoto.title}
+              </h3>
+              {committeeConfig.groupPhoto.description && (
+                <p className={`${COLORS.primary.textMuted} text-sm`}>
+                  {committeeConfig.groupPhoto.description}
+                </p>
+              )}
             </div>
-          </div>
+          )}
         </div>
 
         {/* Committee Members Grid - Full Width */}
@@ -138,15 +171,22 @@ const Committee = () => {
             Core Team
           </h2>
           
-          {/* 2 Columns Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 max-w-6xl mx-auto">
-            {/* Render regular members */}
-            {regularMembers.map((member) => (
+          {/* Dynamic Grid Layout based on configuration */}
+          <div className={`grid grid-cols-1 ${
+            config.gridLayout === '4-column' ? 'lg:grid-cols-4 md:grid-cols-2' :
+            config.gridLayout === '3-column' ? 'lg:grid-cols-3 md:grid-cols-2' :
+            'md:grid-cols-2'
+          } gap-12 lg:gap-16 max-w-6xl mx-auto`}>
+            
+            {/* Render all members */}
+            {allMembers.map((member) => (
               <IndividualMemberCard key={member.id} member={member} />
             ))}
             
-            {/* Render combined card */}
-            <CombinedMemberCard combinedData={combinedMembers} />
+            {/* Render combined cards if enabled */}
+            {config.showCombinedMembers && combinedMembers.map((combinedData) => (
+              <CombinedMemberCard key={combinedData.id} combinedData={combinedData} />
+            ))}
           </div>
         </div>
 

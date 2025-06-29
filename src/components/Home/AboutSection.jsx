@@ -1,4 +1,5 @@
 import { COLORS } from '../../constants/colors'
+import Image from '../ui/Image'
 
 const AboutSection = () => {
   return (
@@ -31,18 +32,11 @@ const AboutSection = () => {
           </div>
           
           <div className="relative order-1 lg:order-2">
-            {/* Placeholder Image - Replace with your own image */}
-            {/* Aspect Ratio: 4:3 (More square, better proportioned) */}
-            <div className={`aspect-[4/3] w-full max-w-lg ${COLORS.primary.bgTertiary}/20 ${COLORS.effects.roundedLg} flex items-center justify-center ${COLORS.primary.border} border-2 border-dashed mx-auto`}>
-              <div className="text-center p-8">
-                <div className="text-5xl mb-4">🖼️</div>
-                <p className={`${COLORS.primary.textMuted} text-base font-medium`}>
-                  Replace with your image
-                </p>
-                <p className={`${COLORS.primary.textLight} text-sm mt-2`}>
-                  Aspect Ratio: 4:3
-                </p>
-              </div>
+            <div className="max-w-lg mx-auto">
+              <Image 
+                imagePath="about.main"
+                containerClassName="transition-transform duration-300 hover:scale-105"
+              />
             </div>
           </div>
         </div>

@@ -1,15 +1,16 @@
 import { useParams, useNavigate } from 'react-router-dom'
 import { COLORS } from '../constants/colors'
-import { eventsData, eventTypes } from '../data/eventsData'
+import { eventsData, eventCategories, getEventsByCategory } from '../data/eventsData'
+import Image from '../components/ui/Image'
 
 const EventCategory = () => {
   const { type } = useParams()
   const navigate = useNavigate()
 
-  const categoryInfo = eventTypes[type]
-  const events = eventsData[type] || []
+  const categoryInfo = eventCategories[type]
+  const events = getEventsByCategory(type) // Only get enabled events
 
-  if (!categoryInfo) {
+  if (!categoryInfo || !categoryInfo.enabled) {
     return (
       <div className={`min-h-screen ${COLORS.primary.bg} pt-20 px-4 flex items-center justify-center`}>
         <div className="text-center">
@@ -28,20 +29,22 @@ const EventCategory = () => {
   }
 
   const EventCard = ({ event }) => {
+    // Don't render disabled events
+    if (event.enabled === false) {
+      return null
+    }
+
     return (
       <div 
         className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 ${COLORS.interactive.cardHover} cursor-pointer group`}
         onClick={() => navigate(`/events/${type}/${event.id}`)}
       >
-        {/* Event Image Placeholder */}
-        <div className={`aspect-video w-full ${COLORS.primary.bgTertiary}/20 ${COLORS.effects.rounded} flex items-center justify-center ${COLORS.primary.border} border-2 border-dashed mb-4 group-hover:scale-105 transition-transform duration-300`}>
-          <div className="text-center p-4">
-            <div className="text-2xl mb-2">{categoryInfo.icon}</div>
-            <p className={`${COLORS.primary.textMuted} text-xs`}>
-              Event Image<br/>
-              <span className="text-xs">16:9 Ratio</span>
-            </p>
-          </div>
+        {/* Event Image using centralized image system */}
+        <div className="mb-4">
+          <Image 
+            imagePath={event.imageKey}
+            containerClassName="group-hover:scale-105 transition-transform duration-300"
+          />
         </div>
 
         {/* Event Content */}
@@ -53,7 +56,7 @@ const EventCategory = () => {
               type === 'seminars' ? 'bg-purple-500/20 text-purple-400' :
               'bg-emerald-500/20 text-emerald-400'
             }`}>
-              {event.level || event.teamSize || event.attendance || event.certification || 'Event'}
+              {event.level || event.teamSize || event.attendance || event.certification || event.difficulty || 'Event'}
             </span>
             <span className={`${COLORS.primary.textMuted} text-xs`}>
               {new Date(event.date).toLocaleDateString()}
@@ -67,6 +70,22 @@ const EventCategory = () => {
           <p className={`${COLORS.primary.textMuted} text-sm line-clamp-3`}>
             {event.description}
           </p>
+
+          {/* Event Tags */}
+          {event.tags && (
+            <div className="flex flex-wrap gap-1">
+              {event.tags.slice(0, 4).map((tag, index) => (
+                <span key={index} className={`text-xs px-2 py-1 ${COLORS.effects.rounded} bg-slate-700/30 ${COLORS.primary.textLight}`}>
+                  {tag}
+                </span>
+              ))}
+              {event.tags.length > 4 && (
+                <span className={`text-xs px-2 py-1 ${COLORS.effects.rounded} bg-slate-700/30 ${COLORS.primary.textLight}`}>
+                  +{event.tags.length - 4}
+                </span>
+              )}
+            </div>
+          )}
 
           {/* Event Specific Details */}
           <div className="space-y-2 text-xs">
@@ -85,7 +104,11 @@ const EventCategory = () => {
                 <span className={`${COLORS.primary.textSecondary}`}>
                   👨‍🏫 {event.instructor}
                 </span>
-                
+                {event.fee && (
+                  <span className={`${COLORS.accent.primaryText} font-medium`}>
+                    💰 {event.fee}
+                  </span>
+                )}
               </div>
             )}
             
@@ -105,7 +128,11 @@ const EventCategory = () => {
                 <span className={`${COLORS.primary.textSecondary}`}>
                   🎤 {event.speaker}
                 </span>
-                
+                {event.capacity && event.registered && (
+                  <span className={`${COLORS.primary.textSecondary}`}>
+                    👥 {event.registered}/{event.capacity}
+                  </span>
+                )}
               </div>
             )}
             
@@ -121,13 +148,29 @@ const EventCategory = () => {
             )}
           </div>
 
+          {/* Registration Status and Button */}
           <div className="flex items-center justify-between pt-2">
             <button className={`text-xs ${COLORS.accent.primaryText} font-medium group-hover:underline`}>
               View Details →
             </button>
-            <button className={`text-xs ${COLORS.interactive.buttonPrimary} px-3 py-1 rounded-full`}>
-              Register Now
-            </button>
+            <div className="flex items-center space-x-2">
+              {event.capacity && event.registered && (
+                <span className={`text-xs ${
+                  event.registered >= event.capacity ? 
+                  'text-red-400' : 
+                  event.registered >= event.capacity * 0.8 ? 
+                  'text-yellow-400' : 
+                  'text-green-400'
+                }`}>
+                  {event.registered >= event.capacity ? 'Full' : 
+                   event.registered >= event.capacity * 0.8 ? 'Filling Fast' : 
+                   'Available'}
+                </span>
+              )}
+              <button className={`text-xs ${COLORS.interactive.buttonPrimary} px-3 py-1 rounded-full`}>
+                Register Now
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -152,7 +195,6 @@ const EventCategory = () => {
         {/* Category Header */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center space-x-4 mb-6">
-            
             <div className="text-center">
               <h1 className={`${COLORS.typography.heading.xl} ${COLORS.primary.text} mb-3`}>
                 {categoryInfo.name}
@@ -162,7 +204,6 @@ const EventCategory = () => {
               </p>
             </div>
           </div>
-          
         </div>
 
         {/* Events Grid */}
@@ -190,7 +231,6 @@ const EventCategory = () => {
           </div>
         )}
 
-        
       </div>
     </div>
   )

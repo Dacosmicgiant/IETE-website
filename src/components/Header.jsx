@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { COLORS } from '../constants/colors'
+import Image from './ui/Image'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -96,14 +97,13 @@ const Header = () => {
             className="flex items-center space-x-4 cursor-pointer"
             onClick={() => navigate('/')}
           >
-            {/* Logo Placeholder - 1:1 Aspect Ratio */}
-            <div className={`aspect-square w-12 h-12 ${COLORS.primary.bgTertiary}/20 ${COLORS.effects.rounded} flex items-center justify-center ${COLORS.primary.border} border-2 border-dashed`}>
-              <div className="text-center">
-                <div className="text-lg">🏢</div>
-                <p className={`${COLORS.primary.textMuted} text-xs leading-none`}>
-                  1:1
-                </p>
-              </div>
+            {/* Logo using centralized image system */}
+            <div className="w-12 h-12">
+              <Image 
+                imagePath="logo"
+                containerClassName="group-hover:scale-105 transition-transform duration-300"
+                showFallbackText={false}
+              />
             </div>
             <div>
               <h1 className={`text-2xl font-bold ${COLORS.primary.text}`}>

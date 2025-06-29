@@ -2,6 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { COLORS } from '../constants/colors'
 import { eventsData, eventTypes } from '../data/eventsData'
+import Image from '../components/ui/Image'
 
 const EventDetail = () => {
   const { type, id } = useParams()
@@ -164,16 +165,11 @@ const EventDetail = () => {
         <div className={`${COLORS.layout.grid.cols2} lg:gap-16 items-stretch mb-12 pt-1.5`}>
           {/* Left: Event Image */}
           <div className="flex flex-col h-full">
-            <div className={`aspect-square w-full max-w-md mx-auto ${COLORS.primary.bgTertiary}/20 ${COLORS.effects.roundedLg} flex items-center justify-center ${COLORS.primary.border} border-2 border-dashed mb-6 flex-shrink min-h-0`}>
-              <div className="text-center p-8">
-                <div className="text-5xl mb-4">{categoryInfo.icon}</div>
-                <p className={`${COLORS.primary.textMuted} text-lg font-medium`}>
-                  Event Banner
-                </p>
-                <p className={`${COLORS.primary.textLight} text-sm mt-2`}>
-                  Replace with event image (1:1)
-                </p>
-              </div>
+            <div className="max-w-md mx-auto mb-6 flex-shrink min-h-0">
+              <Image 
+                imagePath={event.detailImageKey}
+                containerClassName="transition-transform duration-300 hover:scale-105"
+              />
             </div>
             
             {/* Event Category Badge */}
@@ -308,7 +304,6 @@ const EventDetail = () => {
           </div>
         </div>
 
-        
       </div>
     </div>
   )
