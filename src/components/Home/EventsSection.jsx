@@ -1,35 +1,20 @@
+// src/components/Home/EventsSection.jsx
 import { useNavigate } from 'react-router-dom'
 import { COLORS } from '../../constants/colors'
+import { APP_DATA } from '../../data/appData'
 
 const EventsSection = () => {
   const navigate = useNavigate()
+  const eventCategories = APP_DATA.events.categories
 
-  const eventCategories = [
-    {
-      icon: '🛠️',
-      title: 'Workshops',
-      description: 'Hands-on learning',
-      route: '/events/workshops'
-    },
-    {
-      icon: '🏆',
-      title: 'Competitions',
-      description: 'Technical challenges',
-      route: '/events/competitions'
-    },
-    {
-      icon: '🎤',
-      title: 'Seminars',
-      description: 'Expert talks',
-      route: '/events/seminars'
-    },
-    {
-      icon: '📚',
-      title: 'Training',
-      description: 'Skill development',
-      route: '/events/training'
-    }
-  ]
+  // Get enabled categories only
+  const enabledCategories = Object.entries(eventCategories)
+    .filter(([key, category]) => category.enabled)
+    .map(([key, category]) => ({
+      key,
+      ...category,
+      route: `/events/${key}`
+    }))
 
   return (
     <section id="events" className={`min-h-screen ${COLORS.primary.bg} px-4 ${COLORS.layout.section}`}>
@@ -43,15 +28,15 @@ const EventsSection = () => {
 
         {/* Event Categories */}
         <div className={`${COLORS.layout.grid.cols4} ${COLORS.layout.grid.gap} max-w-6xl mx-auto`}>
-          {eventCategories.map((category, index) => (
+          {enabledCategories.map((category) => (
             <div 
-              key={index}
+              key={category.key}
               className={`text-center p-6 sm:p-8 ${COLORS.effects.glass} ${COLORS.effects.roundedLg} ${COLORS.interactive.cardHover} group cursor-pointer transition-all duration-300 hover:scale-105`}
               onClick={() => navigate(category.route)}
             >
               <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">{category.icon}</div>
               <h4 className={`${COLORS.primary.text} font-bold text-sm sm:text-base md:text-lg mb-1 sm:mb-2 group-hover:${COLORS.accent.primaryText} transition-colors`}>
-                {category.title}
+                {category.name}
               </h4>
               <p className={`${COLORS.primary.textMuted} ${COLORS.typography.body.sm}`}>
                 {category.description}
@@ -59,8 +44,6 @@ const EventsSection = () => {
             </div>
           ))}
         </div>
-
-        
       </div>
     </section>
   )

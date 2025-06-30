@@ -1,13 +1,17 @@
+// src/components/Home/AboutSection.jsx
 import { COLORS } from '../../constants/colors'
 import Image from '../ui/Image'
+import { APP_DATA } from '../../data/appData'
 
 const AboutSection = () => {
+  const siteData = APP_DATA.site
+  
   return (
     <section id="about" className={`min-h-screen ${COLORS.primary.bgSecondary} px-4 ${COLORS.layout.section}`}>
       <div className={`${COLORS.layout.container} ${COLORS.layout.section}`}>
         <div className={`text-center ${COLORS.layout.spacing.xl}`}>
           <h2 className={`${COLORS.typography.heading.xl} ${COLORS.primary.text} mb-4 sm:mb-6`}>
-            About <span className={COLORS.accent.primaryText}>IETE-PCE</span>
+            About <span className={COLORS.accent.primaryText}>{siteData.name}</span>
           </h2>
         </div>
         
@@ -34,7 +38,7 @@ const AboutSection = () => {
           <div className="relative order-1 lg:order-2">
             <div className="max-w-lg mx-auto">
               <Image 
-                imagePath="about.main"
+                imageData={siteData.about}
                 containerClassName="transition-transform duration-300 hover:scale-105"
               />
             </div>

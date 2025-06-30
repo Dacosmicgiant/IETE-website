@@ -1,10 +1,12 @@
+// src/pages/Events.jsx
 import { useNavigate } from 'react-router-dom'
 import { COLORS } from '../constants/colors'
-import { eventsData, eventCategories, getEventsByCategory } from '../data/eventsData'
+import { APP_DATA, getEnabledEvents } from '../data/appData'
 import Image from '../components/ui/Image'
 
 const Events = () => {
   const navigate = useNavigate()
+  const eventCategories = APP_DATA.events.categories
 
   const formatDate = (dateString) => {
     const date = new Date(dateString)
@@ -22,10 +24,10 @@ const Events = () => {
         className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 ${COLORS.interactive.cardHover} cursor-pointer group`}
         onClick={() => navigate(`/events/${type}/${event.id}`)}
       >
-        {/* Event Image using centralized image system */}
+        {/* Event Image using new image system */}
         <div className="mb-4">
           <Image 
-            imagePath={event.imageKey}
+            imageData={event.image}
             containerClassName="group-hover:scale-105 transition-transform duration-300"
           />
         </div>
@@ -50,9 +52,11 @@ const Events = () => {
             {event.title}
           </h3>
 
-          <p className={`${COLORS.primary.textMuted} text-sm line-clamp-2`}>
-            {event.description}
-          </p>
+          {event.description && (
+            <p className={`${COLORS.primary.textMuted} text-sm line-clamp-2`}>
+              {event.description}
+            </p>
+          )}
 
           {/* Event Tags */}
           {event.tags && (
@@ -73,11 +77,13 @@ const Events = () => {
           <div className="flex items-center justify-between text-xs">
             <div className="flex items-center space-x-4">
               <span className={`${COLORS.primary.textSecondary} flex items-center`}>
-                🕒 {event.time.split(' - ')[0]}
+                🕒 {event.time}
               </span>
-              <span className={`${COLORS.primary.textSecondary} flex items-center`}>
-                📍 {event.venue}
-              </span>
+              {event.venue && (
+                <span className={`${COLORS.primary.textSecondary} flex items-center`}>
+                  📍 {event.venue}
+                </span>
+              )}
             </div>
             <button className={`text-xs ${COLORS.accent.primaryText} font-medium group-hover:underline`}>
               Learn More →
@@ -106,7 +112,7 @@ const Events = () => {
   }
 
   const CategorySection = ({ type, title, description }) => {
-    const events = getEventsByCategory(type).slice(0, 3) // Show only first 3 enabled events
+    const events = getEnabledEvents(type).slice(0, 3) // Show only first 3 enabled events
     
     // Don't render if category is disabled or no events
     if (!eventCategories[type]?.enabled || events.length === 0) {

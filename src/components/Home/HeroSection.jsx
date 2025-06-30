@@ -1,7 +1,11 @@
+// src/components/Home/HeroSection.jsx
 import { COLORS } from '../../constants/colors'
 import Image from '../ui/Image'
+import { APP_DATA } from '../../data/appData'
 
 const HeroSection = () => {
+  const siteData = APP_DATA.site
+  
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
     if (element) {
@@ -26,11 +30,11 @@ const HeroSection = () => {
             
             <div>
               <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-4 sm:mb-6 ${COLORS.primary.text} tracking-tight leading-tight`}>
-                IETE-PCE
+                {siteData.name}
               </h1>
               
               <h2 className={`text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium mb-4 sm:mb-6 ${COLORS.primary.textSecondary} leading-relaxed`}>
-                The Institution of Electronics and <span className={`${COLORS.accent.primaryText} font-semibold`}>Telecommunication Engineers</span>
+                {siteData.fullName}
               </h2>
             </div>
             
@@ -44,7 +48,7 @@ const HeroSection = () => {
                 onClick={() => scrollToSection('join')}
                 className={`group w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 ${COLORS.interactive.buttonPrimary} ${COLORS.effects.rounded} sm:${COLORS.effects.roundedLg} font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25`}
               >
-                Join IETE-PCE
+                Join {siteData.name}
                 <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300 inline-block">→</span>
               </button>
               <button 
@@ -59,7 +63,7 @@ const HeroSection = () => {
           {/* Right Section - Hero Image */}
           <div className={`${COLORS.layout.spacing.md} order-1 lg:order-2`}>
             <Image 
-              imagePath="hero.main"
+              imageData={siteData.hero}
               containerClassName="transition-transform duration-300 hover:scale-[1.02]"
             />
           </div>

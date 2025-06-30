@@ -1,23 +1,21 @@
+// src/pages/Committee.jsx
 import { COLORS } from '../constants/colors'
 import Image from '../components/ui/Image'
-import { 
-  committeeMembers, 
-  combinedMembers, 
-  committeeConfig,
-  getAllMembersOrdered 
-} from '../data/committeeData'
+import { APP_DATA, getEnabledCommitteeMembers } from '../data/appData'
 
 const Committee = () => {
-  const allMembers = getAllMembersOrdered()
-  const config = committeeConfig.displaySettings
+  const allMembers = getEnabledCommitteeMembers()
+  const config = APP_DATA.config.committee
+  const groupPhoto = APP_DATA.committee.groupPhoto
+  const combinedMembers = APP_DATA.committee.combinedMembers
 
   // Individual Member Card Component
   const IndividualMemberCard = ({ member }) => (
     <div className="group text-center">
-      {/* Member Photo using centralized image system */}
+      {/* Member Photo using new image system */}
       <div className="max-w-xs mx-auto mb-4 sm:mb-6">
         <Image 
-          imagePath={member.imageKey}
+          imageData={member.image}
           containerClassName="group-hover:scale-105 transition-transform duration-300"
         />
       </div>
@@ -27,9 +25,12 @@ const Committee = () => {
         <h4 className={`${COLORS.typography.heading.sm} mb-1 sm:mb-2 leading-tight`}>
           {member.name}
         </h4>
-        <p className={`${COLORS.accent.primaryText} font-semibold text-sm sm:text-base leading-tight mb-2`}>
-          {member.position}
-        </p>
+        
+        {member.position && (
+          <p className={`${COLORS.accent.primaryText} font-semibold text-sm sm:text-base leading-tight mb-2`}>
+            {member.position}
+          </p>
+        )}
         
         {member.year && (
           <p className={`${COLORS.primary.textMuted} ${COLORS.typography.body.sm} mb-2`}>
@@ -93,10 +94,10 @@ const Committee = () => {
   // Combined Member Card Component
   const CombinedMemberCard = ({ combinedData }) => (
     <div className="group text-center">
-      {/* Combined Photo using centralized image system */}
+      {/* Combined Photo using new image system */}
       <div className="max-w-xs mx-auto mb-4 sm:mb-6">
         <Image 
-          imagePath={combinedData.imageKey}
+          imageData={combinedData.image}
           containerClassName="group-hover:scale-105 transition-transform duration-300"
         />
       </div>
@@ -114,9 +115,12 @@ const Committee = () => {
             <h4 className={`${COLORS.typography.heading.sm} mb-1 leading-tight`}>
               {member.name}
             </h4>
-            <p className={`${COLORS.accent.primaryText} font-semibold text-sm sm:text-base leading-tight mb-1`}>
-              {member.position}
-            </p>
+            
+            {member.position && (
+              <p className={`${COLORS.accent.primaryText} font-semibold text-sm sm:text-base leading-tight mb-1`}>
+                {member.position}
+              </p>
+            )}
             
             {member.year && (
               <p className={`${COLORS.primary.textMuted} ${COLORS.typography.body.sm} mb-2`}>
@@ -146,24 +150,26 @@ const Committee = () => {
       <div className="w-full py-12 sm:py-16">
 
         {/* Committee Group Photo - Full Width with Height Constraint */}
-        <div className="mb-16 sm:mb-20">
-          <Image 
-            imagePath={committeeConfig.groupPhoto.imageKey}
-            containerClassName="max-h-[70vh]"
-          />
-          {committeeConfig.groupPhoto.title && (
-            <div className="text-center mt-4">
-              <h3 className={`${COLORS.typography.heading.md} ${COLORS.primary.text} mb-2`}>
-                {committeeConfig.groupPhoto.title}
-              </h3>
-              {committeeConfig.groupPhoto.description && (
-                <p className={`${COLORS.primary.textMuted} text-sm`}>
-                  {committeeConfig.groupPhoto.description}
-                </p>
-              )}
-            </div>
-          )}
-        </div>
+        {groupPhoto && (
+          <div className="mb-16 sm:mb-20">
+            <Image 
+              imageData={groupPhoto}
+              containerClassName="max-h-[70vh]"
+            />
+            {groupPhoto.title && (
+              <div className="text-center mt-4">
+                <h3 className={`${COLORS.typography.heading.md} ${COLORS.primary.text} mb-2`}>
+                  {groupPhoto.title}
+                </h3>
+                {groupPhoto.description && (
+                  <p className={`${COLORS.primary.textMuted} text-sm`}>
+                    {groupPhoto.description}
+                  </p>
+                )}
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Committee Members Grid - Full Width */}
         <div className="mb-12">
@@ -184,7 +190,7 @@ const Committee = () => {
             ))}
             
             {/* Render combined cards if enabled */}
-            {config.showCombinedMembers && combinedMembers.map((combinedData) => (
+            {config.showCombinedMembers && combinedMembers.filter(cm => cm.enabled !== false).map((combinedData) => (
               <CombinedMemberCard key={combinedData.id} combinedData={combinedData} />
             ))}
           </div>

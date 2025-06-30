@@ -1,13 +1,16 @@
+// src/components/Header.jsx
 import { useState, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { COLORS } from '../constants/colors'
 import Image from './ui/Image'
+import { APP_DATA } from '../data/appData'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
   const navigate = useNavigate()
   const location = useLocation()
+  const siteData = APP_DATA.site
 
   const navigation = [
     { name: 'Home', href: '/#home', id: 'home', type: 'scroll' },
@@ -97,19 +100,21 @@ const Header = () => {
             className="flex items-center space-x-4 cursor-pointer"
             onClick={() => navigate('/')}
           >
-            {/* Logo using centralized image system */}
+            {/* Logo using new image system */}
             <div className="w-12 h-12">
               <Image 
-                imagePath="logo"
+                imageData={siteData.logo}
                 containerClassName="group-hover:scale-105 transition-transform duration-300"
                 showFallbackText={false}
               />
             </div>
             <div>
               <h1 className={`text-2xl font-bold ${COLORS.primary.text}`}>
-                IETE-PCE
+                {siteData.name}
               </h1>
-              <p className={`text-sm ${COLORS.primary.textMuted} hidden sm:block`}>Institution of Electronics and Telecommunication Engineers</p>
+              <p className={`text-sm ${COLORS.primary.textMuted} hidden sm:block`}>
+                {siteData.fullName}
+              </p>
             </div>
           </div>
 

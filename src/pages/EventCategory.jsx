@@ -1,14 +1,15 @@
+// src/pages/EventCategory.jsx
 import { useParams, useNavigate } from 'react-router-dom'
 import { COLORS } from '../constants/colors'
-import { eventsData, eventCategories, getEventsByCategory } from '../data/eventsData'
+import { APP_DATA, getEnabledEvents } from '../data/appData'
 import Image from '../components/ui/Image'
 
 const EventCategory = () => {
   const { type } = useParams()
   const navigate = useNavigate()
 
-  const categoryInfo = eventCategories[type]
-  const events = getEventsByCategory(type) // Only get enabled events
+  const categoryInfo = APP_DATA.events.categories[type]
+  const events = getEnabledEvents(type) // Only get enabled events
 
   if (!categoryInfo || !categoryInfo.enabled) {
     return (
@@ -39,10 +40,10 @@ const EventCategory = () => {
         className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 ${COLORS.interactive.cardHover} cursor-pointer group`}
         onClick={() => navigate(`/events/${type}/${event.id}`)}
       >
-        {/* Event Image using centralized image system */}
+        {/* Event Image using new image system */}
         <div className="mb-4">
           <Image 
-            imagePath={event.imageKey}
+            imageData={event.image}
             containerClassName="group-hover:scale-105 transition-transform duration-300"
           />
         </div>
@@ -67,12 +68,14 @@ const EventCategory = () => {
             {event.title}
           </h3>
 
-          <p className={`${COLORS.primary.textMuted} text-sm line-clamp-3`}>
-            {event.description}
-          </p>
+          {event.description && (
+            <p className={`${COLORS.primary.textMuted} text-sm line-clamp-3`}>
+              {event.description}
+            </p>
+          )}
 
           {/* Event Tags */}
-          {event.tags && (
+          {event.tags && event.tags.length > 0 && (
             <div className="flex flex-wrap gap-1">
               {event.tags.slice(0, 4).map((tag, index) => (
                 <span key={index} className={`text-xs px-2 py-1 ${COLORS.effects.rounded} bg-slate-700/30 ${COLORS.primary.textLight}`}>
@@ -93,17 +96,21 @@ const EventCategory = () => {
               <span className={`${COLORS.primary.textSecondary} flex items-center`}>
                 🕒 {event.time}
               </span>
-              <span className={`${COLORS.primary.textSecondary} flex items-center`}>
-                📍 {event.venue}
-              </span>
+              {event.venue && (
+                <span className={`${COLORS.primary.textSecondary} flex items-center`}>
+                  📍 {event.venue}
+                </span>
+              )}
             </div>
             
             {/* Type-specific information */}
             {type === 'workshops' && (
               <div className="flex items-center justify-between">
-                <span className={`${COLORS.primary.textSecondary}`}>
-                  👨‍🏫 {event.instructor}
-                </span>
+                {event.instructor && (
+                  <span className={`${COLORS.primary.textSecondary}`}>
+                    👨‍🏫 {event.instructor}
+                  </span>
+                )}
                 {event.fee && (
                   <span className={`${COLORS.accent.primaryText} font-medium`}>
                     💰 {event.fee}
@@ -114,20 +121,26 @@ const EventCategory = () => {
             
             {type === 'competitions' && (
               <div className="flex items-center justify-between">
-                <span className={`${COLORS.primary.textSecondary}`}>
-                  💰 {event.prizes}
-                </span>
-                <span className={`${COLORS.primary.textSecondary}`}>
-                  📅 Deadline: {new Date(event.deadline).toLocaleDateString()}
-                </span>
+                {event.prizes && (
+                  <span className={`${COLORS.primary.textSecondary}`}>
+                    💰 {event.prizes}
+                  </span>
+                )}
+                {event.deadline && (
+                  <span className={`${COLORS.primary.textSecondary}`}>
+                    📅 Deadline: {new Date(event.deadline).toLocaleDateString()}
+                  </span>
+                )}
               </div>
             )}
             
             {type === 'seminars' && (
               <div className="flex items-center justify-between">
-                <span className={`${COLORS.primary.textSecondary}`}>
-                  🎤 {event.speaker}
-                </span>
+                {event.speaker && (
+                  <span className={`${COLORS.primary.textSecondary}`}>
+                    🎤 {event.speaker}
+                  </span>
+                )}
                 {event.capacity && event.registered && (
                   <span className={`${COLORS.primary.textSecondary}`}>
                     👥 {event.registered}/{event.capacity}
@@ -138,21 +151,44 @@ const EventCategory = () => {
             
             {type === 'training' && (
               <div className="flex items-center justify-between">
-                <span className={`${COLORS.primary.textSecondary}`}>
-                  👨‍💼 {event.trainer}
-                </span>
-                <span className={`${COLORS.primary.textSecondary}`}>
-                  ⏱️ {event.duration}
-                </span>
+                {event.trainer && (
+                  <span className={`${COLORS.primary.textSecondary}`}>
+                    👨‍💼 {event.trainer}
+                  </span>
+                )}
+                {event.duration && (
+                  <span className={`${COLORS.primary.textSecondary}`}>
+                    ⏱️ {event.duration}
+                  </span>
+                )}
               </div>
             )}
           </div>
 
-          {/* Registration Status and Button */}
-          <div className="flex items-center justify-between pt-2">
+          {/* Additional Info Row */}
+          <div className="flex items-center justify-between text-xs pt-2">
+            {/* Left side - extra info based on event type */}
+            <div className="flex items-center space-x-3">
+              {event.targetAudience && (
+                <span className={`${COLORS.primary.textLight}`}>
+                  👥 {event.targetAudience}
+                </span>
+              )}
+              {event.prerequisites && (
+                <span className={`${COLORS.primary.textLight}`}>
+                  📋 Prerequisites required
+                </span>
+              )}
+            </div>
+            
+            {/* Right side - action button */}
             <button className={`text-xs ${COLORS.accent.primaryText} font-medium group-hover:underline`}>
               View Details →
             </button>
+          </div>
+
+          {/* Registration Status and Button */}
+          <div className="flex items-center justify-between pt-2 border-t border-slate-700/30">
             <div className="flex items-center space-x-2">
               {event.capacity && event.registered && (
                 <span className={`text-xs ${
@@ -167,10 +203,15 @@ const EventCategory = () => {
                    'Available'}
                 </span>
               )}
-              <button className={`text-xs ${COLORS.interactive.buttonPrimary} px-3 py-1 rounded-full`}>
-                Register Now
-              </button>
+              {event.registrationDeadline && (
+                <span className={`text-xs ${COLORS.primary.textLight}`}>
+                  Deadline: {new Date(event.registrationDeadline).toLocaleDateString()}
+                </span>
+              )}
             </div>
+            <button className={`text-xs ${COLORS.interactive.buttonPrimary} px-3 py-1 rounded-full hover:scale-105 transition-transform`}>
+              Register Now
+            </button>
           </div>
         </div>
       </div>
@@ -195,16 +236,47 @@ const EventCategory = () => {
         {/* Category Header */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center space-x-4 mb-6">
+            <div className="text-6xl">{categoryInfo.icon}</div>
             <div className="text-center">
               <h1 className={`${COLORS.typography.heading.xl} ${COLORS.primary.text} mb-3`}>
                 {categoryInfo.name}
               </h1>
-              <p className={`${COLORS.primary.textMuted} text-lg`}>
+              <p className={`${COLORS.primary.textMuted} text-lg max-w-2xl`}>
                 {categoryInfo.description}
               </p>
             </div>
           </div>
         </div>
+
+        {/* Category Stats */}
+        {events.length > 0 && (
+          <div className="flex items-center justify-center space-x-8 mb-12">
+            <div className="text-center">
+              <div className={`text-2xl font-bold ${COLORS.accent.primaryText}`}>
+                {events.length}
+              </div>
+              <div className={`text-sm ${COLORS.primary.textMuted}`}>
+                Available {categoryInfo.name}
+              </div>
+            </div>
+            <div className="text-center">
+              <div className={`text-2xl font-bold ${COLORS.accent.primaryText}`}>
+                {events.filter(e => new Date(e.date) >= new Date()).length}
+              </div>
+              <div className={`text-sm ${COLORS.primary.textMuted}`}>
+                Upcoming Events
+              </div>
+            </div>
+            <div className="text-center">
+              <div className={`text-2xl font-bold ${COLORS.accent.primaryText}`}>
+                {events.filter(e => e.capacity && e.registered && e.registered < e.capacity).length || events.length}
+              </div>
+              <div className={`text-sm ${COLORS.primary.textMuted}`}>
+                Open for Registration
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Events Grid */}
         {events.length > 0 ? (
@@ -215,19 +287,53 @@ const EventCategory = () => {
           </div>
         ) : (
           <div className={`text-center p-12 ${COLORS.effects.glass} ${COLORS.effects.roundedLg}`}>
-            <div className="text-4xl mb-4">📅</div>
+            <div className="text-6xl mb-6">{categoryInfo.icon}</div>
             <h3 className={`${COLORS.typography.heading.lg} ${COLORS.primary.text} mb-4`}>
-              No Events Found
+              No {categoryInfo.name} Found
             </h3>
-            <p className={`${COLORS.primary.textMuted} mb-6`}>
-              There are currently no events in this category. Check back later for updates!
+            <p className={`${COLORS.primary.textMuted} mb-6 max-w-md mx-auto`}>
+              There are currently no {categoryInfo.name.toLowerCase()} available. Check back later for exciting new events!
             </p>
-            <button 
-              onClick={() => navigate('/events')}
-              className={`${COLORS.interactive.buttonPrimary} px-6 py-3 ${COLORS.effects.roundedLg}`}
-            >
-              Explore Other Events
-            </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button 
+                onClick={() => navigate('/events')}
+                className={`${COLORS.interactive.buttonPrimary} px-6 py-3 ${COLORS.effects.roundedLg}`}
+              >
+                Explore Other Events
+              </button>
+              <button 
+                onClick={() => navigate('/')}
+                className={`${COLORS.interactive.buttonSecondary} px-6 py-3 ${COLORS.effects.roundedLg}`}
+              >
+                Back to Home
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Call to Action */}
+        {events.length > 0 && (
+          <div className={`text-center mt-16 p-8 ${COLORS.effects.glass} ${COLORS.effects.roundedLg}`}>
+            <h3 className={`${COLORS.typography.heading.md} ${COLORS.primary.text} mb-4`}>
+              Ready to Join?
+            </h3>
+            <p className={`${COLORS.primary.textMuted} mb-6 max-w-md mx-auto`}>
+              Don't miss out on these amazing {categoryInfo.name.toLowerCase()}. Register now and enhance your skills!
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button 
+                onClick={() => navigate('/events')}
+                className={`${COLORS.interactive.buttonPrimary} px-6 py-3 ${COLORS.effects.roundedLg}`}
+              >
+                Browse All Events
+              </button>
+              <button 
+                onClick={() => navigate('/committee')}
+                className={`${COLORS.interactive.buttonSecondary} px-6 py-3 ${COLORS.effects.roundedLg}`}
+              >
+                Contact Organizers
+              </button>
+            </div>
           </div>
         )}
 

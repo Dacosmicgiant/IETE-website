@@ -1,17 +1,12 @@
+// src/components/Home/CommitteeSection.jsx
 import { COLORS } from '../../constants/colors'
 import Image from '../ui/Image'
-import { 
-  committeeMembers, 
-  combinedMembers, 
-  committeeConfig, 
-  getExecutiveMembers,
-  getAllMembersOrdered 
-} from '../../data/committeeData'
+import { APP_DATA, getExecutiveMembers } from '../../data/appData'
 
 const CommitteeSection = () => {
   // Get only executive members for home page (first 4)
   const executiveMembers = getExecutiveMembers().slice(0, 4)
-  const config = committeeConfig.displaySettings
+  const config = APP_DATA.config.committee
 
   return (
     <section id="committee" className={`min-h-screen ${COLORS.primary.bgSecondary} px-4 ${COLORS.layout.section}`}>
@@ -26,10 +21,10 @@ const CommitteeSection = () => {
         <div className={`${COLORS.layout.grid.cols4} ${COLORS.layout.grid.gap} max-w-4xl mx-auto`}>
           {executiveMembers.map((member) => (
             <div key={member.id} className="group text-center">
-              {/* Member Photo using centralized image system */}
+              {/* Member Photo using new image system */}
               <div className="max-w-xs mx-auto mb-3 sm:mb-4">
                 <Image 
-                  imagePath={member.imageKey}
+                  imageData={member.image}
                   containerClassName="group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -38,9 +33,12 @@ const CommitteeSection = () => {
                 <h4 className={`${COLORS.typography.heading.sm} mb-1 sm:mb-2`}>
                   {member.name}
                 </h4>
-                <p className={`${COLORS.accent.primaryText} font-semibold text-sm sm:text-base mb-2`}>
-                  {member.position}
-                </p>
+                
+                {member.position && (
+                  <p className={`${COLORS.accent.primaryText} font-semibold text-sm sm:text-base mb-2`}>
+                    {member.position}
+                  </p>
+                )}
                 
                 {config.showBios && member.bio && (
                   <p className={`${COLORS.primary.textMuted} text-xs mb-2 italic`}>

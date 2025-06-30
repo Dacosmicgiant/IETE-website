@@ -1,21 +1,22 @@
+// src/components/Home/FacultySection.jsx
 import { COLORS } from '../../constants/colors'
 import Image from '../ui/Image'
-import { facultyMembers, facultyConfig, getFacultyInHierarchy } from '../../data/facultyData'
+import { APP_DATA, getEnabledFaculty } from '../../data/appData'
 
 const FacultySection = () => {
-  const faculty = getFacultyInHierarchy()
-  const config = facultyConfig.displaySettings
+  const faculty = getEnabledFaculty()
+  const config = APP_DATA.config.faculty
 
   return (
     <section id="faculty" className={`min-h-screen ${COLORS.primary.bg} px-4 ${COLORS.layout.section}`}>
       <div className={`${COLORS.layout.container} ${COLORS.layout.section}`}>
         <div className="text-center mb-6 sm:mb-8">
           <h2 className={`${COLORS.typography.heading.xl} ${COLORS.primary.text} mb-2 sm:mb-3`}>
-            {facultyConfig.sectionTitle}
+            {config.sectionTitle}
           </h2>
-          {facultyConfig.sectionDescription && (
+          {config.sectionDescription && (
             <p className={`${COLORS.primary.textMuted} text-lg max-w-2xl mx-auto`}>
-              {facultyConfig.sectionDescription}
+              {config.sectionDescription}
             </p>
           )}
         </div>
@@ -27,10 +28,10 @@ const FacultySection = () => {
         } gap-8 sm:gap-12 lg:gap-16 max-w-6xl mx-auto`}>
           {faculty.map((member) => (
             <div key={member.id} className="group text-center">
-              {/* Faculty Photo using centralized image system */}
+              {/* Faculty Photo using new image system */}
               <div className="max-w-xs mx-auto mb-3 sm:mb-4">
                 <Image 
-                  imagePath={member.imageKey}
+                  imageData={member.image}
                   containerClassName="group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -39,9 +40,12 @@ const FacultySection = () => {
                 <h4 className={`${COLORS.typography.heading.sm} mb-1 sm:mb-2`}>
                   {member.name}
                 </h4>
-                <p className={`${COLORS.accent.primaryText} font-semibold text-sm sm:text-base mb-2`}>
-                  {config.showFullPositions && member.fullPosition ? member.fullPosition : member.position}
-                </p>
+                
+                {member.position && (
+                  <p className={`${COLORS.accent.primaryText} font-semibold text-sm sm:text-base mb-2`}>
+                    {config.showFullPositions && member.fullPosition ? member.fullPosition : member.position}
+                  </p>
+                )}
                 
                 {config.showQualifications && member.qualification && (
                   <p className={`${COLORS.primary.textMuted} text-xs sm:text-sm mb-1`}>
