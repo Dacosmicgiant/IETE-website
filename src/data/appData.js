@@ -145,6 +145,12 @@ export const APP_DATA = {
         name: "Akanksha Rakshe",
         position: "Treasurer",
         year: "Second Year",
+        image: {
+          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222211/3x4_qg9cyd.png',
+          alt: 'Akanksha Rakshe - Treasurer',
+          aspectRatio: '3:4',
+          fallback: '👤'
+        },
         enabled: true
       },
       {
@@ -350,6 +356,12 @@ export const APP_DATA = {
           aspectRatio: '16:9',
           fallback: '🏆'
         },
+        detailImage: {
+          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222106/1x1_of94b1.png',
+          alt: 'Circuit Design Challenge',
+          aspectRatio: '1:1',
+          fallback: '🏆'
+        },
         enabled: true
       },
       {
@@ -394,6 +406,12 @@ export const APP_DATA = {
           aspectRatio: '16:9',
           fallback: '🎤'
         },
+        detailImage: {
+          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222106/1x1_of94b1.png',
+          alt: 'Future of Quantum Computing Seminar',
+          aspectRatio: '1:1',
+          fallback: '🎤'
+        },
         enabled: true
       },
       {
@@ -432,6 +450,18 @@ export const APP_DATA = {
         trainer: "Ms. Kavya Reddy",
         certification: "IETE Certificate",
         fee: "₹300",
+        image: {
+          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222428/16x9_buhwcj.png',
+          alt: 'Communication Skills Training',
+          aspectRatio: '16:9',
+          fallback: '📚'
+        },
+        detailImage: {
+          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222106/1x1_of94b1.png',
+          alt: 'Communication Skills Training Details',
+          aspectRatio: '1:1',
+          fallback: '📚'
+        },
         enabled: true
       },
       {
@@ -466,7 +496,7 @@ export const APP_DATA = {
   // Configuration Settings
   config: {
     faculty: {
-      showQualifications: true,
+      showQualifications: true, //false
       showExperience: true,
       showEmails: false,
       showPhones: false,
@@ -483,7 +513,7 @@ export const APP_DATA = {
     committee: {
       showEmails: false,
       showPhones: false,
-      showBios: true,
+      showBios: true, //false
       showSpecializations: true,
       showAchievements: false,
       showSocialLinks: false,
