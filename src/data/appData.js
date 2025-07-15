@@ -85,7 +85,7 @@ export const APP_DATA = {
   // Committee Members - All fields are optional except name
   committee: {
     groupPhoto: {
-      url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222428/16x9_buhwcj.png',
+      url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752391600/COREE_mjgrza.jpg',
       alt: 'IETE-PCE Committee Team Photo',
       aspectRatio: '16:9',
       fallback: '📸',
