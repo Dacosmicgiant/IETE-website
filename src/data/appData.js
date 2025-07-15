@@ -85,7 +85,7 @@ export const APP_DATA = {
   // Committee Members - All fields are optional except name
   committee: {
     groupPhoto: {
-      url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222428/16x9_buhwcj.png',
+      url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752391600/COREE_mjgrza.jpg',
       alt: 'IETE-PCE Committee Team Photo',
       aspectRatio: '16:9',
       fallback: '📸',
@@ -106,7 +106,7 @@ export const APP_DATA = {
         achievements: ["Best Student Leader 2024", "IEEE Young Professional Award"],
         linkedIn: "https://linkedin.com/in/saniya-mahadik",
         image: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222211/3x4_qg9cyd.png',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752390952/Saniya_Mahadik_flrvje.jpg',
           alt: 'Saniya Mahadik - President',
           aspectRatio: '3:4',
           fallback: '👤'
@@ -120,7 +120,7 @@ export const APP_DATA = {
         year: "Third Year",
         bio: "Supporting the chapter's growth and organizing technical events.",
         image: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222211/3x4_qg9cyd.png',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752390951/Shravani_Margaj_ijzeh6.jpg',
           alt: 'Shravani Margaj - Vice President',
           aspectRatio: '3:4',
           fallback: '👤'
@@ -133,7 +133,7 @@ export const APP_DATA = {
         position: "Secretary",
         specialization: "Communication Systems",
         image: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222211/3x4_qg9cyd.png',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752390951/Riddhi_Samarth_zphwc5.jpg',
           alt: 'Riddhi Samarth - Secretary',
           aspectRatio: '3:4',
           fallback: '👤'
@@ -146,7 +146,7 @@ export const APP_DATA = {
         position: "Treasurer",
         year: "Second Year",
         image: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222211/3x4_qg9cyd.png',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752390971/Akanksha_Rakshe_r8mgdr.jpg',
           alt: 'Akanksha Rakshe - Treasurer',
           aspectRatio: '3:4',
           fallback: '👤'
@@ -157,6 +157,13 @@ export const APP_DATA = {
         id: 5,
         name: "Nikita Ekunde",
         position: "Publicity Head",
+        year: "Second Year",
+         image: {
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752390974/Nikita_Ekunde_atzbjm.jpg',
+          alt: 'Nikita Ekunde- Publicity Head',
+          aspectRatio: '3:4',
+          fallback: '👤'
+        },
         enabled: true
       },
       {
@@ -164,6 +171,14 @@ export const APP_DATA = {
         name: "Aditi Patil",
         position: "Content Head",
         year: "Second Year",
+        image: {
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752390970/Aditi_Patil_jbchls.jpg',
+          alt: 'Aditi Patil - Content Head',
+          aspectRatio: '3:4',
+          fallback: '👤'
+        },
+        
+        
         enabled: true
       },
       {
@@ -171,6 +186,12 @@ export const APP_DATA = {
         name: "Chinmay Dabholkar",
         position: "Graphics Head",
         specialization: "Design & Multimedia",
+        image: {
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752390972/Chinmay_Dabholkar_taozi5.jpg',
+          alt: 'Chinmay Dabholkar - Graphics Head',
+          aspectRatio: '3:4',
+          fallback: '👤'
+        },
         enabled: true
       },
       {
@@ -179,12 +200,24 @@ export const APP_DATA = {
         position: "Technical Head",
         year: "Third Year",
         bio: "Leading technical workshops and innovation projects.",
+        image: {
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752390952/Aayush_Gupta_wjroqw.jpg',
+          alt: 'Aayush Gupta - Technical Head',
+          aspectRatio: '3:4',
+          fallback: '👤'
+        },
         enabled: true
       },
       {
         id: 9,
         name: "Reva Patil",
         position: "Coordinator Nominated Member",
+        image: {
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752390950/Reva_Patil_iyq8do.jpg',
+          alt: 'Reva Patil - Coordinator Nominated Member',
+          aspectRatio: '3:4',
+          fallback: '👤'
+        },
         enabled: true
       }
     ],
