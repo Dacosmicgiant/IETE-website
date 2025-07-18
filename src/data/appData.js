@@ -13,7 +13,7 @@ export const APP_DATA = {
       fallback: '🏢'
     },
     hero: {
-      url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222428/16x9_buhwcj.png',
+      url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752391267/iete_full_y0ia3p.jpg',
       alt: 'IETE-PCE Campus and Innovation',
       aspectRatio: '16:9',
       fallback: '🖼️'
