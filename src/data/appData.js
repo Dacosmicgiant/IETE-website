@@ -219,6 +219,18 @@ export const APP_DATA = {
           fallback: '👤'
         },
         enabled: true
+      },
+      {
+        id: 10,
+        name: "Vansh Katkar",
+        position: "Satellite Club Head",
+        image: {
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752392789/Vansh_Katkar_kofpjq.jpg',
+          alt: 'Vansh Katkar-Satellite Club Head',
+          aspectRatio: '3:4',
+          fallback: '👤'
+        },
+        enabled: true
       }
     ],
     combinedMembers: [
@@ -284,7 +296,7 @@ export const APP_DATA = {
     workshops: [
       {
         id: 1,
-        title: "Introduction to IoT Development", // Required
+        title: "Innogration of IOT ", // Required
         date: "2025-07-15", // Required
         time: "10:00 AM - 4:00 PM", // Required
         description: "Learn to build IoT applications using Arduino and sensors. Hands-on experience with real projects.",
@@ -303,7 +315,7 @@ export const APP_DATA = {
         targetAudience: "2nd year and above",
         outcomes: ["Build working IoT prototypes", "Understand sensor interfacing", "Learn Arduino programming"],
         image: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222428/16x9_buhwcj.png',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095083/Innogration_ddmusa.jpg',
           alt: 'Introduction to IoT Development Workshop',
           aspectRatio: '16:9',
           fallback: '🛠️'
@@ -332,7 +344,7 @@ export const APP_DATA = {
         prerequisites: "Circuit design basics",
         tags: ["PCB", "Electronics", "Design", "Advanced"],
         image: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222428/16x9_buhwcj.png',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095421/PCB_Design_c9nshr.jpg',
           alt: 'PCB Design Workshop',
           aspectRatio: '16:9',
           fallback: '🛠️'
@@ -374,17 +386,17 @@ export const APP_DATA = {
     competitions: [
       {
         id: 1,
-        title: "Circuit Design Challenge",
-        date: "2025-08-10",
-        time: "9:00 AM - 6:00 PM",
+        title: "Circuit Craft",
+        date: "2025-01-24",
+        time: "2:00 AM - 5:00 PM",
         description: "Design innovative electronic circuits to solve real-world problems. Cash prizes for winners.",
         venue: "Main Auditorium",
-        prizes: "₹50,000 Total Prize Pool",
-        registrationFee: "₹500 per team",
+        prizes: "₹3000 Total Prize Pool",
+        registrationFee: "₹210 per team",
         teamSize: "2-4 members",
         deadline: "2025-08-03",
         image: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222428/16x9_buhwcj.png',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095536/Circuir_craft_kks4em.jpg',
           alt: 'Circuit Design Challenge',
           aspectRatio: '16:9',
           fallback: '🏆'
@@ -399,7 +411,7 @@ export const APP_DATA = {
       },
       {
         id: 2,
-        title: "Quick Quiz",
+        title: "Technical Quiz",
         date: "2025-08-15",
         time: "4:00 PM - 5:00 PM",
         description: "Test your electronics knowledge in this fun quiz competition.",
@@ -408,14 +420,14 @@ export const APP_DATA = {
         teamSize: "Individual",
         tags: ["Quiz", "Electronics", "Competition"],
         image: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222428/16x9_buhwcj.png',
-          alt: 'Quick Quiz Competition',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095122/Tech_Quiz_weviyp.jpg',
+          alt: 'Technical Quiz',
           aspectRatio: '16:9',
           fallback: '🏆'
         },
         detailImage: {
           url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222106/1x1_of94b1.png',
-          alt: 'Quick Quiz Competition Details',
+          alt: 'Technical Quiz',
           aspectRatio: '1:1',
           fallback: '🏆'
         },
@@ -425,23 +437,23 @@ export const APP_DATA = {
     seminars: [
       {
         id: 1,
-        title: "Future of Quantum Computing",
-        date: "2025-07-18",
+        title: "Satalite Club Talk",
+        date: "2024-09-23",
         time: "3:00 PM - 5:00 PM",
-        description: "Exploring quantum computing applications in telecommunications and electronics.",
+        description: "A technical talk hosted by the Satellite Club to explore advancements and opportunities in space technology and satellite communication.",
         venue: "Main Auditorium",
-        speaker: "Dr. Vikram Singh, IIT Delhi",
+        speaker: "Ms Leena Bokil",
         attendance: "Free for all students",
-        topics: ["Quantum Algorithms", "Hardware Challenges", "Industry Applications"],
+        topics: [, "Hardware Challenges", "Industry Applications"],
         image: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222428/16x9_buhwcj.png',
-          alt: 'Future of Quantum Computing Seminar',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095378/satalite_club_talk_xmkus2.jpg',
+          alt: 'Satalite Club Talk',
           aspectRatio: '16:9',
           fallback: '🎤'
         },
         detailImage: {
           url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222106/1x1_of94b1.png',
-          alt: 'Future of Quantum Computing Seminar',
+          alt: 'Satalite Club Talk',
           aspectRatio: '1:1',
           fallback: '🎤'
         },
@@ -476,22 +488,22 @@ export const APP_DATA = {
     training: [
       {
         id: 1,
-        title: "Communication Skills",
-        date: "2025-07-20",
-        time: "9:00 AM - 1:00 PM",
-        description: "Enhance your technical communication skills for better career prospects.",
+        title: "Industrial Visit",
+        date: "2025-03-8",
+        time: "12:00 AM - 5:00 PM",
+        description: "A professional industrial visit organized by the IETE Committee to bridge academic learning with real-world industry exposure..",
         trainer: "Ms. Kavya Reddy",
         certification: "IETE Certificate",
         fee: "₹300",
         image: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222428/16x9_buhwcj.png',
-          alt: 'Communication Skills Training',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095402/Industrial_visit_tlxkop.jpg',
+          alt: 'Industrial Visit',
           aspectRatio: '16:9',
           fallback: '📚'
         },
         detailImage: {
           url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222106/1x1_of94b1.png',
-          alt: 'Communication Skills Training Details',
+          alt: 'Industrial Visit',
           aspectRatio: '1:1',
           fallback: '📚'
         },
