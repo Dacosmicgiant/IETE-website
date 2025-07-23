@@ -1,4 +1,6 @@
 import { COLORS } from '../constants/colors'
+import { APP_DATA } from '../data/appData'
+import Image from './ui/Image'
 
 const Footer = () => {
   const quickLinks = [
@@ -32,10 +34,17 @@ const Footer = () => {
           {/* About Section */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 sm:space-x-4 mb-6 sm:mb-8">
-              <div className={`${COLORS.accent.primary} p-2 sm:p-3 ${COLORS.effects.rounded}`}>
+              {/* <div className={`${COLORS.accent.primary} p-2 sm:p-3 ${COLORS.effects.rounded}`}>
                 <div className={`w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center font-bold text-slate-950 text-sm sm:text-base`}>
                   I
                 </div>
+              </div> */}
+              <div className="w-12 h-12">
+                <Image 
+                  imageData={APP_DATA.site.logo}
+                  containerClassName="group-hover:scale-105 transition-transform duration-300"
+                  showFallbackText={false}
+                />
               </div>
               <div>
                 <h3 className={`${COLORS.typography.heading.md} ${COLORS.primary.text}`}>IETE-PCE</h3>

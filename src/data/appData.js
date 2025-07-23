@@ -7,7 +7,7 @@ export const APP_DATA = {
     fullName: "Institution of Electronics and Telecommunication Engineers",
     description: "Excellence in Engineering",
     logo: {
-      url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1738169958/v1dlwdml8eme3h6eec8z.jpg',
+      url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095597/IETE_LOGO_Red_xirien.png',
       alt: 'IETE-PCE Logo',
       aspectRatio: '1:1',
       fallback: '🏢'
@@ -19,7 +19,7 @@ export const APP_DATA = {
       fallback: '🖼️'
     },
     about: {
-      url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222428/16x9_buhwcj.png',
+      url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753094048/IETE_About_r15bfs.jpg',
       alt: 'IETE Institution Building',
       aspectRatio: '4:3',
       fallback: '🖼️'
@@ -285,8 +285,8 @@ export const APP_DATA = {
         color: "purple",
         enabled: true
       },
-      training: {
-        name: "Training",
+      IV: {
+        name: "Industrial Visits",
         description: "Professional skill development and certification programs",
         icon: "📚",
         color: "emerald",
@@ -317,7 +317,7 @@ export const APP_DATA = {
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095083/Innogration_ddmusa.jpg',
           alt: 'Introduction to IoT Development Workshop',
-          aspectRatio: '16:9',
+          aspectRatio: '3:4',
           fallback: '🛠️'
         },
         detailImage: {
@@ -346,7 +346,7 @@ export const APP_DATA = {
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095421/PCB_Design_c9nshr.jpg',
           alt: 'PCB Design Workshop',
-          aspectRatio: '16:9',
+          aspectRatio: '3:4',
           fallback: '🛠️'
         },
         detailImage: {
@@ -371,7 +371,7 @@ export const APP_DATA = {
         image: {
           url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222428/16x9_buhwcj.png',
           alt: 'Basic Electronics Workshop',
-          aspectRatio: '16:9',
+          aspectRatio: '3:4',
           fallback: '🛠️'
         },
         detailImage: {
@@ -398,7 +398,7 @@ export const APP_DATA = {
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095536/Circuir_craft_kks4em.jpg',
           alt: 'Circuit Design Challenge',
-          aspectRatio: '16:9',
+          aspectRatio: '3:4',
           fallback: '🏆'
         },
         detailImage: {
@@ -420,9 +420,11 @@ export const APP_DATA = {
         teamSize: "Individual",
         tags: ["Quiz", "Electronics", "Competition"],
         image: {
+
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095122/Tech_Quiz_weviyp.jpg',
           alt: 'Technical Quiz',
           aspectRatio: '16:9',
+
           fallback: '🏆'
         },
         detailImage: {
@@ -446,9 +448,11 @@ export const APP_DATA = {
         attendance: "Free for all students",
         topics: [, "Hardware Challenges", "Industry Applications"],
         image: {
+
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095378/satalite_club_talk_xmkus2.jpg',
           alt: 'Satalite Club Talk',
           aspectRatio: '16:9',
+
           fallback: '🎤'
         },
         detailImage: {
@@ -473,7 +477,7 @@ export const APP_DATA = {
         image: {
           url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222428/16x9_buhwcj.png',
           alt: 'AI in Electronics Seminar',
-          aspectRatio: '16:9',
+          aspectRatio: '3:4',
           fallback: '🎤'
         },
         detailImage: {
@@ -485,7 +489,7 @@ export const APP_DATA = {
         enabled: true
       }
     ],
-    training: [
+    IV: [
       {
         id: 1,
         title: "Industrial Visit",
@@ -496,9 +500,11 @@ export const APP_DATA = {
         certification: "IETE Certificate",
         fee: "₹300",
         image: {
+
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095402/Industrial_visit_tlxkop.jpg',
           alt: 'Industrial Visit',
           aspectRatio: '16:9',
+
           fallback: '📚'
         },
         detailImage: {
@@ -524,7 +530,7 @@ export const APP_DATA = {
         image: {
           url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222428/16x9_buhwcj.png',
           alt: 'Leadership Workshop Training',
-          aspectRatio: '16:9',
+          aspectRatio: '3:4',
           fallback: '📚'
         },
         detailImage: {
@@ -570,7 +576,7 @@ export const APP_DATA = {
         workshops: true,
         competitions: true,
         seminars: true,
-        training: true
+        IV: true
       }
     }
   }
