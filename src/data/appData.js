@@ -226,7 +226,7 @@ export const APP_DATA = {
         id: "combined-nominated",
         title: "Additional Nominated Members",
         image: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222211/3x4_qg9cyd.png',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753096196/Narayan_Pratiksha_bsli4n.jpg',
           alt: 'Additional Nominated Members',
           aspectRatio: '3:4',
           fallback: '👥'

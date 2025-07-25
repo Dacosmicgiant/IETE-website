@@ -149,27 +149,31 @@ const Committee = () => {
     <div className={`min-h-screen ${COLORS.primary.bg} pt-20 px-4 sm:px-6 lg:px-8`}>
       <div className="w-full py-12 sm:py-16">
 
-        {/* Committee Group Photo - Full Width with Height Constraint */}
-        {groupPhoto && (
-          <div className="mb-16 sm:mb-20">
-            <Image 
-              imageData={groupPhoto}
-              containerClassName="max-h-[70vh]"
-            />
-            {groupPhoto.title && (
-              <div className="text-center mt-4">
-                <h3 className={`${COLORS.typography.heading.md} ${COLORS.primary.text} mb-2`}>
-                  {groupPhoto.title}
-                </h3>
-                {groupPhoto.description && (
-                  <p className={`${COLORS.primary.textMuted} text-sm`}>
-                    {groupPhoto.description}
-                  </p>
-                )}
-              </div>
-            )}
-          </div>
+        {/* Committee Group Photo - Full Width with 16:9 Aspect Ratio */}
+{/* Committee Group Photo - Full Width with 16:9 Aspect Ratio */}
+{/* Committee Group Photo - Full Width with 16:9 Aspect Ratio */}
+{groupPhoto && (
+  <div className="mb-16 sm:mb-20">
+    <div className="relative w-[50vw] h-[28.125vw] max-w-full mx-auto overflow-hidden">
+      <Image 
+        imageData={groupPhoto}
+        containerClassName="absolute inset-0 w-full h-full object-cover"
+      />
+    </div>
+    {groupPhoto.title && (
+      <div className="text-center mt-4">
+        <h3 className={`${COLORS.typography.heading.md} ${COLORS.primary.text} mb-2`}>
+          {groupPhoto.title}
+        </h3>
+        {groupPhoto.description && (
+          <p className={`${COLORS.primary.textMuted} text-sm`}>
+            {groupPhoto.description}
+          </p>
         )}
+      </div>
+    )}
+  </div>
+)}
 
         {/* Committee Members Grid - Full Width */}
         <div className="mb-12">
