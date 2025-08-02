@@ -30,7 +30,7 @@ export const APP_DATA = {
   faculty: [
     {
       id: 1,
-      name: "Dr. Faculty Name", // Only required field
+      name: "Dr. Avinash Vaidya", // Only required field
       position: "HOD",
       fullPosition: "Head of Department",
       department: "Electronics & Telecommunication Engineering",
@@ -45,8 +45,8 @@ export const APP_DATA = {
       officeHours: "Mon-Fri, 10:00 AM - 12:00 PM",
       courses: ["Advanced Digital Signal Processing", "VLSI Design Methodology", "Research Methodology"],
       image: {
-        url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222211/3x4_qg9cyd.png',
-        alt: 'Dr. Faculty Name - HOD',
+        url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1754114245/hod_swqhz5.png',
+        alt: 'Dr. Avinash Vaidya - HOD',
         aspectRatio: '3:4',
         fallback: '👤'
       },
@@ -54,12 +54,12 @@ export const APP_DATA = {
     },
     {
       id: 2,
-      name: "Dr. Faculty Name",
+      name: "Dr. Ameet Mehta",
       position: "Coordinator",
       bio: "Dedicated to fostering student development through IETE activities and industry connections.",
       image: {
-        url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222211/3x4_qg9cyd.png',
-        alt: 'Dr. Faculty Name - Coordinator',
+        url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1754114244/ameet_akec3m.png',
+        alt: 'Dr. Ameet Mehta - Coordinator',
         aspectRatio: '3:4',
         fallback: '👤'
       },
@@ -67,14 +67,14 @@ export const APP_DATA = {
     },
     {
       id: 3,
-      name: "Prof. Faculty Name",
+      name: "Prof. Shubham Thakur",
       position: "Co-Coordinator",
       qualification: "M.Tech in Electronics",
       experience: "8+ years",
       specializations: ["Microwave Engineering", "RF Circuit Design", "Internet of Things"],
       image: {
-        url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222211/3x4_qg9cyd.png',
-        alt: 'Prof. Faculty Name - Co-Coordinator',
+        url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1754114244/shubham_pymghn.jpg',
+        alt: 'Prof. Shubham Thakur - Co-Coordinator',
         aspectRatio: '3:4',
         fallback: '👤'
       },
