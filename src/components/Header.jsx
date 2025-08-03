@@ -100,14 +100,12 @@ const Header = () => {
             className="flex items-center space-x-4 cursor-pointer"
             onClick={() => navigate('/')}
           >
-            {/* Logo using new image system */}
-            <div className="w-12 h-12">
-              <Image 
-                imageData={siteData.logo}
-                containerClassName="group-hover:scale-105 transition-transform duration-300"
-                showFallbackText={false}
-              />
-            </div>
+            {/* Logo - Direct in flexbox */}
+            <img 
+              src={siteData.logo.src || siteData.logo.url} 
+              alt={siteData.logo.alt || siteData.name}
+              className="h-12 object-contain hover:scale-105 transition-transform duration-300"
+            />
             <div>
               <h1 className={`text-2xl font-bold ${COLORS.primary.text}`}>
                 {siteData.name}
@@ -126,7 +124,7 @@ const Header = () => {
                 <button
                   key={item.name}
                   onClick={() => handleNavigation(item)}
-                  className={`px-4 py-2 ${COLORS.effects.rounded} text-sm font-medium transition-all duration-300 ${
+                  className={`px-4 mx-1.5 py-2 text-sm font-medium transition-all duration-300 ${
                     activeSection === item.id
                       ? COLORS.header.navActive
                       : COLORS.header.navInactive

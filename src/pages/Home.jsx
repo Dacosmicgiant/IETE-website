@@ -34,8 +34,9 @@ const Home = () => {
       {/* Include all other sections */}
       <AboutSection />
       <EventsSection />
-      <CommitteeSection />
+      
       <FacultySection />
+      <CommitteeSection />
     </div>
   )
 }
