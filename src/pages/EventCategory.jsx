@@ -248,35 +248,7 @@ const EventCategory = () => {
           </div>
         </div>
 
-        {/* Category Stats */}
-        {events.length > 0 && (
-          <div className="flex items-center justify-center space-x-8 mb-12">
-            <div className="text-center">
-              <div className={`text-2xl font-bold ${COLORS.accent.primaryText}`}>
-                {events.length}
-              </div>
-              <div className={`text-sm ${COLORS.primary.textMuted}`}>
-                Available {categoryInfo.name}
-              </div>
-            </div>
-            <div className="text-center">
-              <div className={`text-2xl font-bold ${COLORS.accent.primaryText}`}>
-                {events.filter(e => new Date(e.date) >= new Date()).length}
-              </div>
-              <div className={`text-sm ${COLORS.primary.textMuted}`}>
-                Upcoming Events
-              </div>
-            </div>
-            <div className="text-center">
-              <div className={`text-2xl font-bold ${COLORS.accent.primaryText}`}>
-                {events.filter(e => e.capacity && e.registered && e.registered < e.capacity).length || events.length}
-              </div>
-              <div className={`text-sm ${COLORS.primary.textMuted}`}>
-                Open for Registration
-              </div>
-            </div>
-          </div>
-        )}
+        
 
         {/* Events Grid */}
         {events.length > 0 ? (

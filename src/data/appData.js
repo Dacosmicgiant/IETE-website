@@ -98,7 +98,7 @@ export const APP_DATA = {
         id: 1,
         name: "Saniya Mahadik", // Only required field
         position: "President",
-        year: "Final Year",
+        year: "BTech",
         email: "saniya.mahadik@example.com",
         phone: "+91 9876543210",
         bio: "Leading the IETE-PCE chapter with passion for electronics and innovation.",
@@ -117,7 +117,7 @@ export const APP_DATA = {
         id: 2,
         name: "Shravani Margaj",
         position: "Vice President",
-        year: "Third Year",
+        year: "BTech",
         bio: "Supporting the chapter's growth and organizing technical events.",
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752390951/Shravani_Margaj_ijzeh6.jpg',
@@ -132,7 +132,7 @@ export const APP_DATA = {
         name: "Riddhi Samarth",
         position: "Secretary",
         specialization: "Communication Systems",
-        year: "Final Year",
+        year: "BTech",
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752390951/Riddhi_Samarth_zphwc5.jpg',
           alt: 'Riddhi Samarth - Secretary',
@@ -145,7 +145,7 @@ export const APP_DATA = {
         id: 4,
         name: "Akanksha Rakshe",
         position: "Treasurer",
-        year: "Second Year",
+        year: "BTech",
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752390971/Akanksha_Rakshe_r8mgdr.jpg',
           alt: 'Akanksha Rakshe - Treasurer',
@@ -158,7 +158,7 @@ export const APP_DATA = {
         id: 5,
         name: "Nikita Ekunde",
         position: "Publicity Head",
-        year: "Second Year",
+        year: "BTech",
          image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752390974/Nikita_Ekunde_atzbjm.jpg',
           alt: 'Nikita Ekunde- Publicity Head',
@@ -171,7 +171,7 @@ export const APP_DATA = {
         id: 6,
         name: "Aditi Patil",
         position: "Content Head",
-        year: "Second Year",
+        year: "BTech",
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752390970/Aditi_Patil_jbchls.jpg',
           alt: 'Aditi Patil - Content Head',
@@ -186,6 +186,7 @@ export const APP_DATA = {
         id: 7,
         name: "Chinmay Dabholkar",
         position: "Graphics Head",
+        year: "BTech",
         specialization: "Design & Multimedia",
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752390972/Chinmay_Dabholkar_taozi5.jpg',
@@ -199,7 +200,7 @@ export const APP_DATA = {
         id: 8,
         name: "Aayush Gupta",
         position: "Technical Head",
-        year: "Third Year",
+        year: "BTech",
         bio: "Leading technical workshops and innovation projects.",
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752390952/Aayush_Gupta_wjroqw.jpg',
@@ -212,10 +213,11 @@ export const APP_DATA = {
       {
         id: 9,
         name: "Reva Patil",
-        position: "Coordinator Nominated Member",
+        position: "Social Media Head",
+        year: "BTech",
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752390950/Reva_Patil_iyq8do.jpg',
-          alt: 'Reva Patil - Coordinator Nominated Member',
+          alt: 'Reva Patil - Social Media Head',
           aspectRatio: '3:4',
           fallback: '👤'
         },
@@ -225,6 +227,7 @@ export const APP_DATA = {
         id: 10,
         name: "Vansh Katkar",
         position: "Satellite Club Head",
+        year: "BTech",
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752392789/Vansh_Katkar_kofpjq.jpg',
           alt: 'Vansh Katkar-Satellite Club Head',
@@ -232,12 +235,24 @@ export const APP_DATA = {
           fallback: '👤'
         },
         enabled: true
-      }
+      },
+      {
+        id: 11,
+        name: "Prathamesh Patil",
+        position: "Public Relations Head",
+        year: "BTech",
+        image: {
+          url: '',
+          alt: 'Prathamesh Patil - Public Relations Head',
+          aspectRatio: '3:4',
+          fallback: '👤'
+        },
+        enabled: true},
     ],
     combinedMembers: [
       {
         id: "combined-nominated",
-        title: "Additional Nominated Members",
+        title: "",
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753096196/Narayan_Pratiksha_bsli4n.jpg',
           alt: 'Additional Nominated Members',
@@ -248,13 +263,13 @@ export const APP_DATA = {
           {
             name: "Pratiksha Chaudhari", // Only required field for sub-members
             position: "Coordinator Nominated Member",
-            year: "Second Year",
+            year: "BTech",
             specialization: "Power Electronics"
           },
           {
             name: "Narayan Yadav",
             position: "Coordinator Nominated Member",
-            year: "Second Year"
+            year: "BTech",
           }
         ],
         enabled: true
@@ -297,7 +312,7 @@ export const APP_DATA = {
     workshops: [
       {
         id: 1,
-        title: "Innogration of IOT ", // Required
+        title: "Inaugration of IOT ", // Required
         date: "2025-07-15", // Required
         time: "10:00 AM - 4:00 PM", // Required
         description: "Learn to build IoT applications using Arduino and sensors. Hands-on experience with real projects.",
