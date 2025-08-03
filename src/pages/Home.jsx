@@ -33,7 +33,7 @@ const Home = () => {
       <HeroSection />
       {/* Include all other sections */}
       <AboutSection />
-      <EventsSection />
+      {/* <EventsSection /> */}
       
       <FacultySection />
       <CommitteeSection />

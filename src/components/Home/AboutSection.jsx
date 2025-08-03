@@ -9,40 +9,40 @@ const AboutSection = () => {
   return (
     <section id="about" className={`min-h-screen ${COLORS.primary.bgSecondary} px-4 ${COLORS.layout.section}`}>
       <div className={`${COLORS.layout.container} ${COLORS.layout.section}`}>
-        <div className={`text-center ${COLORS.layout.spacing.xl}`}>
-          <h2 className={`${COLORS.typography.heading.xl} ${COLORS.primary.text} mb-4 sm:mb-6`}>
-            About <span className={COLORS.accent.primaryText}>{siteData.name}</span>
-          </h2>
-        </div>
         
-        <div className={`${COLORS.layout.grid.cols2} lg:gap-16 items-center ${COLORS.layout.spacing.xl}`}>
-          <div className={`${COLORS.primary.text} pt-4 order-2 lg:order-1`}>
-            
-            <p className={`${COLORS.typography.body.lg} ${COLORS.primary.textSecondary} mb-6 sm:mb-8`}>
-              The Institution of Electronics and Telecommunication Engineers (IETE) is India's leading 
-              recognised professional society devoted to the advancement of Science and Technology of 
-              Electronics, Telecommunication. Founded in 2024.
-            </p>
-            <p className={`${COLORS.typography.body.md} ${COLORS.primary.textMuted} mb-6 sm:mb-8`}>
-              IETE is the National Apex Professional body of Electronics and Telecommunication, Computer 
-              Science and IT Professionals. It serves more than 1,25,000 members through various 63 Centres, 
-              spread all over India and abroad.
-            </p>
-            <p className={`${COLORS.typography.body.md} ${COLORS.primary.textMuted}`}>
-              The Institution provides leadership in Scientific and Technical areas of direct importance 
-              to the national development and economy. Government of India has recognised IETE as a 
-              Scientific and Industrial Research Organization (SIRO).
-            </p>
-          </div>
+        {/* Flexbox Layout - Two Main Containers */}
+        <div className="flex flex-col lg:flex-row lg:gap-16 items-center">
           
-          <div className="relative order-1 lg:order-2">
-            <div className="max-w-lg mx-auto">
-              <Image 
-                imageData={siteData.about}
-                containerClassName="transition-transform duration-300 hover:scale-105"
-              />
+          {/* First Container - About Heading + Lorem Ipsum */}
+          <div className="flex-1 flex flex-col order-2 lg:order-1">
+            {/* About Heading */}
+            <h2 className={`${COLORS.typography.heading.xl} ${COLORS.primary.text} text-center mb-6 sm:mb-8`}>
+              About <span className={COLORS.accent.primaryText}>{siteData.name}</span>
+            </h2>
+            
+            {/* Lorem Ipsum Content - Justified */}
+            <div className="text-justify space-y-6 sm:space-y-8">
+              <p className={`${COLORS.typography.body.lg} ${COLORS.primary.textSecondary}`}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              </p>
+              
+              <p className={`${COLORS.typography.body.md} ${COLORS.primary.textMuted}`}>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+              </p>
+            
             </div>
           </div>
+          
+          {/* Second Container - Image Only (No Container Wrapper) */}
+          <div className="flex-1 order-1 lg:order-2 mb-8 lg:mb-0">
+            <img
+              src={siteData.about.url}
+              alt={siteData.about.alt || 'About IETE-PCE'}
+              className="w-full h-auto transition-transform duration-300 hover:scale-105 "
+              loading="lazy"
+            />
+          </div>
+          
         </div>
       </div>
     </section>
