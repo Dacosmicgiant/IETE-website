@@ -2,6 +2,7 @@
 import { COLORS } from '../../constants/colors'
 import Image from '../ui/Image'
 import { APP_DATA, getEnabledFaculty } from '../../data/appData'
+import { formatPersonName } from '../../utils/nameUtils.jsx'
 
 const FacultySection = () => {
   const faculty = getEnabledFaculty()
@@ -11,11 +12,11 @@ const FacultySection = () => {
     <section id="faculty" className={`min-h-screen ${COLORS.primary.bg} px-4 ${COLORS.layout.section}`}>
       <div className={`${COLORS.layout.container} ${COLORS.layout.section}`}>
         <div className="text-center mb-6 sm:mb-8">
-          <h2 className={`${COLORS.typography.heading.xl} ${COLORS.primary.text} mb-2 sm:mb-3`}>
+          <h2 className={`${COLORS.typography.heading.lg} ${COLORS.primary.text} mb-2 sm:mb-3`}>
             {config.sectionTitle}
           </h2>
           {config.sectionDescription && (
-            <p className={`${COLORS.primary.textMuted} text-lg max-w-2xl mx-auto`}>
+            <p className={`${COLORS.primary.textMuted} text-lg max-w-3xl mx-auto`}>
               {config.sectionDescription}
             </p>
           )}
@@ -25,7 +26,7 @@ const FacultySection = () => {
           config.gridLayout === '4-column' ? COLORS.layout.grid.cols4 :
           config.gridLayout === '2-column' ? COLORS.layout.grid.cols2 :
           COLORS.layout.grid.cols3
-        } gap-8 sm:gap-12 lg:gap-16 max-w-6xl mx-auto`}>
+        } gap-12 sm:gap-16 lg:gap-20 max-w-4xl mx-auto`}>
           {faculty.map((member) => (
             <div key={member.id} className="group text-center">
               {/* Faculty Photo using new image system */}
@@ -37,8 +38,8 @@ const FacultySection = () => {
               </div>
               
               <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-4 sm:p-6 ${COLORS.primary.text} ${COLORS.interactive.cardHover}`}>
-                <h4 className={`${COLORS.typography.heading.sm} mb-1 sm:mb-2`}>
-                  {member.name}
+                <h4 className={`${COLORS.typography.heading.sm} mb-1 sm:mb-2 leading-tight`}>
+                  {formatPersonName(member.name, true)}
                 </h4>
                 
                 {member.position && (
