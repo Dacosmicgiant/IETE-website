@@ -17,58 +17,58 @@ const HeroSection = () => {
   }
 
   return (
-    <section id="home" className={`relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 px-4 ${COLORS.primary.bg}`}>
-      {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(59,130,246,0.1),transparent_50%)]"></div>
-      
-      <div className={`relative z-10 ${COLORS.layout.container} w-full`}>
-        {/* Grid Layout - Two Sections Side by Side */}
-        <div className={`${COLORS.layout.grid.cols2} lg:gap-16 items-center min-h-[80vh]`}>
-          
-          {/* Left Section - Main Content */}
-          <div className={`${COLORS.primary.text} ${COLORS.layout.spacing.md} order-2 lg:order-1`}>
-            
-            <div>
-              <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-4 sm:mb-6 ${COLORS.primary.text} tracking-tight leading-tight`}>
-                {siteData.name}
-              </h1>
-              
-              <h2 className={`text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium mb-4 sm:mb-6 ${COLORS.primary.textSecondary} leading-relaxed`}>
-                {siteData.fullName}
-              </h2>
-            </div>
-            
-            <p className={`${COLORS.typography.body.lg} ${COLORS.primary.textMuted} max-w-2xl`}>
-              Shaping the future of technology through innovation, research, and excellence in Electronics & 
-              Telecommunication at Pillai College of Engineering.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4">
-              <button 
-                onClick={() => scrollToSection('join')}
-                className={`group w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 ${COLORS.interactive.buttonPrimary} ${COLORS.effects.rounded} sm:${COLORS.effects.roundedLg} font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25`}
-              >
-                Join {siteData.name}
-                <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300 inline-block">→</span>
-              </button>
-              <button 
-                onClick={() => scrollToSection('about')}
-                className={`w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 ${COLORS.interactive.buttonSecondary} ${COLORS.effects.rounded} sm:${COLORS.effects.roundedLg} font-semibold transition-all duration-300`}
-              >
-                Learn More
-              </button>
-            </div>
-          </div>
-
-          {/* Right Section - Hero Image */}
-          <div className={`${COLORS.layout.spacing.md} order-1 lg:order-2`}>
-            <Image 
-              imageData={siteData.hero}
-              containerClassName="transition-transform duration-300 hover:scale-[1.02]"
-            />
-          </div>
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20">
+      {/* Background Image */}
+      <div className="absolute inset-0 w-full h-full">
+        <div className="w-full h-full">
+          <img
+            src={siteData.hero.url}
+            alt={siteData.hero.alt || 'IETE-PCE Hero Background'}
+            className="w-full h-full object-cover"
+            style={{ objectPosition: 'center center' }}
+          />
         </div>
       </div>
+      
+      {/* Red Translucent Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-red-950/40 to-red-900/80"></div>
+      
+      {/* Additional Pattern Overlay for Texture */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(239,68,68,0.1),transparent_50%)] mix-blend-overlay"></div>
+      
+      {/* Mobile/Tablet Text Content - Hidden on Large Screens */}
+      <div className="lg:hidden relative z-20 text-center px-4">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-4 tracking-tight leading-tight drop-shadow-2xl">
+          {siteData.name}
+        </h1>
+        
+        <h2 className="text-lg sm:text-xl md:text-2xl font-medium text-slate-200 mb-6 leading-relaxed drop-shadow-lg">
+          {siteData.fullName}
+        </h2>
+        
+        <p className="text-base sm:text-lg text-slate-300 mb-8 font-light drop-shadow-md max-w-md mx-auto">
+          Excellence in Engineering
+        </p>
+        
+        {/* Simple Buttons for Mobile */}
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-sm mx-auto">
+          <button 
+            onClick={() => scrollToSection('about')}
+            className="px-6 py-3 bg-red-500 hover:bg-red-400 text-white rounded-xl font-semibold transition-all duration-300 drop-shadow-lg"
+          >
+            Join Us
+          </button>
+          <button 
+            onClick={() => scrollToSection('about')}
+            className="px-6 py-3 bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 text-white rounded-xl font-semibold transition-all duration-300 drop-shadow-lg"
+          >
+            Learn More
+          </button>
+        </div>
+      </div>
+      
+      {/* Bottom Gradient Fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-950 to-transparent"></div>
     </section>
   )
 }
