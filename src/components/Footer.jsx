@@ -1,19 +1,12 @@
 import { COLORS } from '../constants/colors'
 import { APP_DATA } from '../data/appData'
-import Image from './ui/Image'
 
 const Footer = () => {
-  const quickLinks = [
-    { name: 'About Us', id: 'about' },
-    { name: 'Events', id: 'events' },
-    { name: 'Committee', id: 'committee' },
-    { name: 'Faculty', id: 'faculty' },
-  ]
-
   const activities = [
     { name: 'Workshops', id: 'events' },
-    { name: 'Seminars', id: 'events' },
     { name: 'Competitions', id: 'events' },
+    { name: 'Seminars', id: 'events' },
+    { name: 'Industrial Visits and Training', id: 'events' },
   ]
 
   // Handle smooth scrolling to sections
@@ -30,22 +23,17 @@ const Footer = () => {
   return (
     <footer className={`${COLORS.primary.bgSecondary} ${COLORS.primary.borderLight} border-t px-4`}>
       <div className={`${COLORS.layout.container} ${COLORS.layout.section}`}>
-        <div className={`${COLORS.layout.grid.cols4} ${COLORS.layout.grid.gap}`}>
-          {/* About Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12">
+          
+          {/* About Section (Left) */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 sm:space-x-4 mb-6 sm:mb-8">
-              {/* <div className={`${COLORS.accent.primary} p-2 sm:p-3 ${COLORS.effects.rounded}`}>
-                <div className={`w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center font-bold text-slate-950 text-sm sm:text-base`}>
-                  I
-                </div>
-              </div> */}
-              <div className="w-12 h-12">
-                <Image 
-                  imageData={APP_DATA.site.logo}
-                  containerClassName="group-hover:scale-105 transition-transform duration-300"
-                  showFallbackText={false}
-                />
-              </div>
+              {/* Logo */}
+              <img 
+                src={APP_DATA.site.logo.src || APP_DATA.site.logo.url} 
+                alt={APP_DATA.site.logo.alt || APP_DATA.site.name}
+                className="h-12 object-contain hover:scale-105 transition-transform duration-300"
+              />
               <div>
                 <h3 className={`${COLORS.typography.heading.md} ${COLORS.primary.text}`}>IETE-PCE</h3>
                 <p className={`${COLORS.typography.body.sm} ${COLORS.primary.textMuted}`}>Excellence in Engineering</p>
@@ -65,61 +53,40 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className={`${COLORS.typography.heading.sm} ${COLORS.primary.text} mb-6 sm:mb-8`}>Quick Links</h4>
-            <ul className={COLORS.layout.spacing.xs}>
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <button 
-                    onClick={() => scrollToSection(link.id)}
-                    className={`${COLORS.primary.textMuted} ${COLORS.interactive.linkHover} text-left ${COLORS.typography.body.md} cursor-pointer`}
-                  >
-                    {link.name}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Activities */}
-          <div>
-            <h4 className={`${COLORS.typography.heading.sm} ${COLORS.primary.text} mb-6 sm:mb-8`}>Activities</h4>
-            <ul className={COLORS.layout.spacing.xs}>
-              {activities.map((activity) => (
-                <li key={activity.name}>
-                  <button 
-                    onClick={() => scrollToSection(activity.id)}
-                    className={`${COLORS.primary.textMuted} ${COLORS.interactive.linkHover} text-left ${COLORS.typography.body.md} cursor-pointer`}
-                  >
-                    {activity.name}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Connect */}
-          <div>
-            <h4 className={`${COLORS.typography.heading.sm} ${COLORS.primary.text} mb-6 sm:mb-8`}>Connect</h4>
-            <div className={COLORS.layout.spacing.sm}>
-              <div className="flex items-center space-x-3 sm:space-x-4">
-                <div className={`w-8 h-8 sm:w-10 sm:h-10 ${COLORS.accent.primary} ${COLORS.effects.rounded} flex items-center justify-center`}>
-                  🌐
-                </div>
-                <span className={`${COLORS.primary.textMuted} ${COLORS.typography.body.sm} break-all`}>www.iete-pce.org</span>
-              </div>
-              <div className="flex items-center space-x-3 sm:space-x-4">
-                <div className={`w-8 h-8 sm:w-10 sm:h-10 ${COLORS.accent.secondary} ${COLORS.effects.rounded} flex items-center justify-center`}>
-                  📧
-                </div>
-                <span className={`${COLORS.primary.textMuted} ${COLORS.typography.body.sm} break-all`}>iete.pce@gmail.com</span>
-              </div>
+          {/* Right Side Sections Wrapper */}
+          <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12 ml-6 sm:ml-8">
+            {/* Activities */}
+            <div>
+              <h4 className={`${COLORS.typography.heading.sm} ${COLORS.primary.text} mb-6 sm:mb-8`}>Activities</h4>
+              <ul className={COLORS.layout.spacing.xs}>
+                {activities.map((activity) => (
+                  <li key={activity.name}>
+                    <button 
+                      onClick={() => scrollToSection(activity.id)}
+                      className={`${COLORS.primary.textMuted} ${COLORS.interactive.linkHover} text-left ${COLORS.typography.body.md} cursor-pointer`}
+                    >
+                      {activity.name}
+                    </button>
+                  </li>
+                ))}
+              </ul>
             </div>
-            
-            <p className={`${COLORS.primary.textLight} ${COLORS.typography.body.sm} mt-6 sm:mt-8`}>
-              Follow us for updates on events, workshops, and opportunities in electronics and telecommunications.
-            </p>
+
+            {/* Connect */}
+            <div>
+              <h4 className={`${COLORS.typography.heading.sm} ${COLORS.primary.text} mb-6 sm:mb-8`}>Connect</h4>
+              <div className={COLORS.layout.spacing.sm}>
+                <div className="flex items-center space-x-3 sm:space-x-4">
+                  <div className={`w-8 h-8 sm:w-10 sm:h-10 ${COLORS.accent.secondary} ${COLORS.effects.rounded} flex items-center justify-center`}>
+                    📧
+                  </div>
+                  <span className={`${COLORS.primary.textMuted} ${COLORS.typography.body.sm} break-all`}>ietepce@mes.ac.in</span>
+                </div>
+              </div>
+              <p className={`${COLORS.primary.textLight} ${COLORS.typography.body.sm} mt-6 sm:mt-8`}>
+                Follow us for updates on events, workshops, and opportunities in electronics and telecommunications.
+              </p>
+            </div>
           </div>
         </div>
 
