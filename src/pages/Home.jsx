@@ -33,9 +33,10 @@ const Home = () => {
       <HeroSection />
       {/* Include all other sections */}
       <AboutSection />
-      <EventsSection />
-      <CommitteeSection />
+      {/* <EventsSection /> */}
+      
       <FacultySection />
+      <CommitteeSection />
     </div>
   )
 }

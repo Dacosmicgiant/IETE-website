@@ -47,7 +47,7 @@ export const COLORS = {
     shadow: 'shadow-2xl',
     gradient: 'bg-gradient-to-br from-red-500 to-orange-600',
     gradientText: 'bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent',
-    rounded: 'rounded-2xl',
+    rounded: 'rounded-xl',
     roundedLg: 'rounded-3xl'
   },
 
@@ -90,7 +90,7 @@ export const COLORS = {
   header: {
     bg: 'bg-slate-900/95',
     backdrop: 'backdrop-blur-lg',
-    border: 'border-b border-white/10',
+    
     logo: 'bg-gradient-to-br from-red-500 to-orange-600',
     navActive: 'bg-gradient-to-r from-red-500 to-orange-600 text-white shadow-lg',
     navInactive: 'text-gray-300 hover:text-white hover:bg-white/10'

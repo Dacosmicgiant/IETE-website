@@ -2,6 +2,7 @@
 import { COLORS } from '../../constants/colors'
 import Image from '../ui/Image'
 import { APP_DATA, getExecutiveMembers } from '../../data/appData'
+import { formatPersonName } from '../../utils/nameUtils.jsx'
 
 const CommitteeSection = () => {
   // Get only executive members for home page (first 4)
@@ -18,7 +19,7 @@ const CommitteeSection = () => {
         </div>
 
         {/* Executive Committee Preview */}
-        <div className={`${COLORS.layout.grid.cols4} ${COLORS.layout.grid.gap} max-w-4xl mx-auto`}>
+        <div className={`${COLORS.layout.grid.cols4} ${COLORS.layout.grid.gap} gap-16 sm:gap-20 lg:gap-24 max-w-6xl mx-auto`}>
           {executiveMembers.map((member) => (
             <div key={member.id} className="group text-center">
               {/* Member Photo using new image system */}
@@ -30,8 +31,8 @@ const CommitteeSection = () => {
               </div>
               
               <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-4 sm:p-6 ${COLORS.primary.text} ${COLORS.interactive.cardHover}`}>
-                <h4 className={`${COLORS.typography.heading.sm} mb-1 sm:mb-2`}>
-                  {member.name}
+                <h4 className={`${COLORS.typography.heading.sm} mb-1 sm:mb-2 leading-tight`}>
+                  {formatPersonName(member.name, false)}
                 </h4>
                 
                 {member.position && (

@@ -31,7 +31,7 @@ export const APP_DATA = {
     {
       id: 1,
       name: "Dr. Avinash Vaidya", // Only required field
-      position: "HOD",
+      position: "Head of Department",
       fullPosition: "Head of Department",
       department: "Electronics & Telecommunication Engineering",
       qualification: "Ph.D. in Electronics Engineering",
@@ -132,6 +132,7 @@ export const APP_DATA = {
         name: "Riddhi Samarth",
         position: "Secretary",
         specialization: "Communication Systems",
+        year: "Final Year",
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752390951/Riddhi_Samarth_zphwc5.jpg',
           alt: 'Riddhi Samarth - Secretary',
@@ -547,12 +548,12 @@ export const APP_DATA = {
   // Configuration Settings
   config: {
     faculty: {
-      showQualifications: true, //false
-      showExperience: true,
+      showQualifications: false, //false
+      showExperience: false,
       showEmails: false,
       showPhones: false,
-      showBios: true,
-      showSpecializations: true,
+      showBios: false,
+      showSpecializations: false,
       showAchievements: false,
       showOfficeInfo: false,
       showCourses: false,
@@ -564,8 +565,8 @@ export const APP_DATA = {
     committee: {
       showEmails: false,
       showPhones: false,
-      showBios: true, //false
-      showSpecializations: true,
+      showBios: false, //false
+      showSpecializations: false,
       showAchievements: false,
       showSocialLinks: false,
       gridLayout: "2-column", // "2-column", "3-column", "4-column"
