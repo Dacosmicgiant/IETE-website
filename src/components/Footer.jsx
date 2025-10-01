@@ -41,12 +41,40 @@ const Footer = () => {
               advancing technology education since 2024.
             </p>
             <div className="flex space-x-3 sm:space-x-4">
-              <button className={`w-10 h-10 sm:w-12 sm:h-12 ${COLORS.primary.bgTertiary} ${COLORS.accent.primaryHover} ${COLORS.effects.rounded} flex items-center justify-center ${COLORS.primary.textMuted} hover:text-slate-950 transition-all duration-300`}>
-                🌐
-              </button>
-              <button className={`w-10 h-10 sm:w-12 sm:h-12 ${COLORS.primary.bgTertiary} ${COLORS.accent.secondaryHover} ${COLORS.effects.rounded} flex items-center justify-center ${COLORS.primary.textMuted} ${COLORS.primary.text} transition-all duration-300`}>
-                📧
-              </button>
+              <a 
+                href="mailto:ietepce@mes.ac.in"
+                className={`w-10 h-10 sm:w-12 sm:h-12 ${COLORS.primary.bgTertiary} ${COLORS.accent.primaryHover} ${COLORS.effects.rounded} flex items-center justify-center ${COLORS.primary.textMuted} hover:text-slate-950 transition-all duration-300`}
+              >
+                <img 
+                  src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759302686/WhatsApp_Image_2025-10-01_at_12.29.37_ffd95a84_dbgcq5.jpg"
+                  alt="Gmail"
+                  className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                />
+              </a>
+              <a 
+                href="https://www.instagram.com/iete_pce?igsh=MWtjNnpndHY3a2EwZg=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-10 h-10 sm:w-12 sm:h-12 ${COLORS.primary.bgTertiary} ${COLORS.accent.secondaryHover} ${COLORS.effects.rounded} flex items-center justify-center ${COLORS.primary.textMuted} hover:text-slate-950 transition-all duration-300`}
+              >
+                <img 
+                  src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759302686/WhatsApp_Image_2025-10-01_at_12.30.14_1cd6a5cd_qc1n0y.jpg"
+                  alt="Instagram"
+                  className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                />
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/iete-sf-pce-024091322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-10 h-10 sm:w-12 sm:h-12 ${COLORS.primary.bgTertiary} ${COLORS.accent.tertiaryHover} ${COLORS.effects.rounded} flex items-center justify-center ${COLORS.primary.textMuted} hover:text-slate-950 transition-all duration-300`}
+              >
+                <img 
+                  src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759302686/WhatsApp_Image_2025-10-01_at_12.28.50_aa7db037_m2d9jq.jpg"
+                  alt="LinkedIn"
+                  className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                />
+              </a>
             </div>
           </div>
 
