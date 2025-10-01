@@ -219,7 +219,7 @@ const Committee = () => {
                 🛠️ Technical Team
               </h3>
               <div className="space-y-2">
-                <p className={`${COLORS.primary.textSecondary} text-sm`}>Karan</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Karan S. Gawali</p>
                 <p className={`${COLORS.primary.textSecondary} text-sm`}>Omswaroop Gupta</p>
                 <p className={`${COLORS.primary.textSecondary} text-sm`}>Rajdeep Maity</p>
                 <p className={`${COLORS.primary.textSecondary} text-sm`}>Sameeksha Thorat</p>
@@ -258,6 +258,7 @@ const Committee = () => {
                 <p className={`${COLORS.primary.textSecondary} text-sm`}>Swarup</p>
                 <p className={`${COLORS.primary.textSecondary} text-sm`}>Aditya M</p>
                 <p className={`${COLORS.primary.textSecondary} text-sm`}>Tanishq Salunkhe</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Nakul Patil</p>
                 <p className={`${COLORS.primary.textSecondary} text-sm`}>Rutuja</p>
               </div>
             </div>
