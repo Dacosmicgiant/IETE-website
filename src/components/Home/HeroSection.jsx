@@ -30,11 +30,8 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Red Translucent Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-red-950/40 to-red-900/80"></div>
-      
-      {/* Additional Pattern Overlay for Texture */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(239,68,68,0.1),transparent_50%)] mix-blend-overlay"></div>
+      {/* Dark Translucent Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-slate-950/40 to-slate-900/80"></div>
       
       {/* Mobile/Tablet Text Content - Hidden on Large Screens */}
       <div className="lg:hidden relative z-20 text-center px-4">
@@ -50,17 +47,36 @@ const HeroSection = () => {
           Excellence in Engineering
         </p>
         
-        {/* Simple Buttons for Mobile */}
+        {/* Simple Button for Mobile */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-sm mx-auto">
           <button 
             onClick={() => scrollToSection('about')}
-            className="px-6 py-3 bg-red-500 hover:bg-red-400 text-white rounded-xl font-semibold transition-all duration-300 drop-shadow-lg"
+            className="px-6 py-3 bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 text-white rounded-xl font-semibold transition-all duration-300 drop-shadow-lg"
           >
-            Join Us
+            Learn More
           </button>
+        </div>
+      </div>
+
+      {/* Desktop Text Content - Hidden on Small/Medium Screens */}
+      <div className="hidden lg:block relative z-20 text-center px-8">
+        <h1 className="text-6xl xl:text-7xl 2xl:text-8xl font-black text-white mb-6 tracking-tight leading-tight drop-shadow-2xl">
+          {siteData.name}
+        </h1>
+        
+        <h2 className="text-2xl xl:text-3xl 2xl:text-4xl font-medium text-slate-200 mb-8 leading-relaxed drop-shadow-lg">
+          {siteData.fullName}
+        </h2>
+        
+        <p className="text-xl xl:text-2xl text-slate-300 mb-12 font-light drop-shadow-md max-w-2xl mx-auto">
+          Excellence in Engineering
+        </p>
+        
+        {/* Simple Button for Desktop */}
+        <div className="flex justify-center">
           <button 
             onClick={() => scrollToSection('about')}
-            className="px-6 py-3 bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 text-white rounded-xl font-semibold transition-all duration-300 drop-shadow-lg"
+            className="px-8 py-4 bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 text-white rounded-xl font-semibold transition-all duration-300 drop-shadow-lg text-lg"
           >
             Learn More
           </button>

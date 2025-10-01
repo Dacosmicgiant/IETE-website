@@ -151,7 +151,7 @@ const Committee = () => {
         
 
         {/* Artistically Styled Committee Members Grid Box with Frame */}
-        <div className={`max-w-6xl mx-auto mb-12 shadow-2xl ${COLORS.effects.roundedLg} bg-red-800  p-1.5`}>
+        <div className={`max-w-6xl mx-auto mb-12 shadow-2xl ${COLORS.effects.roundedLg} bg-blue-800  p-1.5`}>
           <div
             className={`w-full h-full p-8 sm:p-12 ${COLORS.primary.bgSecondary} ${COLORS.effects.rounded}`}
           > 

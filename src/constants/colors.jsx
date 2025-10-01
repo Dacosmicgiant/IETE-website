@@ -16,27 +16,27 @@ export const COLORS = {
     borderLight: 'border-slate-800'
   },
 
-  // Accent colors - Red-emphasized theme
+  // Accent colors - Blue-emphasized theme
   accent: {
-    primary: 'bg-red-500',
-    primaryHover: 'bg-red-400',
-    primaryText: 'text-red-400',
-    primaryTextHover: 'text-red-300',
-    secondary: 'bg-orange-500',
-    secondaryText: 'text-red-400',
-    tertiary: 'bg-pink-500',
-    tertiaryText: 'text-red-400',
-    quaternary: 'bg-rose-500',
-    quaternaryText: 'text-red-400'
+    primary: 'bg-blue-500',
+    primaryHover: 'bg-blue-400',
+    primaryText: 'text-blue-400',
+    primaryTextHover: 'text-blue-300',
+    secondary: 'bg-indigo-500',
+    secondaryText: 'text-blue-400',
+    tertiary: 'bg-cyan-500',
+    tertiaryText: 'text-blue-400',
+    quaternary: 'bg-sky-500',
+    quaternaryText: 'text-blue-400'
   },
 
   // Interactive elements
   interactive: {
-    buttonPrimary: 'bg-red-500 hover:bg-red-400 text-white',
+    buttonPrimary: 'bg-blue-500 hover:bg-blue-400 text-white',
     buttonSecondary: 'bg-slate-800/50 hover:bg-slate-700/50 border border-slate-700 text-white',
     buttonGhost: 'hover:bg-white/10 text-slate-300 hover:text-white',
     cardHover: 'hover:bg-slate-800/50 transition-all duration-300',
-    linkHover: 'hover:text-red-400 transition-colors'
+    linkHover: 'hover:text-blue-400 transition-colors'
   },
 
   // Effects
@@ -45,8 +45,8 @@ export const COLORS = {
     glass: 'bg-slate-800/30 backdrop-blur-xl border border-slate-700/50',
     glassHover: 'hover:bg-slate-800/50 transition-all duration-300',
     shadow: 'shadow-2xl',
-    gradient: 'bg-gradient-to-br from-red-500 to-orange-600',
-    gradientText: 'bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent',
+    gradient: 'bg-gradient-to-br from-blue-500 to-indigo-600',
+    gradientText: 'bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent',
     rounded: 'rounded-xl',
     roundedLg: 'rounded-3xl'
   },
@@ -91,18 +91,18 @@ export const COLORS = {
     bg: 'bg-slate-900/95',
     backdrop: 'backdrop-blur-lg',
     
-    logo: 'bg-gradient-to-br from-red-500 to-orange-600',
-    navActive: 'bg-gradient-to-r from-red-500 to-orange-600 text-white shadow-lg',
+    logo: 'bg-gradient-to-br from-blue-500 to-indigo-600',
+    navActive: 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg',
     navInactive: 'text-gray-300 hover:text-white hover:bg-white/10'
   },
 
   // Color variants for dynamic content
   variants: {
-    red: 'bg-red-500',
-    orange: 'bg-orange-500', 
-    pink: 'bg-pink-500',
-    rose: 'bg-rose-500',
-    amber: 'bg-amber-500',
-    yellow: 'bg-yellow-500'
+    blue: 'bg-blue-500',
+    indigo: 'bg-indigo-500', 
+    cyan: 'bg-cyan-500',
+    sky: 'bg-sky-500',
+    teal: 'bg-teal-500',
+    violet: 'bg-violet-500'
   }
 }

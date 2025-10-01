@@ -193,7 +193,7 @@ const EventCategory = () => {
               {event.capacity && event.registered && (
                 <span className={`text-xs ${
                   event.registered >= event.capacity ? 
-                  'text-red-400' : 
+                  'text-blue-400' : 
                   event.registered >= event.capacity * 0.8 ? 
                   'text-yellow-400' : 
                   'text-green-400'
