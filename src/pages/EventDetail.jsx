@@ -325,59 +325,6 @@ const EventDetail = () => {
           {getEventSpecificDetails()}
         </div>
 
-        {/* Additional Info Section */}
-        {(event.outcomes || event.tags || event.targetAudience) && (
-          <div className="mb-12">
-            <h2 className={`${COLORS.typography.heading.lg} ${COLORS.primary.text} mb-8 text-center`}>
-              Additional Information
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              
-              {/* Learning Outcomes */}
-              {event.outcomes && event.outcomes.length > 0 && (
-                <div className={`p-6 ${COLORS.effects.glass} ${COLORS.effects.roundedLg}`}>
-                  <h4 className={`${COLORS.primary.text} font-bold mb-4 flex items-center`}>
-                    🎯 Learning Outcomes
-                  </h4>
-                  <ul className="space-y-2">
-                    {event.outcomes.map((outcome, index) => (
-                      <li key={index} className={`${COLORS.primary.textSecondary} flex items-start`}>
-                        <span className="mr-2 mt-1">•</span>
-                        {outcome}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {/* Target Audience */}
-              {event.targetAudience && (
-                <div className={`p-6 ${COLORS.effects.glass} ${COLORS.effects.roundedLg}`}>
-                  <h4 className={`${COLORS.primary.text} font-bold mb-4 flex items-center`}>
-                    👥 Target Audience
-                  </h4>
-                  <p className={`${COLORS.primary.textSecondary}`}>{event.targetAudience}</p>
-                </div>
-              )}
-
-              {/* Tags */}
-              {event.tags && event.tags.length > 0 && (
-                <div className={`p-6 ${COLORS.effects.glass} ${COLORS.effects.roundedLg}`}>
-                  <h4 className={`${COLORS.primary.text} font-bold mb-4 flex items-center`}>
-                    🏷️ Tags
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {event.tags.map((tag, index) => (
-                      <span key={index} className={`text-xs px-3 py-1 ${COLORS.effects.rounded} bg-slate-700/50 ${COLORS.primary.textSecondary}`}>
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-        )}
 
         {/* Related Events */}
         <div className="mb-12">

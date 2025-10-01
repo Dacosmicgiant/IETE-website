@@ -438,13 +438,13 @@ export const APP_DATA = {
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1754114245/hackrobo_poster.jpg',
           alt: 'HACKROBO Hardware Hackathon',
-          aspectRatio: '16:9',
+          aspectRatio: '3:4',
           fallback: '🤖'
         },
         detailImage: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1754114245/hackrobo_poster.jpg',
           alt: 'HACKROBO Hardware Hackathon Details',
-          aspectRatio: '16:9',
+          aspectRatio: '3:4',
           fallback: '🤖'
         },
         enabled: true
@@ -462,17 +462,15 @@ export const APP_DATA = {
         attendance: "Free for all students",
         topics: [, "Hardware Challenges", "Industry Applications"],
         image: {
-
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095378/satalite_club_talk_xmkus2.jpg',
           alt: 'Satalite Club Talk',
-          aspectRatio: '16:9',
-
+          aspectRatio: '3:4',
           fallback: '🎤'
         },
         detailImage: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222106/1x1_of94b1.png',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095378/satalite_club_talk_xmkus2.jpg',
           alt: 'Satalite Club Talk',
-          aspectRatio: '1:1',
+          aspectRatio: '3:4',
           fallback: '🎤'
         },
         enabled: true
@@ -489,47 +487,19 @@ export const APP_DATA = {
         certification: "IETE Certificate",
         fee: "₹300",
         image: {
-
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095402/Industrial_visit_tlxkop.jpg',
           alt: 'Industrial Visit',
-          aspectRatio: '16:9',
-
-          fallback: '📚'
-        },
-        detailImage: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222106/1x1_of94b1.png',
-          alt: 'Industrial Visit',
-          aspectRatio: '1:1',
-          fallback: '📚'
-        },
-        enabled: true
-      },
-      {
-        id: 2,
-        title: "Leadership Workshop",
-        date: "2025-08-05",
-        time: "10:00 AM - 3:00 PM",
-        description: "Develop leadership skills for technical teams and project management.",
-        trainer: "Leadership Expert",
-        venue: "Training Room 2",
-        duration: "5 hours",
-        certification: "Leadership Certificate",
-        fee: "₹400",
-        tags: ["Leadership", "Management", "Skills"],
-        image: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222428/16x9_buhwcj.png',
-          alt: 'Leadership Workshop Training',
           aspectRatio: '3:4',
           fallback: '📚'
         },
         detailImage: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222106/1x1_of94b1.png',
-          alt: 'Leadership Workshop Training Details',
-          aspectRatio: '1:1',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095402/Industrial_visit_tlxkop.jpg',
+          alt: 'Industrial Visit',
+          aspectRatio: '3:4',
           fallback: '📚'
         },
         enabled: true
-      }
+      },
     ]
   },
 
