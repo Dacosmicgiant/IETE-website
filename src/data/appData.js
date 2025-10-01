@@ -373,31 +373,6 @@ export const APP_DATA = {
         },
         enabled: true
       },
-      {
-        id: 3,
-        title: "Basic Electronics",
-        date: "2025-08-01",
-        time: "2:00 PM - 5:00 PM",
-        description: "Introduction to basic electronic components and circuits.",
-        venue: "Lab A",
-        instructor: "Dr. Electronics Expert",
-        level: "Beginner",
-        duration: "3 hours",
-        tags: ["Electronics", "Basics", "Beginner"],
-        image: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222428/16x9_buhwcj.png',
-          alt: 'Basic Electronics Workshop',
-          aspectRatio: '3:4',
-          fallback: '🛠️'
-        },
-        detailImage: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222106/1x1_of94b1.png',
-          alt: 'Basic Electronics Workshop Details',
-          aspectRatio: '1:1',
-          fallback: '🛠️'
-        },
-        enabled: true
-      }
     ],
     competitions: [
       {
@@ -436,18 +411,41 @@ export const APP_DATA = {
         teamSize: "Individual",
         tags: ["Quiz", "Electronics", "Competition"],
         image: {
-
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095122/Tech_Quiz_weviyp.jpg',
           alt: 'Technical Quiz',
-          aspectRatio: '16:9',
-
+          aspectRatio: '3:4',
           fallback: '🏆'
         },
         detailImage: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222106/1x1_of94b1.png',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095122/Tech_Quiz_weviyp.jpg',
           alt: 'Technical Quiz',
-          aspectRatio: '1:1',
+          aspectRatio: '3:4',
           fallback: '🏆'
+        },
+        enabled: true
+      },
+      {
+        id: 3,
+        title: "HACKROBO",
+        date: "2025-09-19",
+        time: "9:00 AM - 6:00 PM",
+        description: "2-day long national level hardware hackathon focusing on robotics and embedded systems innovation.",
+        venue: "Main Campus",
+        prizes: "Exciting prizes for winners",
+        teamSize: "3-5 members",
+        duration: "2 days",
+        tags: ["Hardware", "Robotics", "Hackathon", "National Level"],
+        image: {
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1754114245/hackrobo_poster.jpg',
+          alt: 'HACKROBO Hardware Hackathon',
+          aspectRatio: '16:9',
+          fallback: '🤖'
+        },
+        detailImage: {
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1754114245/hackrobo_poster.jpg',
+          alt: 'HACKROBO Hardware Hackathon Details',
+          aspectRatio: '16:9',
+          fallback: '🤖'
         },
         enabled: true
       }
@@ -479,36 +477,11 @@ export const APP_DATA = {
         },
         enabled: true
       },
-      {
-        id: 2,
-        title: "AI in Electronics",
-        date: "2025-07-25",
-        time: "2:00 PM - 4:00 PM",
-        speaker: "Industry Expert",
-        description: "Exploring the role of AI in modern electronics and future applications.",
-        venue: "Seminar Hall",
-        attendance: "Free for all students",
-        topics: ["Machine Learning", "Electronics Integration", "Future Trends"],
-        tags: ["AI", "Electronics", "Future Tech"],
-        image: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222428/16x9_buhwcj.png',
-          alt: 'AI in Electronics Seminar',
-          aspectRatio: '3:4',
-          fallback: '🎤'
-        },
-        detailImage: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222106/1x1_of94b1.png',
-          alt: 'AI in Electronics Seminar Details',
-          aspectRatio: '1:1',
-          fallback: '🎤'
-        },
-        enabled: true
-      }
     ],
     IV: [
       {
         id: 1,
-        title: "Industrial Visit",
+        title: "Industrial and Trainings",
         date: "2025-03-8",
         time: "12:00 AM - 5:00 PM",
         description: "A professional industrial visit organized by the IETE Committee to bridge academic learning with real-world industry exposure..",

@@ -20,14 +20,14 @@ const AboutSection = () => {
               About <span className={COLORS.accent.primaryText}>{siteData.name}</span>
             </h2>
             
-            {/* Lorem Ipsum Content - Justified */}
+            {/* About IETE-PCE Content */}
             <div className="text-justify space-y-6 sm:space-y-8">
               <p className={`${COLORS.typography.body.lg} ${COLORS.primary.textSecondary}`}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                The Institution of Electronics and Telecommunication Engineers (IETE) at PCE is a premier student chapter dedicated to fostering excellence in electronics and telecommunication engineering. We provide a platform for students to explore cutting-edge technologies, participate in technical competitions, and develop professional skills through hands-on workshops and industry interactions.
               </p>
               
               <p className={`${COLORS.typography.body.md} ${COLORS.primary.textMuted}`}>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                Our mission is to bridge the gap between theoretical knowledge and practical application, preparing students for successful careers in the rapidly evolving field of electronics and telecommunications. Through regular seminars, technical workshops, hackathons, and industry visits, we ensure our members stay ahead of technological trends and develop the skills needed to excel in their professional journey.
               </p>
             
             </div>

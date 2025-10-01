@@ -1,23 +1,20 @@
+import { useNavigate } from 'react-router-dom'
 import { COLORS } from '../constants/colors'
 import { APP_DATA } from '../data/appData'
 
 const Footer = () => {
+  const navigate = useNavigate()
+  
   const activities = [
-    { name: 'Workshops', id: 'events' },
-    { name: 'Competitions', id: 'events' },
-    { name: 'Seminars', id: 'events' },
-    { name: 'Industrial Visits and Training', id: 'events' },
+    { name: 'Workshops', route: '/events' },
+    { name: 'Competitions', route: '/events' },
+    { name: 'Seminars', route: '/events' },
+    { name: 'Industrial Visits and Training', route: '/events' },
   ]
 
-  // Handle smooth scrolling to sections
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      })
-    }
+  // Handle navigation to events page
+  const handleNavigation = (route) => {
+    navigate(route)
   }
 
   return (
@@ -62,7 +59,7 @@ const Footer = () => {
                 {activities.map((activity) => (
                   <li key={activity.name}>
                     <button 
-                      onClick={() => scrollToSection(activity.id)}
+                      onClick={() => handleNavigation(activity.route)}
                       className={`${COLORS.primary.textMuted} ${COLORS.interactive.linkHover} text-left ${COLORS.typography.body.md} cursor-pointer`}
                     >
                       {activity.name}
