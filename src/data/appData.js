@@ -489,13 +489,13 @@ export const APP_DATA = {
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095402/Industrial_visit_tlxkop.jpg',
           alt: 'Industrial Visit',
-          aspectRatio: '16:9',
+          aspectRatio: '4:3',
           fallback: '📚'
         },
         detailImage: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095402/Industrial_visit_tlxkop.jpg',
           alt: 'Industrial Visit',
-          aspectRatio: '16:9',
+          aspectRatio: '4:3',
           fallback: '📚'
         },
         enabled: true
