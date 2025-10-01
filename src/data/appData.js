@@ -242,7 +242,7 @@ export const APP_DATA = {
         position: "Public Relations Head",
         year: "BTech",
         image: {
-          url: '',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753111473/prathmesh_patil_lolhku.jpg',
           alt: 'Prathamesh Patil - Public Relations Head',
           aspectRatio: '3:4',
           fallback: '👤'
@@ -436,13 +436,13 @@ export const APP_DATA = {
         duration: "2 days",
         tags: ["Hardware", "Robotics", "Hackathon", "National Level"],
         image: {
-          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1754114245/hackrobo_poster.jpg',
+          url: 'https://collection.cloudinary.com/djn79ge3m/f5428635a60ba16cf42854eb8079d172',
           alt: 'HACKROBO Hardware Hackathon',
           aspectRatio: '3:4',
           fallback: '🤖'
         },
         detailImage: {
-          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1754114245/hackrobo_poster.jpg',
+          url: 'https://collection.cloudinary.com/djn79ge3m/f5428635a60ba16cf42854eb8079d172',
           alt: 'HACKROBO Hardware Hackathon Details',
           aspectRatio: '3:4',
           fallback: '🤖'
@@ -479,7 +479,7 @@ export const APP_DATA = {
     IV: [
       {
         id: 1,
-        title: "Industrial and Trainings",
+        title: "Industrial visits and Trainings",
         date: "2025-03-8",
         time: "12:00 AM - 5:00 PM",
         description: "A professional industrial visit organized by the IETE Committee to bridge academic learning with real-world industry exposure..",
@@ -489,13 +489,13 @@ export const APP_DATA = {
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095402/Industrial_visit_tlxkop.jpg',
           alt: 'Industrial Visit',
-          aspectRatio: '3:4',
+          aspectRatio: '16:9',
           fallback: '📚'
         },
         detailImage: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095402/Industrial_visit_tlxkop.jpg',
           alt: 'Industrial Visit',
-          aspectRatio: '3:4',
+          aspectRatio: '16:9',
           fallback: '📚'
         },
         enabled: true
