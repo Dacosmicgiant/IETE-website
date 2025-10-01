@@ -337,9 +337,9 @@ export const APP_DATA = {
           fallback: '🛠️'
         },
         detailImage: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222106/1x1_of94b1.png',
-          alt: 'IoT Development Workshop Details',
-          aspectRatio: '1:1',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095083/Innogration_ddmusa.jpg',
+          alt: 'Introduction to IoT Development Workshop',
+          aspectRatio: '3:4',
           fallback: '🛠️'
         },
         enabled: true
@@ -366,9 +366,9 @@ export const APP_DATA = {
           fallback: '🛠️'
         },
         detailImage: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222106/1x1_of94b1.png',
-          alt: 'PCB Design Workshop Details',
-          aspectRatio: '1:1',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095421/PCB_Design_c9nshr.jpg',
+          alt: 'PCB Design Workshop',
+          aspectRatio: '3:4',
           fallback: '🛠️'
         },
         enabled: true
@@ -393,9 +393,9 @@ export const APP_DATA = {
           fallback: '🏆'
         },
         detailImage: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1751222106/1x1_of94b1.png',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095536/Circuir_craft_kks4em.jpg',
           alt: 'Circuit Design Challenge',
-          aspectRatio: '1:1',
+          aspectRatio: '3:4',
           fallback: '🏆'
         },
         enabled: true
