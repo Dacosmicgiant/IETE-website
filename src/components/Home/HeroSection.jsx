@@ -47,15 +47,7 @@ const HeroSection = () => {
           Excellence in Engineering
         </p>
         
-        {/* Simple Button for Mobile */}
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-sm mx-auto">
-          <button 
-            onClick={() => scrollToSection('about')}
-            className="px-6 py-3 bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 text-white rounded-xl font-semibold transition-all duration-300 drop-shadow-lg"
-          >
-            Learn More
-          </button>
-        </div>
+        
       </div>
 
       {/* Desktop Text Content - Hidden on Small/Medium Screens */}
@@ -72,15 +64,7 @@ const HeroSection = () => {
           Excellence in Engineering
         </p>
         
-        {/* Simple Button for Desktop */}
-        <div className="flex justify-center">
-          <button 
-            onClick={() => scrollToSection('about')}
-            className="px-8 py-4 bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 text-white rounded-xl font-semibold transition-all duration-300 drop-shadow-lg text-lg"
-          >
-            Learn More
-          </button>
-        </div>
+        
       </div>
       
       {/* Bottom Gradient Fade */}
