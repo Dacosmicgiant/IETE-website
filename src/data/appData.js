@@ -460,7 +460,7 @@ export const APP_DATA = {
         venue: "Main Auditorium",
         speaker: "Ms Leena Bokil",
         attendance: "Free for all students",
-        topics: [, "Hardware Challenges", "Industry Applications"],
+        topics: ["Overview", "Hardware Challenges", "Industry Applications"],
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095378/satalite_club_talk_xmkus2.jpg',
           alt: 'Satalite Club Talk',

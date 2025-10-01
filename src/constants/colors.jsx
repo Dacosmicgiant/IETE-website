@@ -90,6 +90,7 @@ export const COLORS = {
   header: {
     bg: 'bg-slate-900/95',
     backdrop: 'backdrop-blur-lg',
+    border: 'border-b border-slate-800/50',
     
     logo: 'bg-gradient-to-br from-blue-500 to-indigo-600',
     navActive: 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg',
