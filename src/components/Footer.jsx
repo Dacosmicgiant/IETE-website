@@ -79,6 +79,31 @@ const Footer = () => {
                   </div>
                   <span className={`${COLORS.primary.textMuted} ${COLORS.typography.body.sm} break-all`}>ietepce@mes.ac.in</span>
                 </div>
+                
+                {/* Social Media Links */}
+                <div className="flex items-center space-x-3 sm:space-x-4 mt-4">
+                  <a 
+                    href="https://www.linkedin.com/in/iete-sf-pce-024091322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-8 h-8 sm:w-10 sm:h-10 ${COLORS.accent.primary} ${COLORS.effects.rounded} flex items-center justify-center hover:scale-105 transition-transform duration-300`}
+                  >
+                    💼
+                  </a>
+                  <span className={`${COLORS.primary.textMuted} ${COLORS.typography.body.sm}`}>LinkedIn</span>
+                </div>
+                
+                <div className="flex items-center space-x-3 sm:space-x-4 mt-2">
+                  <a 
+                    href="https://www.instagram.com/iete_pce?igsh=MWtjNnpndHY3a2EwZg=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-8 h-8 sm:w-10 sm:h-10 ${COLORS.accent.tertiary} ${COLORS.effects.rounded} flex items-center justify-center hover:scale-105 transition-transform duration-300`}
+                  >
+                    📷
+                  </a>
+                  <span className={`${COLORS.primary.textMuted} ${COLORS.typography.body.sm}`}>Instagram</span>
+                </div>
               </div>
               <p className={`${COLORS.primary.textLight} ${COLORS.typography.body.sm} mt-6 sm:mt-8`}>
                 Follow us for updates on events, workshops, and opportunities in electronics and telecommunications.
@@ -87,8 +112,30 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Contact Details Section */}
+        <div className={`${COLORS.primary.borderLight} border-t mt-12 sm:mt-16 pt-6 sm:pt-8`}>
+          <div className="text-center mb-6 sm:mb-8">
+            <h4 className={`${COLORS.typography.heading.sm} ${COLORS.primary.text} mb-4`}>
+              Faculty Coordinator
+            </h4>
+            <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 max-w-md mx-auto`}>
+              <h5 className={`${COLORS.primary.text} font-bold text-lg mb-3`}>Prof. Ameet Mehta</h5>
+              <div className="space-y-2">
+                <div className="flex items-center justify-center space-x-2">
+                  <span className="text-lg">📞</span>
+                  <span className={`${COLORS.primary.textSecondary} ${COLORS.typography.body.sm}`}>+919702962791</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <span className="text-lg">📧</span>
+                  <span className={`${COLORS.primary.textSecondary} ${COLORS.typography.body.sm} break-all`}>amehta@mes.ac.in</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom Section */}
-        <div className={`${COLORS.primary.borderLight} border-t mt-12 sm:mt-16 pt-6 sm:pt-8 text-center`}>
+        <div className={`${COLORS.primary.borderLight} border-t pt-6 sm:pt-8 text-center`}>
           <div className="flex flex-col md:flex-row justify-between items-center space-y-3 sm:space-y-4 md:space-y-0">
             <p className={`${COLORS.primary.textMuted} ${COLORS.typography.body.sm}`}>
               © 2025 IETE-PCE, Pillai College of Engineering. All rights reserved.

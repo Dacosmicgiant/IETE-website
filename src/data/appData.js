@@ -436,13 +436,13 @@ export const APP_DATA = {
         duration: "2 days",
         tags: ["Hardware", "Robotics", "Hackathon", "National Level"],
         image: {
-          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1754114245/hackrobo_poster.jpg',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759300637/HackRobo_wlalyz.jpg',
           alt: 'HACKROBO Hardware Hackathon',
           aspectRatio: '3:4',
           fallback: '🤖'
         },
         detailImage: {
-          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1754114245/hackrobo_poster.jpg',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759300637/HackRobo_wlalyz.jpg',
           alt: 'HACKROBO Hardware Hackathon Details',
           aspectRatio: '3:4',
           fallback: '🤖'
