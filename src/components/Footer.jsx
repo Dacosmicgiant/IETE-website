@@ -40,42 +40,7 @@ const Footer = () => {
               The Institution of Electronics and Telecommunication Engineers student chapter at PCE, 
               advancing technology education since 2024.
             </p>
-            <div className="flex space-x-3 sm:space-x-4">
-              <a 
-                href="mailto:ietepce@mes.ac.in"
-                className={`w-10 h-10 sm:w-12 sm:h-12 ${COLORS.primary.bgTertiary} ${COLORS.accent.primaryHover} ${COLORS.effects.rounded} flex items-center justify-center ${COLORS.primary.textMuted} hover:text-slate-950 transition-all duration-300`}
-              >
-                <img 
-                  src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759302686/WhatsApp_Image_2025-10-01_at_12.29.37_ffd95a84_dbgcq5.jpg"
-                  alt="Gmail"
-                  className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
-                />
-              </a>
-              <a 
-                href="https://www.instagram.com/iete_pce?igsh=MWtjNnpndHY3a2EwZg=="
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`w-10 h-10 sm:w-12 sm:h-12 ${COLORS.primary.bgTertiary} ${COLORS.accent.secondaryHover} ${COLORS.effects.rounded} flex items-center justify-center ${COLORS.primary.textMuted} hover:text-slate-950 transition-all duration-300`}
-              >
-                <img 
-                  src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759302686/WhatsApp_Image_2025-10-01_at_12.30.14_1cd6a5cd_qc1n0y.jpg"
-                  alt="Instagram"
-                  className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
-                />
-              </a>
-              <a 
-                href="https://www.linkedin.com/in/iete-sf-pce-024091322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`w-10 h-10 sm:w-12 sm:h-12 ${COLORS.primary.bgTertiary} ${COLORS.accent.tertiaryHover} ${COLORS.effects.rounded} flex items-center justify-center ${COLORS.primary.textMuted} hover:text-slate-950 transition-all duration-300`}
-              >
-                <img 
-                  src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759302686/WhatsApp_Image_2025-10-01_at_12.28.50_aa7db037_m2d9jq.jpg"
-                  alt="LinkedIn"
-                  className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
-                />
-              </a>
-            </div>
+            <div className="flex space-x-3 sm:space-x-4"></div>
           </div>
 
           {/* Right Side Sections Wrapper */}
@@ -101,36 +66,50 @@ const Footer = () => {
             <div>
               <h4 className={`${COLORS.typography.heading.sm} ${COLORS.primary.text} mb-6 sm:mb-8`}>Connect</h4>
               <div className={COLORS.layout.spacing.sm}>
+                {/* Email */}
                 <div className="flex items-center space-x-3 sm:space-x-4">
-                  <div className={`w-8 h-8 sm:w-10 sm:h-10 ${COLORS.accent.secondary} ${COLORS.effects.rounded} flex items-center justify-center`}>
-                    📧
-                  </div>
-                  <span className={`${COLORS.primary.textMuted} ${COLORS.typography.body.sm} break-all`}>ietepce@mes.ac.in</span>
+                  <img 
+                    src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759302686/WhatsApp_Image_2025-10-01_at_12.29.37_ffd95a84_dbgcq5.jpg"
+                    alt="Gmail"
+                    className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                  />
+                  <a href="mailto:ietepce@mes.ac.in" className={`${COLORS.primary.textMuted} ${COLORS.typography.body.sm} break-all`}>
+                    ietepce@mes.ac.in
+                  </a>
                 </div>
                 
-                {/* Social Media Links */}
+                {/* LinkedIn */}
                 <div className="flex items-center space-x-3 sm:space-x-4 mt-4">
+                  <img 
+                    src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759302686/WhatsApp_Image_2025-10-01_at_12.28.50_aa7db037_m2d9jq.jpg"
+                    alt="LinkedIn"
+                    className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                  />
                   <a 
                     href="https://www.linkedin.com/in/iete-sf-pce-024091322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-8 h-8 sm:w-10 sm:h-10 ${COLORS.accent.primary} ${COLORS.effects.rounded} flex items-center justify-center hover:scale-105 transition-transform duration-300`}
+                    className={`${COLORS.primary.textMuted} ${COLORS.typography.body.sm}`}
                   >
-                    💼
+                    LinkedIn
                   </a>
-                  <span className={`${COLORS.primary.textMuted} ${COLORS.typography.body.sm}`}>LinkedIn</span>
                 </div>
                 
+                {/* Instagram */}
                 <div className="flex items-center space-x-3 sm:space-x-4 mt-2">
+                  <img 
+                    src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759302686/WhatsApp_Image_2025-10-01_at_12.30.14_1cd6a5cd_qc1n0y.jpg"
+                    alt="Instagram"
+                    className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                  />
                   <a 
                     href="https://www.instagram.com/iete_pce?igsh=MWtjNnpndHY3a2EwZg=="
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-8 h-8 sm:w-10 sm:h-10 ${COLORS.accent.tertiary} ${COLORS.effects.rounded} flex items-center justify-center hover:scale-105 transition-transform duration-300`}
+                    className={`${COLORS.primary.textMuted} ${COLORS.typography.body.sm}`}
                   >
-                    📷
+                    Instagram
                   </a>
-                  <span className={`${COLORS.primary.textMuted} ${COLORS.typography.body.sm}`}>Instagram</span>
                 </div>
               </div>
               <p className={`${COLORS.primary.textLight} ${COLORS.typography.body.sm} mt-6 sm:mt-8`}>
