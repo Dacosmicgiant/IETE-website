@@ -199,11 +199,86 @@ const Committee = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div>
 
-      </div>
-    </div>
-  )
+        {/* Member Details by Teams Section */}
+        <div className="mb-12 sm:mb-16">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className={`${COLORS.typography.heading.lg} ${COLORS.primary.text} mb-4 sm:mb-6`}>
+              Team Members
+            </h2>
+            <p className={`${COLORS.primary.textMuted} text-lg max-w-3xl mx-auto`}>
+              Meet our dedicated team members across different departments
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            {/* Technical Team */}
+            <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 ${COLORS.interactive.cardHover}`}>
+              <h3 className={`${COLORS.primary.text} font-bold text-lg mb-4 flex items-center`}>
+                🛠️ Technical Team
+              </h3>
+              <div className="space-y-2">
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Karan</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Omswaroop Gupta</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Rajdeep</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Sameeksha</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Vaishnavi</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Uddhav</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Yash R</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Yash</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Atharva</p>
+              </div>
+            </div>
+
+            {/* Graphics Team */}
+            <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 ${COLORS.interactive.cardHover}`}>
+              <h3 className={`${COLORS.primary.text} font-bold text-lg mb-4 flex items-center`}>
+                🎨 Graphics
+              </h3>
+              <div className="space-y-2">
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Narayan Yadav</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Rutuja Pathak</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Jyotilipsa Mishra</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Aditya Moon</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Vedant Mishra</p>
+              </div>
+            </div>
+
+            {/* Publicity Team */}
+            <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 ${COLORS.interactive.cardHover}`}>
+              <h3 className={`${COLORS.primary.text} font-bold text-lg mb-4 flex items-center`}>
+                📢 Publicity
+              </h3>
+              <div className="space-y-2">
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Nupur</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Aditi Vishwakarma</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Shreeya</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Sarvesh</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Swarup</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Aditya M</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Tanishq Salunkhe</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Rutuja</p>
+              </div>
+            </div>
+
+            {/* Social Media Team */}
+            <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 ${COLORS.interactive.cardHover}`}>
+              <h3 className={`${COLORS.primary.text} font-bold text-lg mb-4 flex items-center`}>
+                📱 Social Media
+              </h3>
+              <div className="space-y-2">
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Adhil</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Purva</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Sahil Manve</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  )
 }
 
 export default Committee
