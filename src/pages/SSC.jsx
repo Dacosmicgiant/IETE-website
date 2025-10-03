@@ -5,23 +5,28 @@ const SSC = () => {
   const coreMembers = [
     {
       name: "Vansh Katkar",
-      position: "Head of SSC and Joint Hardware Lead"
+      position: "Head of SSC and Joint Hardware Lead",
+      image: "https://res.cloudinary.com/djn79ge3m/image/upload/v1752392789/Vansh_Katkar_kofpjq.jpg"
     },
     {
       name: "Sujal Chavan", 
-      position: "Hardware Lead and Joint Non-Technical Lead"
+      position: "Hardware Lead and Joint Non-Technical Lead",
+      image: null
     },
     {
       name: "Eshika Sawane",
-      position: "Software Lead"
+      position: "Software Lead",
+      image: null
     },
     {
       name: "Samruddhi Kadam",
-      position: "Joint Software Lead"
+      position: "Joint Software Lead",
+      image: null
     },
     {
       name: "Devika Marathe",
-      position: "Non-Technical Lead"
+      position: "Non-Technical Lead",
+      image: null
     }
   ];
 
@@ -58,7 +63,7 @@ const SSC = () => {
           </p>
         </div>
 
-        {/* About Section with Vansh's Photo */}
+        {/* About Section with SSC Logo */}
         <div className="mb-12 sm:mb-16">
           <div className={`max-w-6xl mx-auto mb-12 shadow-2xl ${COLORS.effects.roundedLg} bg-blue-800 p-1.5`}>
             <div className={`w-full h-full p-8 sm:p-12 ${COLORS.primary.bgSecondary} ${COLORS.effects.rounded}`}>
@@ -88,18 +93,13 @@ const SSC = () => {
                   </div>
                 </div>
                 
-                {/* Vansh's Photo - Properly sized */}
+                {/* SSC Logo Placeholder */}
                 <div className="flex-1 order-1 lg:order-2 mb-8 lg:mb-0">
-                  <div className="relative w-64 h-80 mx-auto">
-                    <img
-                      src="https://res.cloudinary.com/djn79ge3m/image/upload/v1752392789/Vansh_Katkar_kofpjq.jpg"
-                      alt="Vansh Katkar - Head of SSC"
-                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105 rounded-lg shadow-lg"
-                      loading="lazy"
-                    />
-                    <div className="absolute bottom-3 left-3 right-3 bg-black/70 text-white p-3 rounded text-center">
-                      <h3 className="font-bold text-base">Vansh Katkar</h3>
-                      <p className="text-sm opacity-90">Head of Student Satellite Club</p>
+                  <div className="relative w-64 h-64 mx-auto bg-gray-200 rounded-lg shadow-lg flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="text-6xl mb-4">🛰️</div>
+                      <h3 className="font-bold text-lg text-gray-600">SSC Logo</h3>
+                      <p className="text-sm text-gray-500">Coming Soon</p>
                     </div>
                   </div>
                 </div>
@@ -123,7 +123,21 @@ const SSC = () => {
             <div className={`w-full h-full p-8 sm:p-12 ${COLORS.primary.bgSecondary} ${COLORS.effects.rounded}`}>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 sm:gap-8">
                 {coreMembers.map((member, index) => (
-                  <div key={index} className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 ${COLORS.interactive.cardHover}`}>
+                  <div key={index} className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 ${COLORS.interactive.cardHover} text-center`}>
+                    {/* Member Photo */}
+                    <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                      {member.image ? (
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-gray-300 flex items-center justify-center">
+                          <span className="text-2xl">👤</span>
+                        </div>
+                      )}
+                    </div>
                     <h3 className={`${COLORS.primary.text} font-bold text-lg mb-2`}>
                       {member.name}
                     </h3>
