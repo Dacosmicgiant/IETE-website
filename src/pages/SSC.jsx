@@ -98,7 +98,7 @@ const SSC = () => {
                   <img
                     src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759471942/WhatsApp_Image_2025-10-03_at_10.20.03_e6071a56_qkgu1g.jpg"
                     alt="SSC Logo"
-                    className="w-64 h-64 mx-auto object-cover rounded-lg shadow-lg"
+                    className="w-72 h-72 mx-auto object-cover rounded-lg shadow-lg"
                     loading="lazy"
                   />
                 </div>
@@ -129,11 +129,21 @@ const SSC = () => {
             </div>
           </div>
 
-          <div className="max-w-4xl mx-auto text-center">
-            <p className={`${COLORS.primary.textSecondary} text-sm sm:text-base`}>
-              Vansh Katkar (Head of SSC and Joint Hardware Lead) • Sujal Chavan (Hardware Lead and Joint Non-Technical Lead) • 
-              Eshika Sawane (Software Lead) • Samruddhi Kadam (Joint Software Lead) • Devika Marathe (Non-Technical Lead)
-            </p>
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {[
+                {name: 'Vansh Katkar', role: 'Head of SSC & Joint Hardware Lead'},
+                {name: 'Sujal Chavan', role: 'Hardware Lead & Joint Non-Technical Lead'},
+                {name: 'Eshika Sawane', role: 'Software Lead'},
+                {name: 'Samruddhi Kadam', role: 'Joint Software Lead'},
+                {name: 'Devika Marathe', role: 'Non-Technical Lead'},
+              ].map((m, i) => (
+                <div key={i} className={`text-center ${COLORS.effects.glass} ${COLORS.effects.rounded} p-3`}>
+                  <div className={`${COLORS.primary.text} font-semibold`}>{m.name}</div>
+                  <div className={`${COLORS.primary.textSecondary} text-sm`}>{m.role}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

@@ -474,7 +474,7 @@ export const APP_DATA = {
     IV: [
       {
         id: 1,
-        title: "Industrial visits and Trainings",
+        title: "Industrial visit to DIGISAT",
         date: "2025-03-8",
         time: "12:00 AM - 5:00 PM",
         description: "DIGISAT - A professional industrial visit organized by the IETE Committee to bridge academic learning with real-world industry exposure.",
