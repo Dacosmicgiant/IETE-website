@@ -96,9 +96,9 @@ const SSC = () => {
                 {/* SSC Logo */}
                 <div className="flex-1 order-1 lg:order-2 mb-8 lg:mb-0">
                   <img
-                    src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759471942/WhatsApp_Image_2025-10-03_at_10.20.03_e6071a56_qkgu1g.jpg"
+                    src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759474243/WhatsApp_Image_2025-10-03_at_10.20.03_c16d3289-removebg-preview_rvjdh6.png"
                     alt="SSC Logo"
-                    className="w-72 h-72 mx-auto object-cover rounded-lg shadow-lg"
+                    className="w-80 h-80 mx-auto object-contain rounded-lg shadow-lg"
                     loading="lazy"
                   />
                 </div>
