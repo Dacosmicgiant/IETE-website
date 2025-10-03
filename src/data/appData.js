@@ -261,15 +261,10 @@ export const APP_DATA = {
         },
         members: [
           {
-            name: "Pratiksha Chaudhari", // Only required field for sub-members
-            position: "Coordinator Nominated Member",
+            name: "Pratiksha Chaudhari & Narayan Yadav", // Only required field for sub-members
+            position: "Coordinator Nominated Members",
             year: "BTech",
             specialization: "Power Electronics"
-          },
-          {
-            name: "Narayan Yadav",
-            position: "Coordinator Nominated Member",
-            year: "BTech",
           }
         ],
         enabled: true

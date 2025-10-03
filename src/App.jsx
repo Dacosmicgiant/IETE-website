@@ -8,6 +8,7 @@ import Events from './pages/Events'
 import EventDetail from './pages/EventDetail'
 import EventCategory from './pages/EventCategory'
 import Committee from './pages/Committee'
+import SSC from './pages/SSC'
 
 // Component to scroll to top on route change
 function ScrollToTop() {
@@ -30,6 +31,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/committee" element={<Committee />} />
+            <Route path="/ssc" element={<SSC />} />
             <Route path="/events" element={<Events />} />
             <Route path="/events/:type" element={<EventCategory />} />
             <Route path="/events/:type/:id" element={<EventDetail />} />

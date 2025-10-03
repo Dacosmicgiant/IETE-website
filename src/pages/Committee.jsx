@@ -223,7 +223,7 @@ const Committee = () => {
                 <p className={`${COLORS.primary.textSecondary} text-sm`}>Omswaroop Gupta</p>
                 <p className={`${COLORS.primary.textSecondary} text-sm`}>Rajdeep Maity</p>
                 <p className={`${COLORS.primary.textSecondary} text-sm`}>Sameeksha Thorat</p>
-                <p className={`${COLORS.primary.textSecondary} text-sm`}>Vaishnavi</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Vaishnavi Gaikwad</p>
                 <p className={`${COLORS.primary.textSecondary} text-sm`}>Uddhav Shinde</p>
                 <p className={`${COLORS.primary.textSecondary} text-sm`}>Yash Rangra</p>
                 <p className={`${COLORS.primary.textSecondary} text-sm`}>Yash Deore</p>
@@ -251,15 +251,16 @@ const Committee = () => {
                 📢 Publicity
               </h3>
               <div className="space-y-2">
-                <p className={`${COLORS.primary.textSecondary} text-sm`}>Nupur</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Devika Marathe</p>
                 <p className={`${COLORS.primary.textSecondary} text-sm`}>Aditi Vishwakarma</p>
                 <p className={`${COLORS.primary.textSecondary} text-sm`}>Shreeya</p>
-                <p className={`${COLORS.primary.textSecondary} text-sm`}>Sarvesh</p>
-                <p className={`${COLORS.primary.textSecondary} text-sm`}>Swarup</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Sarvesh Karulkar</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Swarup Kahar</p>
                 <p className={`${COLORS.primary.textSecondary} text-sm`}>Aditya M</p>
                 <p className={`${COLORS.primary.textSecondary} text-sm`}>Tanishq Salunkhe</p>
                 <p className={`${COLORS.primary.textSecondary} text-sm`}>Nakul Patil</p>
-                <p className={`${COLORS.primary.textSecondary} text-sm`}>Rutuja</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Rutuja Pilankar</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Arya Sachin Gavhale</p>
               </div>
             </div>
 

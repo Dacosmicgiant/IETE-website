@@ -17,6 +17,7 @@ const Header = () => {
     { name: 'About', href: '#about', id: 'about', type: 'scroll' },
     { name: 'Faculty', href: '#faculty', id: 'faculty', type: 'scroll' },
     { name: 'Committee', href: '/committee', id: 'committee', type: 'route' },
+    { name: 'SSC', href: '/ssc', id: 'ssc', type: 'route' },
     { name: 'Events', href: '/events', id: 'events', type: 'route' },
   ]
 
@@ -59,6 +60,8 @@ const Header = () => {
         setActiveSection('events')
       } else if (location.pathname === '/committee') {
         setActiveSection('committee')
+      } else if (location.pathname === '/ssc') {
+        setActiveSection('ssc')
       }
       return
     }
@@ -88,6 +91,8 @@ const Header = () => {
       setActiveSection('events')
     } else if (location.pathname === '/committee') {
       setActiveSection('committee')
+    } else if (location.pathname === '/ssc') {
+      setActiveSection('ssc')
     }
   }, [location.pathname])
 
