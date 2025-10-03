@@ -60,27 +60,46 @@ const SSC = () => {
 
         {/* About Section */}
         <div className="mb-12 sm:mb-16">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className={`${COLORS.typography.heading.lg} ${COLORS.primary.text} mb-8 sm:mb-12`}>
-              About Student Satellite Club
-            </h2>
-            <div className={`${COLORS.primary.textSecondary} text-base sm:text-lg leading-relaxed space-y-4`}>
-              <p>
-                The Student Satellite Club (SSC) at PCE is a dynamic organization dedicated to 
-                advancing space technology education and hands-on satellite development. Our club 
-                brings together passionate students from various engineering disciplines to work 
-                on cutting-edge space technology projects.
-              </p>
-              <p>
-                We focus on practical learning through hardware development, software programming, 
-                and mission planning. Our members gain valuable experience in satellite design, 
-                ground station operations, and space mission management while contributing to 
-                real-world space technology advancement.
-              </p>
-              <p>
-                Join us to be part of the next generation of space engineers and contribute to 
-                India's growing space technology ecosystem!
-              </p>
+          <div className="flex flex-col lg:flex-row lg:gap-16 items-center">
+            {/* Text Content */}
+            <div className="flex-1 order-2 lg:order-1">
+              <h2 className={`${COLORS.typography.heading.lg} ${COLORS.primary.text} mb-8 sm:mb-12 text-center lg:text-left`}>
+                About Student Satellite Club
+              </h2>
+              <div className={`${COLORS.primary.textSecondary} text-base sm:text-lg leading-relaxed space-y-4`}>
+                <p>
+                  The Student Satellite Club (SSC) at PCE is a dynamic organization dedicated to 
+                  advancing space technology education and hands-on satellite development. Our club 
+                  brings together passionate students from various engineering disciplines to work 
+                  on cutting-edge space technology projects.
+                </p>
+                <p>
+                  We focus on practical learning through hardware development, software programming, 
+                  and mission planning. Our members gain valuable experience in satellite design, 
+                  ground station operations, and space mission management while contributing to 
+                  real-world space technology advancement.
+                </p>
+                <p>
+                  Join us to be part of the next generation of space engineers and contribute to 
+                  India's growing space technology ecosystem!
+                </p>
+              </div>
+            </div>
+            
+            {/* Vansh's Photo */}
+            <div className="flex-1 order-1 lg:order-2 mb-8 lg:mb-0">
+              <div className="relative">
+                <img
+                  src="https://res.cloudinary.com/djn79ge3m/image/upload/v1752392789/Vansh_Katkar_kofpjq.jpg"
+                  alt="Vansh Katkar - Head of SSC"
+                  className="w-full h-auto max-w-md mx-auto transition-transform duration-300 hover:scale-105 rounded-lg shadow-lg"
+                  loading="lazy"
+                />
+                <div className="absolute bottom-4 left-4 right-4 bg-black/70 text-white p-3 rounded-lg">
+                  <h3 className="font-bold text-lg">Vansh Katkar</h3>
+                  <p className="text-sm opacity-90">Head of Student Satellite Club</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
