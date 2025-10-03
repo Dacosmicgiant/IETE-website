@@ -93,61 +93,77 @@ const SSC = () => {
                   </div>
                 </div>
                 
-                {/* SSC Logo Placeholder */}
+                {/* SSC Logo */}
                 <div className="flex-1 order-1 lg:order-2 mb-8 lg:mb-0">
-                  <div className="relative w-64 h-64 mx-auto bg-gray-200 rounded-lg shadow-lg flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-6xl mb-4">🛰️</div>
-                      <h3 className="font-bold text-lg text-gray-600">SSC Logo</h3>
-                      <p className="text-sm text-gray-500">Coming Soon</p>
-                    </div>
-                  </div>
+                  <img
+                    src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759471942/WhatsApp_Image_2025-10-03_at_10.20.03_e6071a56_qkgu1g.jpg"
+                    alt="SSC Logo"
+                    className="w-64 h-64 mx-auto object-cover rounded-lg shadow-lg"
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Core Members Section */}
+        {/* Core Members Section (Group Photo + Names) */}
         <div className="mb-12 sm:mb-16">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className={`${COLORS.typography.heading.lg} ${COLORS.primary.text} mb-4 sm:mb-6`}>
               Core Members
             </h2>
             <p className={`${COLORS.primary.textMuted} text-lg max-w-3xl mx-auto`}>
-              Meet our dedicated core team leading the Student Satellite Club
+              Our SSC core team (group photo) with member names
             </p>
           </div>
 
-          <div className={`max-w-6xl mx-auto mb-12 shadow-2xl ${COLORS.effects.roundedLg} bg-blue-800 p-1.5`}>
-            <div className={`w-full h-full p-8 sm:p-12 ${COLORS.primary.bgSecondary} ${COLORS.effects.rounded}`}>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 sm:gap-8">
-                {coreMembers.map((member, index) => (
-                  <div key={index} className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 ${COLORS.interactive.cardHover} text-center`}>
-                    {/* Member Photo */}
-                    <div className="w-28 h-28 mx-auto mb-4 rounded-full overflow-hidden">
-                      {member.image ? (
-                        <img
-                          src={member.image}
-                          alt={member.name}
-                          className="w-full h-full object-cover"
-                        />
-                      ) : (
-                        <div className="w-full h-full bg-gray-300 flex items-center justify-center">
-                          <span className="text-2xl">👤</span>
-                        </div>
-                      )}
-                    </div>
-                    <h3 className={`${COLORS.primary.text} font-bold text-lg mb-2`}>
-                      {member.name}
-                    </h3>
-                    <p className={`${COLORS.accent.primaryText} font-semibold text-sm`}>
-                      {member.position}
-                    </p>
-                  </div>
-                ))}
-              </div>
+          <div className={`max-w-5xl mx-auto mb-8 shadow-2xl ${COLORS.effects.roundedLg} bg-blue-800 p-1.5`}>
+            <div className={`w-full h-full p-4 sm:p-6 ${COLORS.primary.bgSecondary} ${COLORS.effects.rounded}`}>
+              <img
+                src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759471942/WhatsApp_Image_2025-10-03_at_10.20.03_d4a89feb_wrynw6.jpg"
+                alt="SSC Core Team Group Photo"
+                className="w-full h-auto rounded-xl object-cover"
+                loading="lazy"
+              />
             </div>
+          </div>
+
+          <div className="max-w-4xl mx-auto text-center">
+            <p className={`${COLORS.primary.textSecondary} text-sm sm:text-base`}>
+              Vansh Katkar (Head of SSC and Joint Hardware Lead) • Sujal Chavan (Hardware Lead and Joint Non-Technical Lead) • 
+              Eshika Sawane (Software Lead) • Samruddhi Kadam (Joint Software Lead) • Devika Marathe (Non-Technical Lead)
+            </p>
+          </div>
+        </div>
+
+        {/* Faculty Coordinators Section */}
+        <div className="mb-12 sm:mb-16">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className={`${COLORS.typography.heading.lg} ${COLORS.primary.text} mb-4 sm:mb-6`}>
+              Faculty Coordinators
+            </h2>
+            <p className={`${COLORS.primary.textMuted} text-lg max-w-3xl mx-auto`}>
+              Guiding the Student Satellite Club at PCE
+            </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+            {[
+              { name: 'Dr. Suman Wadkar', image: null },
+              { name: 'Prof. Sonali Kathare', image: null }
+            ].map((fac, idx) => (
+              <div key={idx} className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 text-center ${COLORS.interactive.cardHover}`}>
+                <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden bg-gray-300 flex items-center justify-center">
+                  {fac.image ? (
+                    <img src={fac.image} alt={fac.name} className="w-full h-full object-cover" />
+                  ) : (
+                    <span className="text-3xl">👩‍🏫</span>
+                  )}
+                </div>
+                <h3 className={`${COLORS.primary.text} font-bold`}>{fac.name}</h3>
+              </div>
+            ))}
           </div>
         </div>
 

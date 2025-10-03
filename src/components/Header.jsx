@@ -131,8 +131,8 @@ const Header = () => {
                   onClick={() => handleNavigation(item)}
                   className={`px-4 mx-1.5 py-2 text-sm font-medium transition-all duration-300 ${
                     activeSection === item.id
-                      ? COLORS.header.navActive
-                      : COLORS.header.navInactive
+                      ? `${COLORS.header.navActive} rounded-full`
+                      : `${COLORS.header.navInactive} rounded-full`
                   }`}
                 >
                   {item.name}

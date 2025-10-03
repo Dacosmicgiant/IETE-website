@@ -120,23 +120,43 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Contact Details Section */}
+        {/* Contact & Contributors Section */}
         <div className={`${COLORS.primary.borderLight} border-t mt-12 sm:mt-16 pt-6 sm:pt-8`}>
-          <div className="text-center mb-6 sm:mb-8">
-            <h4 className={`${COLORS.typography.heading.sm} ${COLORS.primary.text} mb-4`}>
-              Faculty Coordinator
-            </h4>
-            <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 max-w-md mx-auto`}>
-              <h5 className={`${COLORS.primary.text} font-bold text-lg mb-3`}>Prof. Ameet Mehta</h5>
-              <div className="space-y-2">
-                <div className="flex items-center justify-center space-x-2">
-                  <span className="text-lg">📞</span>
-                  <span className={`${COLORS.primary.textSecondary} ${COLORS.typography.body.sm}`}>+919702962791</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 items-start">
+            {/* Faculty Coordinator - Left */}
+            <div>
+              <h4 className={`${COLORS.typography.heading.sm} ${COLORS.primary.text} mb-4`}>
+                Faculty Coordinator
+              </h4>
+              <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 max-w-md`}>
+                <h5 className={`${COLORS.primary.text} font-bold text-lg mb-3`}>Prof. Ameet Mehta</h5>
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <span className="text-lg">📞</span>
+                    <span className={`${COLORS.primary.textSecondary} ${COLORS.typography.body.sm}`}>+919702962791</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-lg">📧</span>
+                    <span className={`${COLORS.primary.textSecondary} ${COLORS.typography.body.sm} break-all`}>amehta@mes.ac.in</span>
+                  </div>
                 </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <span className="text-lg">📧</span>
-                  <span className={`${COLORS.primary.textSecondary} ${COLORS.typography.body.sm} break-all`}>amehta@mes.ac.in</span>
-                </div>
+              </div>
+            </div>
+
+            {/* Website Contributors - Right */}
+            <div>
+              <h4 className={`${COLORS.typography.heading.sm} ${COLORS.primary.text} mb-4`}>
+                Website Contributors
+              </h4>
+              <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 max-w-md`}>
+                <ul className="list-disc list-inside space-y-1 text-left">
+                  <li className={`${COLORS.primary.textSecondary}`}>Omswaroop Gupta</li>
+                  <li className={`${COLORS.primary.textSecondary}`}>Vishal Patil</li>
+                  <li className={`${COLORS.primary.textSecondary}`}>Aayush Gupta</li>
+                  <li className={`${COLORS.primary.textSecondary}`}>Vedant Vankar</li>
+                  <li className={`${COLORS.primary.textSecondary}`}>Gitanjali Pandey</li>
+                  <li className={`${COLORS.primary.textSecondary}`}>Chinmay Dabholkar</li>
+                </ul>
               </div>
             </div>
           </div>

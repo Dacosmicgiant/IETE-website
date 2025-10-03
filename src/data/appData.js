@@ -297,7 +297,7 @@ export const APP_DATA = {
         enabled: true
       },
       IV: {
-        name: "Industrial Visits",
+        name: "Industrial visits and Trainings",
         description: "Professional skill development and certification programs",
         icon: "📚",
         color: "emerald",
@@ -307,7 +307,7 @@ export const APP_DATA = {
     workshops: [
       {
         id: 1,
-        title: "Inaugration of IOT ", // Required
+        title: "Inauguration of IETE", // Required
         date: "2025-07-15", // Required
         time: "10:00 AM - 4:00 PM", // Required
         description: "Learn to build IoT applications using Arduino and sensors. Hands-on experience with real projects.",
@@ -327,13 +327,13 @@ export const APP_DATA = {
         outcomes: ["Build working IoT prototypes", "Understand sensor interfacing", "Learn Arduino programming"],
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095083/Innogration_ddmusa.jpg',
-          alt: 'Introduction to IoT Development Workshop',
+          alt: 'Inauguration of IETE',
           aspectRatio: '3:4',
           fallback: '🛠️'
         },
         detailImage: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095083/Innogration_ddmusa.jpg',
-          alt: 'Introduction to IoT Development Workshop',
+          alt: 'Inauguration of IETE',
           aspectRatio: '3:4',
           fallback: '🛠️'
         },
@@ -448,7 +448,7 @@ export const APP_DATA = {
     seminars: [
       {
         id: 1,
-        title: "Satalite Club Talk",
+        title: "Satellite Club Talk",
         date: "2024-09-23",
         time: "3:00 PM - 5:00 PM",
         description: "A technical talk hosted by the Satellite Club to explore advancements and opportunities in space technology and satellite communication.",
@@ -458,13 +458,13 @@ export const APP_DATA = {
         topics: ["Overview", "Hardware Challenges", "Industry Applications"],
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095378/satalite_club_talk_xmkus2.jpg',
-          alt: 'Satalite Club Talk',
+          alt: 'Satellite Club Talk',
           aspectRatio: '3:4',
           fallback: '🎤'
         },
         detailImage: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095378/satalite_club_talk_xmkus2.jpg',
-          alt: 'Satalite Club Talk',
+          alt: 'Satellite Club Talk',
           aspectRatio: '3:4',
           fallback: '🎤'
         },
@@ -477,19 +477,19 @@ export const APP_DATA = {
         title: "Industrial visits and Trainings",
         date: "2025-03-8",
         time: "12:00 AM - 5:00 PM",
-        description: "A professional industrial visit organized by the IETE Committee to bridge academic learning with real-world industry exposure..",
+        description: "DIGISAT - A professional industrial visit organized by the IETE Committee to bridge academic learning with real-world industry exposure.",
         trainer: "Ms. Kavya Reddy",
         certification: "IETE Certificate",
         fee: "₹300",
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095402/Industrial_visit_tlxkop.jpg',
-          alt: 'Industrial Visit',
+          alt: 'DIGISAT Industrial Visit',
           aspectRatio: '4:3',
           fallback: '📚'
         },
         detailImage: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095402/Industrial_visit_tlxkop.jpg',
-          alt: 'Industrial Visit',
+          alt: 'DIGISAT Industrial Visit',
           aspectRatio: '4:3',
           fallback: '📚'
         },
