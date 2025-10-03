@@ -88,18 +88,18 @@ const SSC = () => {
                   </div>
                 </div>
                 
-                {/* Vansh's Photo - Smaller size to match committee format */}
+                {/* Vansh's Photo - Properly sized */}
                 <div className="flex-1 order-1 lg:order-2 mb-8 lg:mb-0">
-                  <div className="relative w-48 h-64 mx-auto">
+                  <div className="relative w-64 h-80 mx-auto">
                     <img
                       src="https://res.cloudinary.com/djn79ge3m/image/upload/v1752392789/Vansh_Katkar_kofpjq.jpg"
                       alt="Vansh Katkar - Head of SSC"
                       className="w-full h-full object-cover transition-transform duration-300 hover:scale-105 rounded-lg shadow-lg"
                       loading="lazy"
                     />
-                    <div className="absolute bottom-2 left-2 right-2 bg-black/70 text-white p-2 rounded text-center">
-                      <h3 className="font-bold text-sm">Vansh Katkar</h3>
-                      <p className="text-xs opacity-90">Head of SSC</p>
+                    <div className="absolute bottom-3 left-3 right-3 bg-black/70 text-white p-3 rounded text-center">
+                      <h3 className="font-bold text-base">Vansh Katkar</h3>
+                      <p className="text-sm opacity-90">Head of Student Satellite Club</p>
                     </div>
                   </div>
                 </div>
@@ -148,40 +148,42 @@ const SSC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 sm:gap-8">
-            {/* Hardware Team */}
-            <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 ${COLORS.interactive.cardHover}`}>
-              <h3 className={`${COLORS.primary.text} font-bold text-lg mb-4 flex items-center`}>
-                🛠️ Hardware Team
-              </h3>
-              <div className="space-y-2">
-                {hardwareTeam.map((member, index) => (
-                  <p key={index} className={`${COLORS.primary.textSecondary} text-sm`}>{member}</p>
-                ))}
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 justify-items-center">
+              {/* Hardware Team */}
+              <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 ${COLORS.interactive.cardHover} w-full max-w-sm`}>
+                <h3 className={`${COLORS.primary.text} font-bold text-lg mb-4 flex items-center justify-center`}>
+                  🛠️ Hardware Team
+                </h3>
+                <div className="space-y-2">
+                  {hardwareTeam.map((member, index) => (
+                    <p key={index} className={`${COLORS.primary.textSecondary} text-sm text-center`}>{member}</p>
+                  ))}
+                </div>
               </div>
-            </div>
 
-            {/* Software Team */}
-            <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 ${COLORS.interactive.cardHover}`}>
-              <h3 className={`${COLORS.primary.text} font-bold text-lg mb-4 flex items-center`}>
-                💻 Software Team
-              </h3>
-              <div className="space-y-2">
-                {softwareTeam.map((member, index) => (
-                  <p key={index} className={`${COLORS.primary.textSecondary} text-sm`}>{member}</p>
-                ))}
+              {/* Software Team */}
+              <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 ${COLORS.interactive.cardHover} w-full max-w-sm`}>
+                <h3 className={`${COLORS.primary.text} font-bold text-lg mb-4 flex items-center justify-center`}>
+                  💻 Software Team
+                </h3>
+                <div className="space-y-2">
+                  {softwareTeam.map((member, index) => (
+                    <p key={index} className={`${COLORS.primary.textSecondary} text-sm text-center`}>{member}</p>
+                  ))}
+                </div>
               </div>
-            </div>
 
-            {/* Non-Technical Team */}
-            <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 ${COLORS.interactive.cardHover}`}>
-              <h3 className={`${COLORS.primary.text} font-bold text-lg mb-4 flex items-center`}>
-                📋 Non-Technical Team
-              </h3>
-              <div className="space-y-2">
-                {nonTechnicalTeam.map((member, index) => (
-                  <p key={index} className={`${COLORS.primary.textSecondary} text-sm`}>{member}</p>
-                ))}
+              {/* Non-Technical Team */}
+              <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 ${COLORS.interactive.cardHover} w-full max-w-sm`}>
+                <h3 className={`${COLORS.primary.text} font-bold text-lg mb-4 flex items-center justify-center`}>
+                  📋 Non-Technical Team
+                </h3>
+                <div className="space-y-2">
+                  {nonTechnicalTeam.map((member, index) => (
+                    <p key={index} className={`${COLORS.primary.textSecondary} text-sm text-center`}>{member}</p>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
