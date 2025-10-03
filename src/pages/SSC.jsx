@@ -97,14 +97,12 @@ const SSC = () => {
                 
                 {/* SSC Logo */}
                 <div className="flex-1 order-1 lg:order-2 mb-8 lg:mb-0">
-                  <div className="mx-auto w-[20rem] h-[20rem] md:w-[24rem] md:h-[24rem] p-4 bg-white/30 backdrop-blur-sm rounded-2xl shadow-xl flex items-center justify-center">
-                    <img
-                      src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759474243/WhatsApp_Image_2025-10-03_at_10.20.03_c16d3289-removebg-preview_rvjdh6.png"
-                      alt="SSC Logo"
-                      className="w-full h-full object-contain"
-                      loading="lazy"
-                    />
-                  </div>
+                  <img
+                    src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759474243/WhatsApp_Image_2025-10-03_at_10.20.03_c16d3289-removebg-preview_rvjdh6.png"
+                    alt="SSC Logo"
+                    className="mx-auto w-[20rem] h-[20rem] md:w-[24rem] md:h-[24rem] object-contain"
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </div>
