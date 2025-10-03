@@ -94,13 +94,13 @@ const SSC = () => {
                 </div>
                 
                 {/* SSC Logo */}
-                <div className="flex-1 order-1 lg:order-2 mb-8 lg:mb-0">
+                <div className="flex-1 order-1 lg:order-2 mb-8 lg:mb-0 w-full">
                   {/* Right-side rounded translucent panel with logo */}
-                  <div className="w-full mx-auto bg-white/20 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl">
+                  <div className="w-full mx-auto bg-white/20 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl">
                     <img
                       src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759474243/WhatsApp_Image_2025-10-03_at_10.20.03_c16d3289-removebg-preview_rvjdh6.png"
                       alt="SSC Logo"
-                      className="mx-auto w-[20rem] h-[20rem] md:w-[24rem] md:h-[24rem] object-contain"
+                      className="mx-auto w-[14rem] h-[14rem] sm:w-[20rem] sm:h-[20rem] md:w-[24rem] md:h-[24rem] object-contain"
                       loading="lazy"
                     />
                   </div>
