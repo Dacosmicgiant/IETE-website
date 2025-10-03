@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image } from '../components/ui/Image';
+import Image from '../components/ui/Image';
 import { COLORS } from '../constants/colors';
 
 const SSC = () => {
