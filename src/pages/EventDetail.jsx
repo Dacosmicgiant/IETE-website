@@ -73,7 +73,7 @@ const EventDetail = () => {
               {event.capacity && (
                 <p className={`${COLORS.primary.textSecondary} mb-2`}>
                   <strong>Capacity:</strong> {event.capacity} students
-                  {event.registered && ` (${event.registered} registered)`}
+                  {/* {event.registered && ` (${event.registered} registered)`} */}
                 </p>
               )}
               {event.fee && (
@@ -194,7 +194,7 @@ const EventDetail = () => {
     <div className={`min-h-screen ${COLORS.primary.bg} pt-20 px-4 ${COLORS.layout.section}`}>
       <div className={`${COLORS.layout.container}`}>
         {/* Breadcrumb */}
-        <div className="flex items-center space-x-2 mb-8 text-sm">
+        <div className="flex items-center space-x-2 mb-8 text-sm mt-12">
           <button 
             onClick={() => navigate('/events')}
             className={`${COLORS.primary.textMuted} hover:${COLORS.accent.primaryText} transition-colors`}
@@ -217,7 +217,7 @@ const EventDetail = () => {
           {/* Left: Event Image */}
           <div className="flex flex-col h-full">
             <div className="flex-1 flex items-center justify-center p-4">
-              <div className="max-w-md w-full">
+              <div className="max-w-md w-90">
                 <Image 
                   imageData={event.detailImage || event.image || {
                     url: null,
@@ -230,7 +230,7 @@ const EventDetail = () => {
               </div>
             </div>
             
-            {/* Event Category Badge */}
+            {/* Event Category Badge
             <div className="flex items-center space-x-4 flex-shrink-0 p-4">
               <span className={`px-4 py-2 ${COLORS.effects.rounded} text-sm font-medium ${
                 type === 'workshops' ? 'bg-cyan-500/20 text-cyan-400' :
@@ -243,7 +243,7 @@ const EventDetail = () => {
               <span className={`${COLORS.primary.textMuted} text-sm`}>
                 {formatDate(event.date)}
               </span>
-            </div>
+            </div> */}
           </div>
 
           {/* Right: Event Info */}

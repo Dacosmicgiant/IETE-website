@@ -222,7 +222,7 @@ const EventCategory = () => {
     <div className={`min-h-screen ${COLORS.primary.bg} pt-20 px-4 ${COLORS.layout.section}`}>
       <div className={`${COLORS.layout.container}`}>
         {/* Breadcrumb */}
-        <div className="flex items-center space-x-2 mb-8 text-sm">
+        <div className="flex items-center space-x-2 mb-8 mt-12 text-sm">
           <button 
             onClick={() => navigate('/events')}
             className={`${COLORS.primary.textMuted} hover:${COLORS.accent.primaryText} transition-colors`}

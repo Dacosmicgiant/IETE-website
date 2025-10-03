@@ -93,9 +93,9 @@ const Events = () => {
           {/* Additional Info based on event type */}
           {type === 'workshops' && event.fee && (
             <div className="text-xs text-center">
-              <span className={`px-2 py-1 ${COLORS.effects.rounded} ${COLORS.accent.primaryText} bg-blue-500/20`}>
+              {/* <span className={`px-2 py-1 ${COLORS.effects.rounded} ${COLORS.accent.primaryText} bg-blue-500/20`}>
                 Fee: {event.fee}
-              </span>
+              </span> */}
             </div>
           )}
           

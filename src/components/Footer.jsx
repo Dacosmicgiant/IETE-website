@@ -122,7 +122,7 @@ const Footer = () => {
 
         {/* Contact & Contributors Section */}
         <div className={`${COLORS.primary.borderLight} border-t mt-12 sm:mt-16 pt-6 sm:pt-8`}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 items-start mb-6 sm:mb-8">
             {/* Faculty Coordinator - Left */}
             <div>
               <h4 className={`${COLORS.typography.heading.sm} ${COLORS.primary.text} mb-4`}>
