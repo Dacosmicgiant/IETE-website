@@ -66,8 +66,10 @@ const SSC = () => {
         {/* About Section with SSC Logo */}
         <div className="mb-12 sm:mb-16">
           <div className={`max-w-6xl mx-auto mb-12 shadow-2xl ${COLORS.effects.roundedLg} bg-blue-800 p-1.5`}>
-            <div className={`w-full h-full p-8 sm:p-12 ${COLORS.primary.bgSecondary} ${COLORS.effects.rounded}`}>
-              <div className="flex flex-col lg:flex-row lg:gap-16 items-center">
+            <div className={`w-full h-full p-8 sm:p-12 ${COLORS.primary.bgSecondary} ${COLORS.effects.rounded} relative`}>
+              {/* Translucent overlay for readability */}
+              <div className="absolute inset-0 bg-black/30 ${COLORS.effects.rounded}"></div>
+              <div className="relative flex flex-col lg:flex-row lg:gap-16 items-center">
                 {/* Text Content */}
                 <div className="flex-1 order-2 lg:order-1">
                   <h2 className={`${COLORS.typography.heading.lg} ${COLORS.primary.text} mb-8 sm:mb-12 text-center lg:text-left`}>
@@ -95,12 +97,14 @@ const SSC = () => {
                 
                 {/* SSC Logo */}
                 <div className="flex-1 order-1 lg:order-2 mb-8 lg:mb-0">
-                  <img
-                    src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759474243/WhatsApp_Image_2025-10-03_at_10.20.03_c16d3289-removebg-preview_rvjdh6.png"
-                    alt="SSC Logo"
-                    className="w-80 h-80 mx-auto object-contain rounded-lg shadow-lg"
-                    loading="lazy"
-                  />
+                  <div className="mx-auto w-[20rem] h-[20rem] md:w-[24rem] md:h-[24rem] p-4 bg-black/30 backdrop-blur-sm rounded-2xl shadow-xl flex items-center justify-center">
+                    <img
+                      src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759474243/WhatsApp_Image_2025-10-03_at_10.20.03_c16d3289-removebg-preview_rvjdh6.png"
+                      alt="SSC Logo"
+                      className="w-full h-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
