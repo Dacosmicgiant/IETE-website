@@ -10,6 +10,7 @@ const Footer = () => {
     { name: 'Competitions', route: '/events' },
     { name: 'Seminars', route: '/events' },
     { name: 'Industrial Visits and Training', route: '/events' },
+    { name: 'Student Satellite Club', route: '/ssc' },
   ]
 
   // Handle navigation to events page

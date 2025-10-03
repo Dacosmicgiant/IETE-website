@@ -125,7 +125,7 @@ const SSC = () => {
                 {coreMembers.map((member, index) => (
                   <div key={index} className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 ${COLORS.interactive.cardHover} text-center`}>
                     {/* Member Photo */}
-                    <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                    <div className="w-28 h-28 mx-auto mb-4 rounded-full overflow-hidden">
                       {member.image ? (
                         <img
                           src={member.image}
