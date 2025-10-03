@@ -9,7 +9,7 @@ const EventDetail = lazy(() => import('./pages/EventDetail'))
 const EventCategory = lazy(() => import('./pages/EventCategory'))
 const Committee = lazy(() => import('./pages/Committee'))
 const SSC = lazy(() => import('./pages/SSC'))
-import SSC from './pages/SSC'
+// import SSC from './pages/SSC'
 
 // Component to scroll to top on route change
 function ScrollToTop() {
