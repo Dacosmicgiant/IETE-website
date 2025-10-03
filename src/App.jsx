@@ -1,13 +1,14 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useEffect, lazy, Suspense } from 'react'
 import { COLORS } from './constants/colors'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
-import Events from './pages/Events'
-import EventDetail from './pages/EventDetail'
-import EventCategory from './pages/EventCategory'
-import Committee from './pages/Committee'
+const Events = lazy(() => import('./pages/Events'))
+const EventDetail = lazy(() => import('./pages/EventDetail'))
+const EventCategory = lazy(() => import('./pages/EventCategory'))
+const Committee = lazy(() => import('./pages/Committee'))
+const SSC = lazy(() => import('./pages/SSC'))
 import SSC from './pages/SSC'
 
 // Component to scroll to top on route change
@@ -28,14 +29,16 @@ function App() {
         <ScrollToTop />
         <Header />
         <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/committee" element={<Committee />} />
-            <Route path="/ssc" element={<SSC />} />
-            <Route path="/events" element={<Events />} />
-            <Route path="/events/:type" element={<EventCategory />} />
-            <Route path="/events/:type/:id" element={<EventDetail />} />
-          </Routes>
+          <Suspense fallback={<div className="py-24 text-center text-slate-400">Loading…</div>}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/committee" element={<Committee />} />
+              <Route path="/ssc" element={<SSC />} />
+              <Route path="/events" element={<Events />} />
+              <Route path="/events/:type" element={<EventCategory />} />
+              <Route path="/events/:type/:id" element={<EventDetail />} />
+            </Routes>
+          </Suspense>
         </main>
         <Footer />
       </div>

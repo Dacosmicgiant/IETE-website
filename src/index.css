@@ -14,6 +14,36 @@ html, body {
   font-family: inherit;
 }
 
+/* Smooth scrolling and selection */
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgba(125, 211, 252, 0.35);
+  color: #fff;
+}
+
+/* Subtle enter animations respecting reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in {
+    animation: fadeIn 500ms ease-out both;
+  }
+  .slide-up {
+    animation: slideUp 500ms ease-out both;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(12px) }
+  to { opacity: 1; transform: translateY(0) }
+}
+
 /* Custom font weights for Quantico (400, 700 available) */
 .font-light { font-weight: 400; } /* Using 400 since 300 not available in Quantico */
 .font-normal { font-weight: 400; }
