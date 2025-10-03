@@ -33,14 +33,20 @@ const AboutSection = () => {
             </div>
           </div>
           
-          {/* Second Container - Image Only (No Container Wrapper) */}
+          {/* Second Container - Vansh's Photo */}
           <div className="flex-1 order-1 lg:order-2 mb-8 lg:mb-0">
-            <img
-              src={siteData.about.url}
-              alt={siteData.about.alt || 'About IETE-PCE'}
-              className="w-full h-auto transition-transform duration-300 hover:scale-105 "
-              loading="lazy"
-            />
+            <div className="relative">
+              <img
+                src="https://res.cloudinary.com/djn79ge3m/image/upload/v1752392789/Vansh_Katkar_kofpjq.jpg"
+                alt="Vansh Katkar - Head of SSC"
+                className="w-full h-auto max-w-md mx-auto transition-transform duration-300 hover:scale-105 rounded-lg shadow-lg"
+                loading="lazy"
+              />
+              <div className="absolute bottom-4 left-4 right-4 bg-black/70 text-white p-3 rounded-lg">
+                <h3 className="font-bold text-lg">Vansh Katkar</h3>
+                <p className="text-sm opacity-90">Head of Student Satellite Club</p>
+              </div>
+            </div>
           </div>
           
         </div>
