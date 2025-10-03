@@ -238,7 +238,7 @@ const Committee = () => {
               </h3>
               <div className="space-y-2">
                 <p className={`${COLORS.primary.textSecondary} text-sm`}>Narayan Yadav</p>
-                <p className={`${COLORS.primary.textSecondary} text-sm`}>Rutuja Pathak</p>
+                <p className={`${COLORS.primary.textSecondary} text-sm`}>Rutuja Pilankar</p>
                 <p className={`${COLORS.primary.textSecondary} text-sm`}>Jyotilipsa Mishra</p>
                 <p className={`${COLORS.primary.textSecondary} text-sm`}>Aditya Moon</p>
                 <p className={`${COLORS.primary.textSecondary} text-sm`}>Vedant Mishra</p>
