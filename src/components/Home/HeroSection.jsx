@@ -35,11 +35,11 @@ const HeroSection = () => {
       
       {/* Mobile/Tablet Text Content - Hidden on Large Screens */}
       <div className="lg:hidden relative z-20 text-center px-4">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-4 tracking-tight leading-tight drop-shadow-2xl">
+        {/* <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-4 tracking-tight leading-tight drop-shadow-2xl">
           {siteData.name}
-        </h1>
+        </h1> */}
         
-        <h2 className="text-lg sm:text-xl md:text-2xl font-medium text-slate-200 mb-6 leading-relaxed drop-shadow-lg">
+        <h2 className="text-lg sm:text-xl md:text-2xl font-medium text-slate-200 mt-15 mb-6 leading-relaxed drop-shadow-lg">
           {siteData.fullName}
         </h2>
         
@@ -52,11 +52,11 @@ const HeroSection = () => {
 
       {/* Desktop Text Content - Hidden on Small/Medium Screens */}
       <div className="hidden lg:block relative z-20 text-center px-8">
-        <h1 className="text-6xl xl:text-7xl 2xl:text-8xl font-black text-white mb-6 tracking-tight leading-tight drop-shadow-2xl">
+        {/* <h1 className="text-6xl xl:text-7xl 2xl:text-8xl font-black text-white mb-6 tracking-tight leading-tight drop-shadow-2xl">
           {siteData.name}
-        </h1>
+        </h1> */}
         
-        <h2 className="text-2xl xl:text-3xl 2xl:text-4xl font-medium text-slate-200 mb-8 leading-relaxed drop-shadow-lg">
+        <h2 className="text-2xl xl:text-3xl 2xl:text-4xl font-medium text-slate-200 mt-35 leading-relaxed drop-shadow-lg">
           {siteData.fullName}
         </h2>
         
