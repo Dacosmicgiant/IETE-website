@@ -1,7 +1,7 @@
 // src/pages/Events.jsx
 import { useNavigate } from 'react-router-dom'
 import { COLORS } from '../constants/colors'
-import { APP_DATA, getEnabledEvents } from '../data/appData'
+import { APP_DATA, getEnabledEvents, getUpcomingEvents } from '../data/appData'
 import Image from '../components/ui/Image'
 
 const Events = () => {
@@ -150,6 +150,74 @@ const Events = () => {
     )
   }
 
+  const UpcomingSection = () => {
+    const upcomingFromData = getUpcomingEvents(3)
+    const placeholder = {
+      id: 'up-cc-2025',
+      title: 'Circuit-Craft 2025',
+      date: '2025-12-31',
+      time: 'TBD',
+      description: 'Details coming soon. Stay tuned!',
+      venue: 'TBD',
+      image: {
+        url: '/vite.svg',
+        alt: 'Upcoming Event Placeholder',
+        aspectRatio: '3:4',
+        fallback: '🗓️'
+      },
+      tags: ['Upcoming']
+    }
+    const items = [placeholder, ...upcomingFromData]
+
+    if (items.length === 0) return null
+
+    return (
+      <section className="mb-16">
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <h2 className={`${COLORS.typography.heading.lg} ${COLORS.primary.text}`}>
+              Upcoming Events
+            </h2>
+            <p className={`${COLORS.primary.textMuted} text-sm`}>
+              What’s coming next at IETE-PCE
+            </p>
+          </div>
+        </div>
+
+        <div className={`${COLORS.layout.grid.cols3} ${COLORS.layout.grid.gap}`}>
+          {items.map((event, idx) => (
+            <div key={idx} className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6`}>
+              <div className="mb-4">
+                <Image 
+                  imageData={event.image}
+                />
+              </div>
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className={`px-3 py-1 ${COLORS.effects.rounded} text-xs font-medium bg-amber-500/20 text-amber-300`}>
+                    Upcoming
+                  </span>
+                  <span className={`${COLORS.primary.textMuted} text-xs`}>
+                    {new Date(event.date).toLocaleDateString()}
+                  </span>
+                </div>
+                <h3 className={`${COLORS.typography.heading.sm} ${COLORS.primary.text}`}>
+                  {event.title}
+                </h3>
+                <p className={`${COLORS.primary.textMuted} text-sm`}>
+                  {event.description}
+                </p>
+                <div className="text-xs ${COLORS.primary.textSecondary}">
+                  🕒 {event.time} {event.venue ? ` • 📍 ${event.venue}` : ''}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
   // Get enabled categories
   const enabledCategories = Object.keys(eventCategories).filter(
     category => eventCategories[category].enabled
@@ -164,6 +232,9 @@ const Events = () => {
             Events & <span className={COLORS.accent.primaryText}>Activities</span>
           </h1>
         </div>
+
+        {/* Upcoming */}
+        <UpcomingSection />
 
         {/* Event Categories */}
         <div className="space-y-16">
