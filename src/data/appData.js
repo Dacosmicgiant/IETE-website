@@ -45,7 +45,7 @@ export const APP_DATA = {
       officeHours: "Mon-Fri, 10:00 AM - 12:00 PM",
       courses: ["Advanced Digital Signal Processing", "VLSI Design Methodology", "Research Methodology"],
       image: {
-        url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1754114245/hod_swqhz5.png',
+        url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1760026026/IMG_20251005_112951_vjvqgm.jpg',
         alt: 'Dr. Avinash Vaidya - HOD',
         aspectRatio: '3:4',
         fallback: '👤'
