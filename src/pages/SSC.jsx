@@ -98,7 +98,7 @@ const SSC = () => {
                   {/* Right-side rounded translucent panel with logo */}
                   <div className="w-full mx-auto bg-white/20 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl">
                     <img
-                      src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759474243/WhatsApp_Image_2025-10-03_at_10.20.03_c16d3289-removebg-preview_rvjdh6.png"
+                      src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759471942/WhatsApp_Image_2025-10-03_at_10.20.03_e6071a56_qkgu1g.jpg"
                       alt="SSC Logo"
                       className="mx-auto w-[14rem] h-[14rem] sm:w-[20rem] sm:h-[20rem] md:w-[24rem] md:h-[24rem] object-contain"
                       loading="lazy"
@@ -133,20 +133,47 @@ const SSC = () => {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {[
+            {(() => {
+              const all = [
                 {name: 'Vansh Katkar', role: 'Head of SSC & Joint Hardware Lead'},
                 {name: 'Sujal Chavan', role: 'Hardware Lead & Joint Non-Technical Lead'},
                 {name: 'Eshika Sawane', role: 'Software Lead'},
                 {name: 'Samruddhi Kadam', role: 'Joint Software Lead'},
                 {name: 'Devika Marathe', role: 'Non-Technical Lead'},
-              ].map((m, i) => (
-                <div key={i} className={`text-center ${COLORS.effects.glass} ${COLORS.effects.rounded} p-3`}>
-                  <div className={`${COLORS.primary.text} font-semibold`}>{m.name}</div>
-                  <div className={`${COLORS.primary.textSecondary} text-sm`}>{m.role}</div>
+              ];
+              const head = all[0];
+              const others = all.slice(1);
+              const left = others.filter((_, idx) => idx % 2 === 0);
+              const right = others.filter((_, idx) => idx % 2 === 1);
+              return (
+                <div>
+                  <div className={`mb-4 flex justify-center`}>
+                    <div className={`${COLORS.effects.glass} ${COLORS.effects.rounded} px-4 py-3 text-center w-full sm:w-auto`}>
+                      <div className={`${COLORS.primary.text} font-semibold`}>{head.name}</div>
+                      <div className={`${COLORS.primary.textSecondary} text-sm`}>{head.role}</div>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div className="space-y-3">
+                      {left.map((m, i) => (
+                        <div key={`l-${i}`} className={`${COLORS.effects.glass} ${COLORS.effects.rounded} p-3 text-center`}>
+                          <div className={`${COLORS.primary.text} font-semibold`}>{m.name}</div>
+                          <div className={`${COLORS.primary.textSecondary} text-sm`}>{m.role}</div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="space-y-3">
+                      {right.map((m, i) => (
+                        <div key={`r-${i}`} className={`${COLORS.effects.glass} ${COLORS.effects.rounded} p-3 text-center`}>
+                          <div className={`${COLORS.primary.text} font-semibold`}>{m.name}</div>
+                          <div className={`${COLORS.primary.textSecondary} text-sm`}>{m.role}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-              ))}
-            </div>
+              );
+            })()}
           </div>
         </div>
 
@@ -163,8 +190,16 @@ const SSC = () => {
 
           <div className="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
             {[
-              { name: 'Dr. Suman Wadkar', image: null },
-              { name: 'Prof. Sonali Kathare', image: null }
+              { 
+                name: 'Dr. Suman Wadkar', 
+                image: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1760024375/WhatsApp_Image_2025-10-04_at_15.48.23_71bc167c_oe9qgr.jpg',
+                phone: '+91 99670 14534'
+              },
+              { 
+                name: 'Prof. Sonali Kathare', 
+                image: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1760024298/WhatsApp_Image_2025-10-06_at_22.20.47_4b93dd5a_zvxf43.jpg',
+                phone: '8879304899'
+              }
             ].map((fac, idx) => (
               <div key={idx} className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 text-center ${COLORS.interactive.cardHover}`}>
                 <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden bg-gray-300 flex items-center justify-center">
@@ -175,6 +210,9 @@ const SSC = () => {
                   )}
                 </div>
                 <h3 className={`${COLORS.primary.text} font-bold`}>{fac.name}</h3>
+                {fac.phone && (
+                  <p className={`${COLORS.primary.textSecondary} text-sm mt-1`}>{fac.phone}</p>
+                )}
               </div>
             ))}
           </div>

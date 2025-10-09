@@ -120,7 +120,7 @@ export const APP_DATA = {
         year: "BTech",
         bio: "Supporting the chapter's growth and organizing technical events.",
         image: {
-          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752390951/Shravani_Margaj_ijzeh6.jpg',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1760025135/shrawani_fmwfwv.jpg',
           alt: 'Shravani Margaj - Vice President',
           aspectRatio: '3:4',
           fallback: '👤'
@@ -203,7 +203,7 @@ export const APP_DATA = {
         year: "BTech",
         bio: "Leading technical workshops and innovation projects.",
         image: {
-          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752390952/Aayush_Gupta_wjroqw.jpg',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1760025134/aayushgupta_tp6vhm.jpg',
           alt: 'Aayush Gupta - Technical Head',
           aspectRatio: '3:4',
           fallback: '👤'
@@ -311,7 +311,7 @@ export const APP_DATA = {
         date: "2025-07-15", // Required
         time: "10:00 AM - 4:00 PM", // Required
         description: "Learn to build IoT applications using Arduino and sensors. Hands-on experience with real projects.",
-        venue: "Lab Complex A",
+        venue: "Auditorium",
         instructor: "Dr. Rajesh Kumar",
         capacity: 30,
         registered: 18,
@@ -363,6 +363,27 @@ export const APP_DATA = {
         detailImage: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095421/PCB_Design_c9nshr.jpg',
           alt: 'PCB Design Workshop',
+          aspectRatio: '3:4',
+          fallback: '🛠️'
+        },
+        enabled: true
+      },
+      {
+        id: 3,
+        title: "Workshop and Competition on LabVIEW",
+        date: "2025-09-12",
+        time: "10:00 AM - 5:00 PM",
+        description: "Hands-on workshop and competition using LabVIEW for measurement and automation.",
+        venue: "Lab Complex A",
+        image: {
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759656267/LabView_Workshop_azp5jp.png',
+          alt: 'LabVIEW Workshop and Competition',
+          aspectRatio: '3:4',
+          fallback: '🛠️'
+        },
+        detailImage: {
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759656267/LabView_Workshop_azp5jp.png',
+          alt: 'LabVIEW Workshop and Competition',
           aspectRatio: '3:4',
           fallback: '🛠️'
         },
@@ -465,6 +486,50 @@ export const APP_DATA = {
         detailImage: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095378/satalite_club_talk_xmkus2.jpg',
           alt: 'Satellite Club Talk',
+          aspectRatio: '3:4',
+          fallback: '🎤'
+        },
+        enabled: true
+      },
+      {
+        id: 2,
+        title: "Spoken Integrity Talk",
+        date: "2025-08-22",
+        time: "3:00 PM - 4:30 PM",
+        description: "A talk on spoken integrity and ethical communication in engineering.",
+        venue: "Main Auditorium",
+        speaker: "Guest Speaker",
+        image: {
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759656278/Talk_22_aug_25_fcmhqw.png',
+          alt: 'Spoken Integrity Talk',
+          aspectRatio: '3:4',
+          fallback: '🎤'
+        },
+        detailImage: {
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759656278/Talk_22_aug_25_fcmhqw.png',
+          alt: 'Spoken Integrity Talk',
+          aspectRatio: '3:4',
+          fallback: '🎤'
+        },
+        enabled: true
+      },
+      {
+        id: 3,
+        title: "Startup Challenges and Breakthrough Talk",
+        date: "2025-10-05",
+        time: "1:00 PM - 2:30 PM",
+        description: "Discussion on startup challenges and breakthroughs for budding entrepreneurs.",
+        venue: "Seminar Hall B",
+        speaker: "Industry Entrepreneur",
+        image: {
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759651209/WhatsApp_Image_2025-10-05_at_13.27.54_kzw3ji.jpg',
+          alt: 'Startup Challenges and Breakthrough Talk',
+          aspectRatio: '3:4',
+          fallback: '🎤'
+        },
+        detailImage: {
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759651209/WhatsApp_Image_2025-10-05_at_13.27.54_kzw3ji.jpg',
+          alt: 'Startup Challenges and Breakthrough Talk',
           aspectRatio: '3:4',
           fallback: '🎤'
         },
