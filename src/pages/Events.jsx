@@ -151,25 +151,9 @@ const Events = () => {
   }
 
   const UpcomingSection = () => {
-    const upcomingFromData = getUpcomingEvents(3)
-    const placeholder = {
-      id: 'up-cc-2025',
-      title: 'Circuit-Craft 2025',
-      date: '2025-12-31',
-      time: 'TBD',
-      description: 'Details coming soon. Stay tuned!',
-      venue: 'TBD',
-      image: {
-        url: '/vite.svg',
-        alt: 'Upcoming Event Placeholder',
-        aspectRatio: '3:4',
-        fallback: '🗓️'
-      },
-      tags: ['Upcoming']
-    }
-    const items = [placeholder, ...upcomingFromData]
+    const upcomingEvents = getUpcomingEvents(3)
 
-    if (items.length === 0) return null
+    if (upcomingEvents.length === 0) return null
 
     return (
       <section className="mb-16">
@@ -179,39 +163,14 @@ const Events = () => {
               Upcoming Events
             </h2>
             <p className={`${COLORS.primary.textMuted} text-sm`}>
-              What’s coming next at IETE-PCE
+              What's coming next at IETE-PCE
             </p>
           </div>
         </div>
 
         <div className={`${COLORS.layout.grid.cols3} ${COLORS.layout.grid.gap}`}>
-          {items.map((event, idx) => (
-            <div key={idx} className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6`}>
-              <div className="mb-4">
-                <Image 
-                  imageData={event.image}
-                />
-              </div>
-              <div className="space-y-2">
-                <div className="flex items-center justify-between">
-                  <span className={`px-3 py-1 ${COLORS.effects.rounded} text-xs font-medium bg-amber-500/20 text-amber-300`}>
-                    Upcoming
-                  </span>
-                  <span className={`${COLORS.primary.textMuted} text-xs`}>
-                    {new Date(event.date).toLocaleDateString()}
-                  </span>
-                </div>
-                <h3 className={`${COLORS.typography.heading.sm} ${COLORS.primary.text}`}>
-                  {event.title}
-                </h3>
-                <p className={`${COLORS.primary.textMuted} text-sm`}>
-                  {event.description}
-                </p>
-                <div className="text-xs ${COLORS.primary.textSecondary}">
-                  🕒 {event.time} {event.venue ? ` • 📍 ${event.venue}` : ''}
-                </div>
-              </div>
-            </div>
+          {upcomingEvents.map((event) => (
+            <EventCard key={`${event.category}-${event.id}`} event={event} type={event.category} />
           ))}
         </div>
       </section>
