@@ -1,6 +1,6 @@
 // src/pages/EventDetail.jsx
 import { useParams, useNavigate } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { COLORS } from '../constants/colors'
 import { APP_DATA, getEnabledEvents } from '../data/appData'
 import Image from '../components/ui/Image'
@@ -9,10 +9,32 @@ const EventDetail = () => {
   const { type, id } = useParams()
   const navigate = useNavigate()
   const [isRegistered, setIsRegistered] = useState(false)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
   const events = getEnabledEvents(type)
   const event = events?.find(e => e.id === parseInt(id))
   const categoryInfo = APP_DATA.events.categories[type]
+
+  // Reset carousel when event changes
+  useEffect(() => {
+    setCurrentImageIndex(0)
+  }, [id, type])
+
+  // Keyboard navigation for carousel
+  useEffect(() => {
+    if (!event?.gallery || event.gallery.length <= 1) return
+
+    const handleKeyPress = (e) => {
+      if (e.key === 'ArrowLeft') {
+        previousImage()
+      } else if (e.key === 'ArrowRight') {
+        nextImage()
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyPress)
+    return () => window.removeEventListener('keydown', handleKeyPress)
+  }, [currentImageIndex, event])
 
   if (!event || !categoryInfo || !categoryInfo.enabled) {
     return (
@@ -44,7 +66,111 @@ const EventDetail = () => {
 
   const handleRegistration = () => {
     setIsRegistered(!isRegistered)
-    // Here you would typically handle the actual registration logic
+  }
+
+  // Carousel functions
+  const nextImage = () => {
+    if (event.gallery && event.gallery.length > 1) {
+      setCurrentImageIndex((prev) => (prev + 1) % event.gallery.length)
+    }
+  }
+
+  const previousImage = () => {
+    if (event.gallery && event.gallery.length > 1) {
+      setCurrentImageIndex((prev) => (prev - 1 + event.gallery.length) % event.gallery.length)
+    }
+  }
+
+  const goToImage = (index) => {
+    setCurrentImageIndex(index)
+  }
+
+  // Gallery Carousel Component - Separate section
+  const GalleryCarousel = () => {
+    const hasGallery = event.gallery && event.gallery.length > 0
+    
+    if (!hasGallery) return null
+
+    const showCarouselControls = event.gallery.length > 1
+    const currentImage = event.gallery[currentImageIndex]
+
+    return (
+      <div className="mb-12">
+        <h2 className={`${COLORS.typography.heading.lg} ${COLORS.primary.text} mb-8 text-center`}>
+          Event Gallery
+        </h2>
+        
+        <div className="relative w-full max-w-5xl mx-auto">
+          {/* Main Image Container */}
+          <div className="relative overflow-hidden rounded-2xl">
+            <Image 
+              imageData={{
+                ...currentImage,
+                fallback: currentImage.fallback || '🖼️'
+              }}
+              containerClassName="transition-all duration-500 ease-in-out"
+            />
+
+            {/* Navigation Buttons - Only show if multiple images */}
+            {showCarouselControls && (
+              <>
+                {/* Previous Button */}
+                <button
+                  onClick={previousImage}
+                  className={`absolute left-4 top-1/2 -translate-y-1/2 ${COLORS.effects.glass} ${COLORS.effects.rounded} p-4 ${COLORS.interactive.cardHover} transition-all duration-300 group z-10`}
+                  aria-label="Previous image"
+                >
+                  <svg className={`w-6 h-6 ${COLORS.primary.text} group-hover:scale-110 transition-transform`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+
+                {/* Next Button */}
+                <button
+                  onClick={nextImage}
+                  className={`absolute right-4 top-1/2 -translate-y-1/2 ${COLORS.effects.glass} ${COLORS.effects.rounded} p-4 ${COLORS.interactive.cardHover} transition-all duration-300 group z-10`}
+                  aria-label="Next image"
+                >
+                  <svg className={`w-6 h-6 ${COLORS.primary.text} group-hover:scale-110 transition-transform`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+
+                {/* Image Counter */}
+                <div className={`absolute top-4 right-4 ${COLORS.effects.glass} ${COLORS.effects.rounded} px-4 py-2 text-sm ${COLORS.primary.text} font-medium z-10`}>
+                  {currentImageIndex + 1} / {event.gallery.length}
+                </div>
+              </>
+            )}
+          </div>
+
+          {/* Thumbnail Indicators - Only show if multiple images */}
+          {showCarouselControls && (
+            <div className="flex justify-center gap-3 mt-6 flex-wrap">
+              {event.gallery.map((img, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToImage(index)}
+                  className={`transition-all duration-300 ${
+                    index === currentImageIndex
+                      ? `w-12 h-3 ${COLORS.accent.primaryBg} rounded-full`
+                      : `w-3 h-3 ${COLORS.effects.glass} rounded-full hover:${COLORS.accent.primaryBg} hover:scale-125`
+                  }`}
+                  aria-label={`Go to image ${index + 1}`}
+                />
+              ))}
+            </div>
+          )}
+
+          {/* Image Caption */}
+          {currentImage.alt && (
+            <p className={`text-center mt-4 text-base ${COLORS.primary.textMuted}`}>
+              {currentImage.alt}
+            </p>
+          )}
+        </div>
+      </div>
+    )
   }
 
   const getEventSpecificDetails = () => {
@@ -73,7 +199,6 @@ const EventDetail = () => {
               {event.capacity && (
                 <p className={`${COLORS.primary.textSecondary} mb-2`}>
                   <strong>Capacity:</strong> {event.capacity} students
-                  {/* {event.registered && ` (${event.registered} registered)`} */}
                 </p>
               )}
               {event.fee && (
@@ -152,15 +277,15 @@ const EventDetail = () => {
           </div>
         )
       
-      case 'training':
+      case 'IV':
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className={`p-6 ${COLORS.effects.glass} ${COLORS.effects.roundedLg}`}>
               <h4 className={`${COLORS.primary.text} font-bold mb-4 flex items-center`}>
-                👨‍💼 Training Details
+                👨‍💼 Visit Details
               </h4>
               {event.trainer && (
-                <p className={`${COLORS.primary.textSecondary} mb-2`}><strong>Trainer:</strong> {event.trainer}</p>
+                <p className={`${COLORS.primary.textSecondary} mb-2`}><strong>Guide:</strong> {event.trainer}</p>
               )}
               {event.duration && (
                 <p className={`${COLORS.primary.textSecondary} mb-2`}><strong>Duration:</strong> {event.duration}</p>
@@ -180,6 +305,9 @@ const EventDetail = () => {
               )}
               {event.materials && (
                 <p className={`${COLORS.primary.textSecondary} mt-2`}><strong>Materials:</strong> {event.materials}</p>
+              )}
+              {event.fee && (
+                <p className={`${COLORS.primary.textSecondary} mt-2`}><strong>Fee:</strong> {event.fee}</p>
               )}
             </div>
           </div>
@@ -212,9 +340,9 @@ const EventDetail = () => {
           <span className={COLORS.primary.text}>{event.title}</span>
         </div>
 
-        {/* Event Header */}
+        {/* Event Header - ORIGINAL STRUCTURE MAINTAINED */}
         <div className={`${COLORS.layout.grid.cols2} lg:gap-16 items-stretch mb-12 pt-1.5`}>
-          {/* Left: Event Image */}
+          {/* Left: Event Image - ORIGINAL */}
           <div className="flex flex-col h-full">
             <div className="flex-1 flex items-center justify-center p-4">
               <div className="max-w-md w-90">
@@ -229,24 +357,9 @@ const EventDetail = () => {
                 />
               </div>
             </div>
-            
-            {/* Event Category Badge
-            <div className="flex items-center space-x-4 flex-shrink-0 p-4">
-              <span className={`px-4 py-2 ${COLORS.effects.rounded} text-sm font-medium ${
-                type === 'workshops' ? 'bg-cyan-500/20 text-cyan-400' :
-                type === 'competitions' ? 'bg-blue-500/20 text-blue-400' :
-                type === 'seminars' ? 'bg-purple-500/20 text-purple-400' :
-                'bg-emerald-500/20 text-emerald-400'
-              }`}>
-                {categoryInfo.icon} {categoryInfo.name.slice(0, -1)}
-              </span>
-              <span className={`${COLORS.primary.textMuted} text-sm`}>
-                {formatDate(event.date)}
-              </span>
-            </div> */}
           </div>
 
-          {/* Right: Event Info */}
+          {/* Right: Event Info - ORIGINAL */}
           <div className="flex flex-col h-full min-h-0">
             <h1 className={`${COLORS.typography.heading.xl} ${COLORS.primary.text} mb-6 flex-shrink-0`}>
               {event.title}
@@ -325,6 +438,8 @@ const EventDetail = () => {
           {getEventSpecificDetails()}
         </div>
 
+        {/* NEW: Gallery Carousel Section - Only shows if gallery exists */}
+        <GalleryCarousel />
 
         {/* Related Events */}
         <div className="mb-12">
@@ -368,7 +483,6 @@ const EventDetail = () => {
               ))}
           </div>
         </div>
-
       </div>
     </div>
   )
