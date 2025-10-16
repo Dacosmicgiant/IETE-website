@@ -98,7 +98,7 @@ const SSC = () => {
                   <img
                     src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759471942/WhatsApp_Image_2025-10-03_at_10.20.03_e6071a56_qkgu1g.jpg"
                     alt="SSC Logo"
-                    className="mx-auto w-[20rem] h-[20rem] sm:w-[28rem] sm:h-[28rem] md:w-[32rem] md:h-[32rem] object-cover rounded-full"
+                    className="mx-auto w-[18rem] h-[18rem] sm:w-[24rem] sm:h-[24rem] md:w-[28rem] md:h-[28rem] object-contain rounded-full"
                     loading="lazy"
                   />
                 </div>
@@ -186,7 +186,7 @@ const SSC = () => {
           </div>
 
           <div className="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
-            {[
+            {[ 
               { 
                 name: 'Dr. Suman Wadkar', 
                 image: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1760024375/WhatsApp_Image_2025-10-04_at_15.48.23_71bc167c_oe9qgr.jpg',
@@ -198,8 +198,8 @@ const SSC = () => {
                 phone: '+91 8879304899'
               }
             ].map((fac, idx) => (
-              <div key={idx} className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 text-center ${COLORS.interactive.cardHover}`}>
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-gray-300 flex items-center justify-center">
+              <div key={idx} className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 text-center ${COLORS.interactive.cardHover} ${COLORS.primary.text}`}>
+                <div className="w-48 h-48 sm:w-64 sm:h-64 lg:w-96 lg:h-96 mx-auto mb-4 rounded-full overflow-hidden bg-gray-300 flex items-center justify-center">
                   {fac.image ? (
                     <img src={fac.image} alt={fac.name} className="w-full h-full object-cover" />
                   ) : (
