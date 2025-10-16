@@ -151,11 +151,11 @@ const Footer = () => {
               <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 max-w-md`}>
                 <ul className="space-y-3">
                   <li>
-                    <div className="font-semibold ${COLORS.primary.text}">Dr. Suman Wadkar</div>
+                    <div className={`font-semibold ${COLORS.primary.text}`}>Dr. Suman Wadkar</div>
                     <div className={`${COLORS.primary.textSecondary} ${COLORS.typography.body.sm}`}>Phone: +91 99670 14534</div>
                   </li>
                   <li>
-                    <div className="font-semibold ${COLORS.primary.text}">Prof. Sonali Kathare</div>
+                    <div className={`font-semibold ${COLORS.primary.text}`}>Prof. Sonali Kathare</div>
                     <div className={`${COLORS.primary.textSecondary} ${COLORS.typography.body.sm}`}>Phone: +91 8879304899</div>
                   </li>
                 </ul>

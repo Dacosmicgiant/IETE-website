@@ -94,11 +94,11 @@ const SSC = () => {
                 </div>
                 
                 {/* SSC Logo */}
-                <div className="flex-1 order-1 lg:order-2 mb-8 lg:mb-0 w-full">
+                <div className="flex-1 order-1 lg:order-2 mb-8 lg:mb-0 w-full flex items-center justify-center">
                   <img
                     src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759471942/WhatsApp_Image_2025-10-03_at_10.20.03_e6071a56_qkgu1g.jpg"
                     alt="SSC Logo"
-                    className="mx-auto w-[18rem] h-[18rem] sm:w-[24rem] sm:h-[24rem] md:w-[28rem] md:h-[28rem] object-contain rounded-full"
+                    className="mx-auto w-[18rem] h-[18rem] sm:w-[22rem] sm:h-[22rem] md:w-[26rem] md:h-[26rem] object-contain rounded-full"
                     loading="lazy"
                   />
                 </div>
@@ -199,7 +199,7 @@ const SSC = () => {
               }
             ].map((fac, idx) => (
               <div key={idx} className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 text-center ${COLORS.interactive.cardHover} ${COLORS.primary.text}`}>
-                <div className="w-48 h-48 sm:w-64 sm:h-64 lg:w-96 lg:h-96 mx-auto mb-4 rounded-full overflow-hidden bg-gray-300 flex items-center justify-center">
+                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 mx-auto mb-4 rounded-full overflow-hidden bg-gray-300 flex items-center justify-center">
                   {fac.image ? (
                     <img src={fac.image} alt={fac.name} className="w-full h-full object-cover" />
                   ) : (
