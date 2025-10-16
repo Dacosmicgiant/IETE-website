@@ -227,7 +227,7 @@ export const APP_DATA = {
         id: 10,
         name: "Vansh Katkar",
         position: "Satellite Club Head",
-        year: "BTech",
+        year: "TY",
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752392789/Vansh_Katkar_kofpjq.jpg',
           alt: 'Vansh Katkar-Satellite Club Head',

@@ -95,15 +95,12 @@ const SSC = () => {
                 
                 {/* SSC Logo */}
                 <div className="flex-1 order-1 lg:order-2 mb-8 lg:mb-0 w-full">
-                  {/* Right-side rounded translucent panel with logo */}
-                  <div className="w-full mx-auto bg-white/20 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl">
-                    <img
-                      src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759471942/WhatsApp_Image_2025-10-03_at_10.20.03_e6071a56_qkgu1g.jpg"
-                      alt="SSC Logo"
-                      className="mx-auto w-[14rem] h-[14rem] sm:w-[20rem] sm:h-[20rem] md:w-[24rem] md:h-[24rem] object-contain"
-                      loading="lazy"
-                    />
-                  </div>
+                  <img
+                    src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759471942/WhatsApp_Image_2025-10-03_at_10.20.03_e6071a56_qkgu1g.jpg"
+                    alt="SSC Logo"
+                    className="mx-auto w-[20rem] h-[20rem] sm:w-[28rem] sm:h-[28rem] md:w-[32rem] md:h-[32rem] object-cover rounded-full"
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </div>
@@ -198,11 +195,11 @@ const SSC = () => {
               { 
                 name: 'Prof. Sonali Kathare', 
                 image: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1760024298/WhatsApp_Image_2025-10-06_at_22.20.47_4b93dd5a_zvxf43.jpg',
-                phone: '8879304899'
+                phone: '+91 8879304899'
               }
             ].map((fac, idx) => (
               <div key={idx} className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 text-center ${COLORS.interactive.cardHover}`}>
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden bg-gray-300 flex items-center justify-center">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-gray-300 flex items-center justify-center">
                   {fac.image ? (
                     <img src={fac.image} alt={fac.name} className="w-full h-full object-cover" />
                   ) : (

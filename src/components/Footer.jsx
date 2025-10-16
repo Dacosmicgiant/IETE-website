@@ -70,7 +70,7 @@ const Footer = () => {
                 {/* Email */}
                 <div className="flex items-center space-x-3 sm:space-x-4">
                   <img 
-                    src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759302686/WhatsApp_Image_2025-10-01_at_12.29.37_ffd95a84_dbgcq5.jpg"
+                    src="https://res.cloudinary.com/djn79ge3m/image/upload/v1760633423/mail_hxrpfn.png"
                     alt="Gmail"
                     className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
                   />
@@ -99,7 +99,7 @@ const Footer = () => {
                 {/* Instagram */}
                 <div className="flex items-center space-x-3 sm:space-x-4 mt-2">
                   <img 
-                    src="https://res.cloudinary.com/djn79ge3m/image/upload/v1759302686/WhatsApp_Image_2025-10-01_at_12.30.14_1cd6a5cd_qc1n0y.jpg"
+                    src="https://res.cloudinary.com/djn79ge3m/image/upload/v1760633422/instagram_nxlhmi.png"
                     alt="Instagram"
                     className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
                   />
@@ -122,7 +122,7 @@ const Footer = () => {
 
         {/* Contact & Contributors Section */}
         <div className={`${COLORS.primary.borderLight} border-t mt-12 sm:mt-16 pt-6 sm:pt-8`}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 items-start mb-6 sm:mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-10 items-start mb-6 sm:mb-8">
             {/* Faculty Coordinator - Left */}
             <div>
               <h4 className={`${COLORS.typography.heading.sm} ${COLORS.primary.text} mb-4`}>
@@ -140,6 +140,25 @@ const Footer = () => {
                     <span className={`${COLORS.primary.textSecondary} ${COLORS.typography.body.sm} break-all`}>amehta@mes.ac.in</span>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            {/* SSC Faculty Coordinators - Middle */}
+            <div>
+              <h4 className={`${COLORS.typography.heading.sm} ${COLORS.primary.text} mb-4`}>
+                SSC Faculty Coordinators
+              </h4>
+              <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 max-w-md`}>
+                <ul className="space-y-3">
+                  <li>
+                    <div className="font-semibold ${COLORS.primary.text}">Dr. Suman Wadkar</div>
+                    <div className={`${COLORS.primary.textSecondary} ${COLORS.typography.body.sm}`}>Phone: +91 99670 14534</div>
+                  </li>
+                  <li>
+                    <div className="font-semibold ${COLORS.primary.text}">Prof. Sonali Kathare</div>
+                    <div className={`${COLORS.primary.textSecondary} ${COLORS.typography.body.sm}`}>Phone: +91 8879304899</div>
+                  </li>
+                </ul>
               </div>
             </div>
 
