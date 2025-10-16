@@ -383,6 +383,23 @@ export const APP_DATA = {
           aspectRatio: '3:4',
           fallback: '🛠️'
         },
+        gallery: [
+          {
+            url: 'https://your-image-url-1.jpg',
+            alt: 'Description of first image',
+            aspectRatio: '16:9'
+          },
+          {
+            url: 'https://your-image-url-2.jpg',
+            alt: 'Description of second image',
+            aspectRatio: '16:9'
+          },
+          {
+            url: 'https://your-image-url-3.jpg',
+            alt: 'Description of third image',
+            aspectRatio: '16:9'
+          }
+        ],
         enabled: true
       },
       {
@@ -404,6 +421,23 @@ export const APP_DATA = {
           aspectRatio: '3:4',
           fallback: '🛠️'
         },
+        gallery: [
+          {
+            url: 'https://your-image-url-1.jpg',
+            alt: 'Description of first image',
+            aspectRatio: '16:9'
+          },
+          {
+            url: 'https://your-image-url-2.jpg',
+            alt: 'Description of second image',
+            aspectRatio: '16:9'
+          },
+          {
+            url: 'https://your-image-url-3.jpg',
+            alt: 'Description of third image',
+            aspectRatio: '16:9'
+          }
+        ],
         enabled: true
       },
     ],
@@ -431,6 +465,23 @@ export const APP_DATA = {
           aspectRatio: '3:4',
           fallback: '🏆'
         },
+        gallery: [
+          {
+            url: 'https://your-image-url-1.jpg',
+            alt: 'Description of first image',
+            aspectRatio: '16:9'
+          },
+          {
+            url: 'https://your-image-url-2.jpg',
+            alt: 'Description of second image',
+            aspectRatio: '16:9'
+          },
+          {
+            url: 'https://your-image-url-3.jpg',
+            alt: 'Description of third image',
+            aspectRatio: '16:9'
+          }
+        ],
         enabled: true
       },
       {
@@ -455,6 +506,23 @@ export const APP_DATA = {
           aspectRatio: '3:4',
           fallback: '🏆'
         },
+        gallery: [
+          {
+            url: 'https://your-image-url-1.jpg',
+            alt: 'Description of first image',
+            aspectRatio: '16:9'
+          },
+          {
+            url: 'https://your-image-url-2.jpg',
+            alt: 'Description of second image',
+            aspectRatio: '16:9'
+          },
+          {
+            url: 'https://your-image-url-3.jpg',
+            alt: 'Description of third image',
+            aspectRatio: '16:9'
+          }
+        ],
         enabled: true
       },
       {
@@ -480,6 +548,23 @@ export const APP_DATA = {
           aspectRatio: '3:4',
           fallback: '🤖'
         },
+        gallery: [
+          {
+            url: 'https://your-image-url-1.jpg',
+            alt: 'Description of first image',
+            aspectRatio: '16:9'
+          },
+          {
+            url: 'https://your-image-url-2.jpg',
+            alt: 'Description of second image',
+            aspectRatio: '16:9'
+          },
+          {
+            url: 'https://your-image-url-3.jpg',
+            alt: 'Description of third image',
+            aspectRatio: '16:9'
+          }
+        ],
         enabled: true
       }
     ],
@@ -506,6 +591,23 @@ export const APP_DATA = {
           aspectRatio: '3:4',
           fallback: '🎤'
         },
+        gallery: [
+          {
+            url: 'https://your-image-url-1.jpg',
+            alt: 'Description of first image',
+            aspectRatio: '16:9'
+          },
+          {
+            url: 'https://your-image-url-2.jpg',
+            alt: 'Description of second image',
+            aspectRatio: '16:9'
+          },
+          {
+            url: 'https://your-image-url-3.jpg',
+            alt: 'Description of third image',
+            aspectRatio: '16:9'
+          }
+        ],
         enabled: true
       },
       {
@@ -528,6 +630,23 @@ export const APP_DATA = {
           aspectRatio: '3:4',
           fallback: '🎤'
         },
+        gallery: [
+          {
+            url: 'https://your-image-url-1.jpg',
+            alt: 'Description of first image',
+            aspectRatio: '16:9'
+          },
+          {
+            url: 'https://your-image-url-2.jpg',
+            alt: 'Description of second image',
+            aspectRatio: '16:9'
+          },
+          {
+            url: 'https://your-image-url-3.jpg',
+            alt: 'Description of third image',
+            aspectRatio: '16:9'
+          }
+        ],
         enabled: true
       },
       {
@@ -550,6 +669,23 @@ export const APP_DATA = {
           aspectRatio: '3:4',
           fallback: '🎤'
         },
+        gallery: [
+          {
+            url: 'https://your-image-url-1.jpg',
+            alt: 'Description of first image',
+            aspectRatio: '16:9'
+          },
+          {
+            url: 'https://your-image-url-2.jpg',
+            alt: 'Description of second image',
+            aspectRatio: '16:9'
+          },
+          {
+            url: 'https://your-image-url-3.jpg',
+            alt: 'Description of third image',
+            aspectRatio: '16:9'
+          }
+        ],
         enabled: true
       },
     ],
@@ -575,6 +711,23 @@ export const APP_DATA = {
           aspectRatio: '4:3',
           fallback: '📚'
         },
+        gallery: [
+          {
+            url: 'https://your-image-url-1.jpg',
+            alt: 'Description of first image',
+            aspectRatio: '16:9'
+          },
+          {
+            url: 'https://your-image-url-2.jpg',
+            alt: 'Description of second image',
+            aspectRatio: '16:9'
+          },
+          {
+            url: 'https://your-image-url-3.jpg',
+            alt: 'Description of third image',
+            aspectRatio: '16:9'
+          }
+        ],
         enabled: true
       },
     ]
