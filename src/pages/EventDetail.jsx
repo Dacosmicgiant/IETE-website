@@ -64,6 +64,13 @@ const EventDetail = () => {
     })
   }
 
+  const isEventPast = (dateString) => {
+    const eventDate = new Date(dateString)
+    const today = new Date()
+    today.setHours(0, 0, 0, 0) // Set to start of today
+    return eventDate < today
+  }
+
   const handleRegistration = () => {
     setIsRegistered(!isRegistered)
   }
@@ -410,19 +417,26 @@ const EventDetail = () => {
 
             {/* Registration Button */}
             <div className="flex flex-col sm:flex-row gap-4 mt-auto flex-shrink-0">
-              <button 
-                onClick={handleRegistration}
-                className={`flex-1 px-8 py-4 ${
-                  isRegistered 
-                    ? `${COLORS.interactive.buttonSecondary} cursor-default` 
-                    : COLORS.interactive.buttonPrimary
-                } ${COLORS.effects.roundedLg} font-semibold transition-all duration-300 ${
-                  !isRegistered && 'hover:scale-105'
-                }`}
-                disabled={isRegistered}
-              >
-                {isRegistered ? '✓ Registered Successfully' : 'Register Now'}
-              </button>
+              {!isEventPast(event.date) && (
+                <button 
+                  onClick={handleRegistration}
+                  className={`flex-1 px-8 py-4 ${
+                    isRegistered 
+                      ? `${COLORS.interactive.buttonSecondary} cursor-default` 
+                      : COLORS.interactive.buttonPrimary
+                  } ${COLORS.effects.roundedLg} font-semibold transition-all duration-300 ${
+                    !isRegistered && 'hover:scale-105'
+                  }`}
+                  disabled={isRegistered}
+                >
+                  {isRegistered ? '✓ Registered Successfully' : 'Register Now'}
+                </button>
+              )}
+              {isEventPast(event.date) && (
+                <div className={`flex-1 px-8 py-4 ${COLORS.interactive.buttonSecondary} ${COLORS.effects.roundedLg} font-semibold text-center opacity-60 cursor-not-allowed`}>
+                  Event Ended
+                </div>
+              )}
               <button className={`px-8 py-4 ${COLORS.interactive.buttonSecondary} ${COLORS.effects.roundedLg} font-semibold`}>
                 Share Event
               </button>
