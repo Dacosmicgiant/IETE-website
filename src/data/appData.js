@@ -120,7 +120,7 @@ export const APP_DATA = {
         year: "BTech",
         bio: "Supporting the chapter's growth and organizing technical events.",
         image: {
-          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/fl_preserve_transparency/v1761314461/IMG_7328.HEIC_fpscmo.jpg?_s=public-apps',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1761319199/WhatsApp_Image_2025-10-24_at_20.47.41_mhm1lw.jpg',
           alt: 'Shravani Margaj - Vice President',
           aspectRatio: '3:4',
           fallback: '👤'
@@ -173,7 +173,7 @@ export const APP_DATA = {
         position: "Content Head",
         year: "BTech",
         image: {
-          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752390970/Aditi_Patil_jbchls.jpg',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1761319198/WhatsApp_Image_2025-10-24_at_20.42.47_soofhg.jpg',
           alt: 'Aditi Patil - Content Head',
           aspectRatio: '3:4',
           fallback: '👤'
@@ -338,21 +338,46 @@ export const APP_DATA = {
           fallback: '🛠️'
         },
         gallery: [
-        {
-          url: "https://your-image-url-1.jpg",
-          alt: "Description of first image",
-          aspectRatio: "16:9"
-        },
-        {
-          url: "https://your-image-url-2.jpg",
-          alt: "Description of second image",
-          aspectRatio: "16:9"
-        },
-        {
-          url: "https://your-image-url-3.jpg",
-          alt: "Description of third image",
-          aspectRatio: "16:9"
-        }
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759564759/IMG_6136_mufvnf.jpg',
+    alt: 'IETE and SSC inauguration - ceremonial lighting of lamp',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759564754/IMG_6088_carml2.jpg',
+    alt: 'IETE and SSC inauguration - chief guests on stage during ceremony',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759564753/IMG_6151_wepygp.jpg',
+    alt: 'IETE and SSC inauguration - dignitaries addressing the audience',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759564753/IMG_6104_okeqbb.jpg',
+    alt: 'IETE and SSC inauguration - formal inauguration proceedings',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759564753/IMG_6187_y8uvyi.jpg',
+    alt: 'IETE and SSC inauguration - guest speakers and officials',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759564752/IMG_6158_q8jcsj.jpg',
+    alt: 'IETE and SSC inauguration - audience gathering at ceremony',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759564752/IMG_6284_hgmdrm.jpg',
+    alt: 'IETE and SSC inauguration - ceremonial unveiling event',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759564751/IMG_6123_pns5y5.jpg',
+    alt: 'IETE and SSC inauguration - official ceremony moment',
+    aspectRatio: '16:9'
+  }
       ],
         enabled: true
       },
@@ -384,22 +409,22 @@ export const APP_DATA = {
           fallback: '🛠️'
         },
         gallery: [
-          {
-            url: 'https://your-image-url-1.jpg',
-            alt: 'Description of first image',
-            aspectRatio: '16:9'
-          },
-          {
-            url: 'https://your-image-url-2.jpg',
-            alt: 'Description of second image',
-            aspectRatio: '16:9'
-          },
-          {
-            url: 'https://your-image-url-3.jpg',
-            alt: 'Description of third image',
-            aspectRatio: '16:9'
-          }
-        ],
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565096/IMG_2514_uebc0q.heic',
+    alt: 'PCB Design Workshop - students learning circuit board design',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565093/IMG-20250205-WA0016_emf2wl.jpg',
+    alt: 'PCB Design Workshop - hands-on PCB layout training session',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565091/IMG_2513_aqqsqo.heic',
+    alt: 'PCB Design Workshop - participants working on design software',
+    aspectRatio: '16:9'
+  }
+],
         enabled: true
       },
       {
@@ -422,22 +447,42 @@ export const APP_DATA = {
           fallback: '🛠️'
         },
         gallery: [
-          {
-            url: 'https://your-image-url-1.jpg',
-            alt: 'Description of first image',
-            aspectRatio: '16:9'
-          },
-          {
-            url: 'https://your-image-url-2.jpg',
-            alt: 'Description of second image',
-            aspectRatio: '16:9'
-          },
-          {
-            url: 'https://your-image-url-3.jpg',
-            alt: 'Description of third image',
-            aspectRatio: '16:9'
-          }
-        ],
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759658273/IMG-20250327-WA0064_hhvymy.jpg',
+    alt: 'LabVIEW workshop - students learning graphical programming',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759658268/IMG-20250327-WA0049_d42ijt.jpg',
+    alt: 'LabVIEW training session - hands-on programming experience',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759658215/IMG-20250327-WA0012_vdfrik.jpg',
+    alt: 'LabVIEW workshop - participants working on lab computers',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759658210/IMG-20250327-WA0010_zxeysa.jpg',
+    alt: 'LabVIEW session - students engaged in practical exercises',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759658202/IMG-20250327-WA0043_oy8mfb.jpg',
+    alt: 'LabVIEW training - instructor demonstrating software features',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759658198/IMG-20250327-WA0058_scbve1.jpg',
+    alt: 'LabVIEW workshop - collaborative learning environment',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759658194/IMG-20250327-WA0066_prgbvc.jpg',
+    alt: 'LabVIEW session - students developing virtual instruments',
+    aspectRatio: '16:9'
+  }
+],
         enabled: true
       },
     ],
@@ -466,22 +511,52 @@ export const APP_DATA = {
           fallback: '🏆'
         },
         gallery: [
-          {
-            url: 'https://your-image-url-1.jpg',
-            alt: 'Description of first image',
-            aspectRatio: '16:9'
-          },
-          {
-            url: 'https://your-image-url-2.jpg',
-            alt: 'Description of second image',
-            aspectRatio: '16:9'
-          },
-          {
-            url: 'https://your-image-url-3.jpg',
-            alt: 'Description of third image',
-            aspectRatio: '16:9'
-          }
-        ],
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565284/IMG_2263_lva9qz.jpg',
+    alt: 'Circuit craft project - electronic components and breadboard setup',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565281/IMG_20250124_161118_sc76pv.jpg',
+    alt: 'Circuit craft workshop - students working on electronics project',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565278/IMG_20250124_22462374_u2mixd.jpg',
+    alt: 'Circuit craft demonstration - completed electronic circuit',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565277/IMG20250124143257_sw2arq.jpg',
+    alt: 'Circuit craft activity - hands-on electronics assembly',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565276/IMG-20250124-WA0005_hegdks.jpg',
+    alt: 'Circuit craft session - participants learning circuit design',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565275/IMG-20250124-WA0020_ziulun.jpg',
+    alt: 'Circuit craft project - working prototype with LED components',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565272/IMG20250124174323_tukfrh.jpg',
+    alt: 'Circuit craft workshop - group collaboration on electronics',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565272/IMG20250124150800_e5kz13.jpg',
+    alt: 'Circuit craft event - testing and troubleshooting circuits',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565271/IMG20250124164321_rwxsj2.jpg',
+    alt: 'Circuit craft activity - final project showcase',
+    aspectRatio: '16:9'
+  }
+],
         enabled: true
       },
       {
@@ -507,22 +582,52 @@ export const APP_DATA = {
           fallback: '🏆'
         },
         gallery: [
-          {
-            url: 'https://your-image-url-1.jpg',
-            alt: 'Description of first image',
-            aspectRatio: '16:9'
-          },
-          {
-            url: 'https://your-image-url-2.jpg',
-            alt: 'Description of second image',
-            aspectRatio: '16:9'
-          },
-          {
-            url: 'https://your-image-url-3.jpg',
-            alt: 'Description of third image',
-            aspectRatio: '16:9'
-          }
-        ],
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759567311/IMG_20240920_181822_f4vj6r.jpg',
+    alt: 'Technical Quiz - participants competing in quiz competition',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759567308/IMG_20240920_125310_vocvgo.jpg',
+    alt: 'Technical Quiz - teams engaged in challenging questions',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759567303/IMG20240920161405_jai2ha.jpg',
+    alt: 'Technical Quiz - students answering technical questions',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759567302/IMG20240920130550_jnrx0x.jpg',
+    alt: 'Technical Quiz - quiz master conducting competition',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759567299/IMG20240920131517_ns7zej.jpg',
+    alt: 'Technical Quiz - intense competition moments',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759567298/IMG20240920161217_rsjrnl.jpg',
+    alt: 'Technical Quiz - audience watching quiz rounds',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759567298/IMG_5907_dviguq.jpg',
+    alt: 'Technical Quiz - prize distribution ceremony',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759567297/IMG_9673_gj3llb.heic',
+    alt: 'Technical Quiz - winners celebrating victory',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759567297/IMG_5895_uui5ek.jpg',
+    alt: 'Technical Quiz - group photo with participants',
+    aspectRatio: '16:9'
+  }
+],
         enabled: true
       },
       {
@@ -634,22 +739,32 @@ export const APP_DATA = {
           fallback: '🎤'
         },
         gallery: [
-          {
-            url: 'https://your-image-url-1.jpg',
-            alt: 'Description of first image',
-            aspectRatio: '16:9'
-          },
-          {
-            url: 'https://your-image-url-2.jpg',
-            alt: 'Description of second image',
-            aspectRatio: '16:9'
-          },
-          {
-            url: 'https://your-image-url-3.jpg',
-            alt: 'Description of third image',
-            aspectRatio: '16:9'
-          }
-        ],
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759648540/IMG-20250610-WA0050_s5yxl6.jpg',
+    alt: 'Satellite Club Talk - expert speaker presenting on satellite technology',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759648540/IMG-20250610-WA0064_rgaesd.jpg',
+    alt: 'Satellite Club Talk - audience engaged in technical presentation',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759648539/IMG-20250610-WA0058_cd1nsi.jpg',
+    alt: 'Satellite Club Talk - interactive session on space technology',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759648537/IMG-20250610-WA0074_htekww.jpg',
+    alt: 'Satellite Club Talk - students learning about satellite systems',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759648536/IMG-20250610-WA0070_zr9gcc.jpg',
+    alt: 'Satellite Club Talk - Q&A session with satellite expert',
+    aspectRatio: '16:9'
+  }
+],
         enabled: true
       },
       {
@@ -673,22 +788,42 @@ export const APP_DATA = {
           fallback: '🎤'
         },
         gallery: [
-          {
-            url: 'https://your-image-url-1.jpg',
-            alt: 'Description of first image',
-            aspectRatio: '16:9'
-          },
-          {
-            url: 'https://your-image-url-2.jpg',
-            alt: 'Description of second image',
-            aspectRatio: '16:9'
-          },
-          {
-            url: 'https://your-image-url-3.jpg',
-            alt: 'Description of third image',
-            aspectRatio: '16:9'
-          }
-        ],
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759658471/IMG_6440_x2ksez.heic',
+    alt: 'Spoken Integrity event - speaker addressing audience on ethics',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759658467/IMG_6444_dz4s3r.heic',
+    alt: 'Spoken Integrity event - presentation on values and integrity',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759658462/IMG_6437_tkwoz1.heic',
+    alt: 'Spoken Integrity event - participants engaged in discussion',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759658457/IMG_6448_qlojne.heic',
+    alt: 'Spoken Integrity event - keynote session on ethical practices',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759658453/IMG_6455_blclr8.heic',
+    alt: 'Spoken Integrity event - interactive talk on professional integrity',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759658448/IMG_6473_r1d6hq.heic',
+    alt: 'Spoken Integrity event - audience participation and engagement',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759658442/IMG_6467_mbt9j1.heic',
+    alt: 'Spoken Integrity event - group photo with speakers and attendees',
+    aspectRatio: '16:9'
+  }
+],
         enabled: true
       },
       {
@@ -712,22 +847,32 @@ export const APP_DATA = {
           fallback: '🎤'
         },
         gallery: [
-          {
-            url: 'https://your-image-url-1.jpg',
-            alt: 'Description of first image',
-            aspectRatio: '16:9'
-          },
-          {
-            url: 'https://your-image-url-2.jpg',
-            alt: 'Description of second image',
-            aspectRatio: '16:9'
-          },
-          {
-            url: 'https://your-image-url-3.jpg',
-            alt: 'Description of third image',
-            aspectRatio: '16:9'
-          }
-        ],
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759655877/1000085223_1203f8a76b9ebad467d65676137a763c-03_02_2025_19_26_28_c410lc.jpg',
+    alt: 'Startup Challenges and Breakthrough - keynote speaker presentation',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759655873/1000085234_56a77fb419f347a8289ccf5d5c378ed2-03_02_2025_18_51_23_jquoj8.jpg',
+    alt: 'Startup Challenges and Breakthrough - entrepreneur sharing insights',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759655870/1000085232_2ff2ad58b6f0fd6725b67938c4d2df37-03_02_2025_18_51_23_dw6xlj.jpg',
+    alt: 'Startup Challenges and Breakthrough - interactive discussion session',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759655866/1000085229_36969452993d780546b75518fbe2bf17-03_02_2025_19_26_28_xfkrpf.jpg',
+    alt: 'Startup Challenges and Breakthrough - audience engagement and Q&A',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759655863/1000085225_65b439b53a923dd1e56e134fab890b86-03_02_2025_18_51_24_wq18xy.jpg',
+    alt: 'Startup Challenges and Breakthrough - networking and collaboration',
+    aspectRatio: '16:9'
+  }
+],
         enabled: true
       },
     ],
@@ -754,22 +899,42 @@ export const APP_DATA = {
           fallback: '📚'
         },
         gallery: [
-          {
-            url: 'https://your-image-url-1.jpg',
-            alt: 'Description of first image',
-            aspectRatio: '16:9'
-          },
-          {
-            url: 'https://your-image-url-2.jpg',
-            alt: 'Description of second image',
-            aspectRatio: '16:9'
-          },
-          {
-            url: 'https://your-image-url-3.jpg',
-            alt: 'Description of third image',
-            aspectRatio: '16:9'
-          }
-        ],
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759567960/IMG-20250310-WA0211_wr6hby.jpg',
+    alt: 'Industrial visit to DIGISAT - students exploring facility',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759567955/IMG-20250310-WA0219_ntvbxs.jpg',
+    alt: 'Industrial visit to DIGISAT - group presentation and demonstration',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759567953/IMG-20250310-WA0247_cgb8ht.jpg',
+    alt: 'Industrial visit to DIGISAT - technical equipment showcase',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759567953/IMG-20250310-WA0209_fhdhax.jpg',
+    alt: 'Industrial visit to DIGISAT - students observing industrial processes',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759567952/IMG-20250310-WA0256_rhrmn9.jpg',
+    alt: 'Industrial visit to DIGISAT - facility tour and learning session',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759567951/IMG-20250310-WA0265_xrd44d.jpg',
+    alt: 'Industrial visit to DIGISAT - interactive industry experience',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759567950/WhatsApp_Image_2025-03-08_at_08.00.26_hwchyk.jpg',
+    alt: 'Industrial visit to DIGISAT - group photo at facility',
+    aspectRatio: '16:9'
+  }
+],
         enabled: true
       },
     ]
