@@ -92,7 +92,7 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     className={`${COLORS.primary.textMuted} ${COLORS.typography.body.sm}`}
                   >
-                    LinkedIn
+                    IETE-SF PCE
                   </a>
                 </div>
                 
@@ -109,7 +109,7 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     className={`${COLORS.primary.textMuted} ${COLORS.typography.body.sm}`}
                   >
-                    Instagram
+                    iete_pce
                   </a>
                 </div>
               </div>
@@ -125,23 +125,45 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-10 items-start mb-6 sm:mb-8">
             {/* Faculty Coordinator - Left */}
             <div>
-              <h4 className={`${COLORS.typography.heading.sm} ${COLORS.primary.text} mb-4`}>
-                Faculty Coordinator
-              </h4>
-              <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 max-w-md`}>
-                <h5 className={`${COLORS.primary.text} font-bold text-lg mb-3`}>Prof. Ameet Mehta</h5>
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <span className="text-lg">📞</span>
-                    <span className={`${COLORS.primary.textSecondary} ${COLORS.typography.body.sm}`}>+919702962791</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <span className="text-lg">📧</span>
-                    <span className={`${COLORS.primary.textSecondary} ${COLORS.typography.body.sm} break-all`}>amehta@mes.ac.in</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+  <h4 className={`${COLORS.typography.heading.sm} ${COLORS.primary.text} mb-4`}>
+    Faculty Coordinator
+        </h4>
+        <div>
+  <div className={`${COLORS.effects.glass} ${COLORS.effects.roundedLg} p-6 max-w-md space-y-6`}>
+    {/* First Faculty Coordinator */}
+    <div>
+      <h5 className={`${COLORS.primary.text} font-bold text-lg mb-3`}>Dr. Ameet Mehta</h5>
+      <div className="space-y-2">
+        <div className="flex items-center space-x-2">
+          <span className="text-lg">📞</span>
+          <span className={`${COLORS.primary.textSecondary} ${COLORS.typography.body.sm}`}>+919702962791</span>
+        </div>
+        <div className="flex items-center space-x-2">
+          <span className="text-lg">📧</span>
+          <span className={`${COLORS.primary.textSecondary} ${COLORS.typography.body.sm} break-all`}>amehta@mes.ac.in</span>
+        </div>
+      </div>
+    </div>
+
+    {/* Second Faculty Coordinator */}
+    <div>
+      <h5 className={`${COLORS.primary.text} font-bold text-lg mb-3`}>Prof. Shubham Thakur</h5>
+      <div className="space-y-2">
+        <div className="flex items-center space-x-2">
+          <span className="text-lg">📞</span>
+          <span className={`${COLORS.primary.textSecondary} ${COLORS.typography.body.sm}`}>+9172087 99637</span>
+        </div>
+        <div className="flex items-center space-x-2">
+          <span className="text-lg">📧</span>
+          <span className={`${COLORS.primary.textSecondary} ${COLORS.typography.body.sm} break-all`}>sthakur@mes.ac.in</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+
+            
 
             {/* SSC Faculty Coordinators - Middle */}
             <div>

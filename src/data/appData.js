@@ -85,7 +85,7 @@ export const APP_DATA = {
   // Committee Members - All fields are optional except name
   committee: {
     groupPhoto: {
-      url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752391600/COREE_mjgrza.jpg',
+      url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1761308458/WhatsApp_Image_2025-10-24_at_17.48.45_yyobas.jpg',
       alt: 'IETE-PCE Committee Team Photo',
       aspectRatio: '16:9',
       fallback: '📸',
@@ -106,7 +106,7 @@ export const APP_DATA = {
         achievements: ["Best Student Leader 2024", "IEEE Young Professional Award"],
         linkedIn: "https://linkedin.com/in/saniya-mahadik",
         image: {
-          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752390952/Saniya_Mahadik_flrvje.jpg',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1761308458/WhatsApp_Image_2025-10-24_at_17.48.44_aoxep5.jpg',
           alt: 'Saniya Mahadik - President',
           aspectRatio: '3:4',
           fallback: '👤'
@@ -120,7 +120,7 @@ export const APP_DATA = {
         year: "BTech",
         bio: "Supporting the chapter's growth and organizing technical events.",
         image: {
-          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1760025135/shrawani_fmwfwv.jpg',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/fl_preserve_transparency/v1761314461/IMG_7328.HEIC_fpscmo.jpg?_s=public-apps',
           alt: 'Shravani Margaj - Vice President',
           aspectRatio: '3:4',
           fallback: '👤'
@@ -134,7 +134,7 @@ export const APP_DATA = {
         specialization: "Communication Systems",
         year: "BTech",
         image: {
-          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1752390951/Riddhi_Samarth_zphwc5.jpg',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1761308964/WhatsApp_Image_2025-10-24_at_17.55.25_fltfcr.jpg',
           alt: 'Riddhi Samarth - Secretary',
           aspectRatio: '3:4',
           fallback: '👤'
@@ -545,6 +545,48 @@ export const APP_DATA = {
         detailImage: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759300637/HackRobo_wlalyz.jpg',
           alt: 'HACKROBO Hardware Hackathon Details',
+          aspectRatio: '3:4',
+          fallback: '🤖'
+        },
+        gallery: [
+          {
+            url: 'https://your-image-url-1.jpg',
+            alt: 'Description of first image',
+            aspectRatio: '16:9'
+          },
+          {
+            url: 'https://your-image-url-2.jpg',
+            alt: 'Description of second image',
+            aspectRatio: '16:9'
+          },
+          {
+            url: 'https://your-image-url-3.jpg',
+            alt: 'Description of third image',
+            aspectRatio: '16:9'
+          }
+        ],
+        enabled: true
+      },
+      {
+        id: 4,
+        title: "CIRCUIT CRAFT 3.0",
+        date: "2025-10-16",
+        time: "2:00 PM - 5:00 PM",
+        description: "2-day long national level hardware hackathon focusing on robotics and embedded systems innovation.",
+        venue: "J-104",
+        prizes: "₹3,000 Total Prizes",
+        teamSize: "1-3 members",
+        duration: "3 hours",
+        tags: ["Hardware"],
+        image: {
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1761306971/WhatsApp_Image_2025-10-24_at_17.21.04_1_gapxwz.jpg',
+          alt: 'CIRCUIT CRAFT 3.0',
+          aspectRatio: '3:4',
+          fallback: '🤖'
+        },
+        detailImage: {
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1761306971/WhatsApp_Image_2025-10-24_at_17.21.04_1_gapxwz.jpg',
+          alt: 'CIRCUIT CRAFT 3.0',
           aspectRatio: '3:4',
           fallback: '🤖'
         },
