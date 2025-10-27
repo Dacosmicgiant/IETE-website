@@ -13,7 +13,7 @@ export const APP_DATA = {
       fallback: '🏢'
     },
     hero: {
-      url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1760026793/iete_grp_photo_jmoku3.png',
+      url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1759567457/iete_committeeEditwww_al5whz.jpg',
       alt: 'IETE-PCE Campus and Innovation',
       aspectRatio: '16:9',
       fallback: '🖼️'
@@ -408,23 +408,23 @@ export const APP_DATA = {
           aspectRatio: '3:4',
           fallback: '🛠️'
         },
-        gallery: [
-  {
-    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565096/IMG_2514_uebc0q.heic',
-    alt: 'PCB Design Workshop - students learning circuit board design',
-    aspectRatio: '16:9'
-  },
-  {
-    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565093/IMG-20250205-WA0016_emf2wl.jpg',
-    alt: 'PCB Design Workshop - hands-on PCB layout training session',
-    aspectRatio: '16:9'
-  },
-  {
-    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565091/IMG_2513_aqqsqo.heic',
-    alt: 'PCB Design Workshop - participants working on design software',
-    aspectRatio: '16:9'
-  }
-],
+  "gallery": [
+    {
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759565096/IMG_2514_uebc0q.heic",
+      "alt": "PCB Design Workshop",
+      "aspectRatio": "16:9"
+    },
+    {
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759565093/IMG-20250205-WA0016_emf2wl.jpg",
+      "alt": "PCB Design Workshop",
+      "aspectRatio": "16:9"
+    },
+    {
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759565091/IMG_2513_aqqsqo.heic",
+      "alt": "PCB Design Workshop",
+      "aspectRatio": "16:9"
+    }
+  ],
         enabled: true
       },
       {
@@ -695,23 +695,39 @@ export const APP_DATA = {
           aspectRatio: '3:4',
           fallback: '🤖'
         },
-        gallery: [
-          {
-            url: 'https://your-image-url-1.jpg',
-            alt: 'Description of first image',
-            aspectRatio: '16:9'
-          },
-          {
-            url: 'https://your-image-url-2.jpg',
-            alt: 'Description of second image',
-            aspectRatio: '16:9'
-          },
-          {
-            url: 'https://your-image-url-3.jpg',
-            alt: 'Description of third image',
-            aspectRatio: '16:9'
-          }
-        ],
+        "gallery": [
+    
+    {
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1761307086/WhatsApp_Image_2025-10-24_at_17.20.52_1_yq0fm1.jpg",
+      "alt": "circuit craft 3.0",
+      "aspectRatio": "16:9"
+    },
+    {
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1761307083/WhatsApp_Image_2025-10-24_at_17.20.51_agel42.jpg",
+      "alt": "circuit craft 3.0",
+      "aspectRatio": "16:9"
+    },
+    {
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1761307082/WhatsApp_Image_2025-10-24_at_17.20.49_1_nw0srt.jpg",
+      "alt": "circuit craft 3.0",
+      "aspectRatio": "16:9"
+    },
+    {
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1761307082/WhatsApp_Image_2025-10-24_at_17.20.49_mrpfva.jpg",
+      "alt": "circuit craft 3.0",
+      "aspectRatio": "16:9"
+    },
+    {
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1761307081/WhatsApp_Image_2025-10-24_at_17.20.47_ndntp0.jpg",
+      "alt": "circuit craft 3.0",
+      "aspectRatio": "16:9"
+    },
+    {
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1761307080/WhatsApp_Image_2025-10-24_at_17.20.47_1_z6eezc.jpg",
+      "alt": "circuit craft 3.0",
+      "aspectRatio": "16:9"
+    }
+  ],
         enabled: true
       }
     ],
@@ -768,64 +784,64 @@ export const APP_DATA = {
         enabled: true
       },
       {
-        id: 2,
-        title: "Spoken Integrity Talk",
-        date: "2025-08-22",
-        time: "3:00 PM - 4:30 PM",
-        description: "A talk on spoken integrity and ethical communication in engineering.",
-        venue: "Main Auditorium",
-        speaker: "Guest Speaker",
-        image: {
-          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759656278/Talk_22_aug_25_fcmhqw.png',
-          alt: 'Spoken Integrity Talk',
-          aspectRatio: '3:4',
-          fallback: '🎤'
-        },
-        detailImage: {
-          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759656278/Talk_22_aug_25_fcmhqw.png',
-          alt: 'Spoken Integrity Talk',
-          aspectRatio: '3:4',
-          fallback: '🎤'
-        },
-        gallery: [
-  {
-    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759658471/IMG_6440_x2ksez.heic',
-    alt: 'Spoken Integrity event - speaker addressing audience on ethics',
-    aspectRatio: '16:9'
+  "id": 2,
+  "title": "Spoken Integrity Talk",
+  "date": "2025-08-22",
+  "time": "3:00 PM - 4:30 PM",
+  "description": "A talk on spoken integrity and ethical communication in engineering.",
+  "venue": "Main Auditorium",
+  "speaker": "Guest Speaker",
+  "image": {
+    "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759656278/Talk_22_aug_25_fcmhqw.png",
+    "alt": "Spoken Integrity Talk",
+    "aspectRatio": "3:4",
+    "fallback": "🎤"
   },
-  {
-    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759658467/IMG_6444_dz4s3r.heic',
-    alt: 'Spoken Integrity event - presentation on values and integrity',
-    aspectRatio: '16:9'
+  "detailImage": {
+    "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759656278/Talk_22_aug_25_fcmhqw.png",
+    "alt": "Spoken Integrity Talk",
+    "aspectRatio": "3:4",
+    "fallback": "🎤"
   },
-  {
-    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759658462/IMG_6437_tkwoz1.heic',
-    alt: 'Spoken Integrity event - participants engaged in discussion',
-    aspectRatio: '16:9'
-  },
-  {
-    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759658457/IMG_6448_qlojne.heic',
-    alt: 'Spoken Integrity event - keynote session on ethical practices',
-    aspectRatio: '16:9'
-  },
-  {
-    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759658453/IMG_6455_blclr8.heic',
-    alt: 'Spoken Integrity event - interactive talk on professional integrity',
-    aspectRatio: '16:9'
-  },
-  {
-    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759658448/IMG_6473_r1d6hq.heic',
-    alt: 'Spoken Integrity event - audience participation and engagement',
-    aspectRatio: '16:9'
-  },
-  {
-    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759658442/IMG_6467_mbt9j1.heic',
-    alt: 'Spoken Integrity event - group photo with speakers and attendees',
-    aspectRatio: '16:9'
-  }
-],
-        enabled: true
-      },
+  "gallery": [
+    {
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759658471/IMG_6440_x2ksez.heic",
+      "alt": "Spoken Integrity",
+      "aspectRatio": "16:9"
+    },
+    {
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759658467/IMG_6444_dz4s3r.heic",
+      "alt": "Spoken Integrity",
+      "aspectRatio": "16:9"
+    },
+    {
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759658462/IMG_6437_tkwoz1.heic",
+      "alt": "Spoken Integrity",
+      "aspectRatio": "16:9"
+    },
+    {
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759658457/IMG_6448_qlojne.heic",
+      "alt": "Spoken Integrity",
+      "aspectRatio": "16:9"
+    },
+    {
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759658453/IMG_6455_blclr8.heic",
+      "alt": "Spoken Integrity",
+      "aspectRatio": "16:9"
+    },
+    {
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759658448/IMG_6473_r1d6hq.heic",
+      "alt": "Spoken Integrity",
+      "aspectRatio": "16:9"
+    },
+    {
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759658442/IMG_6467_mbt9j1.heic",
+      "alt": "Spoken Integrity",
+      "aspectRatio": "16:9"
+    }
+  ],
+  "enabled": true
+},
       {
         id: 3,
         title: "Startup Challenges and Breakthrough Talk",

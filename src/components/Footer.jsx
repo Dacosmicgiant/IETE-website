@@ -155,7 +155,7 @@ const Footer = () => {
         </div>
         <div className="flex items-center space-x-2">
           <span className="text-lg">📧</span>
-          <span className={`${COLORS.primary.textSecondary} ${COLORS.typography.body.sm} break-all`}>sthakur@mes.ac.in</span>
+          <span className={`${COLORS.primary.textSecondary} ${COLORS.typography.body.sm} break-all`}>shubhamthakur@mes.ac.in</span>
         </div>
       </div>
     </div>
@@ -174,11 +174,11 @@ const Footer = () => {
                 <ul className="space-y-3">
                   <li>
                     <div className={`font-semibold ${COLORS.primary.text}`}>Dr. Suman Wadkar</div>
-                    <div className={`${COLORS.primary.textSecondary} ${COLORS.typography.body.sm}`}>Phone: +91 99670 14534</div>
+                    <div className={`${COLORS.primary.textSecondary} ${COLORS.typography.body.sm}`}><span className="text-lg">📞</span>+91 99670 14534</div>
                   </li>
                   <li>
                     <div className={`font-semibold ${COLORS.primary.text}`}>Prof. Sonali Kathare</div>
-                    <div className={`${COLORS.primary.textSecondary} ${COLORS.typography.body.sm}`}>Phone: +91 8879304899</div>
+                    <div className={`${COLORS.primary.textSecondary} ${COLORS.typography.body.sm}`}><span className="text-lg">📞</span>+91 8879304899</div>
                   </li>
                 </ul>
               </div>
