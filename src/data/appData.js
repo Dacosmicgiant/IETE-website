@@ -24,7 +24,7 @@ export const APP_DATA = {
       aspectRatio: '4:3',
       fallback: '🖼️'
     }
-  },
+  } ,
 
   // Faculty Members - All fields are optional except name
   faculty: [
