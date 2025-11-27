@@ -89,9 +89,9 @@ export const APP_DATA = {
       alt: 'IETE-PCE Committee Team Photo',
       aspectRatio: '16:9',
       fallback: '📸',
-      title: "IETE-PCE Core Team 2024-25",
+      title: "IETE-PCE Core Team 2025",
       description: "Our dedicated team working towards excellence in electronics and telecommunications.",
-      year: "2024-25"
+      year: "2025"
     },
     members: [
       {
@@ -384,7 +384,7 @@ export const APP_DATA = {
         level: "Advanced",
         fee: "₹200",
         description: "Master PCB design using industry-standard tools. Create professional circuit boards from scratch.",
-        venue: "T304",
+        venue: "J201",
         capacity: 25,
         registered: 22,
         duration: "5 hours",
@@ -491,17 +491,17 @@ export const APP_DATA = {
         prizes: "₹3000 Total Prize Pool",
         registrationFee: "₹210 per team",
         teamSize: "2-4 members",
-        deadline: "2025-08-03",
+       
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095536/Circuir_craft_kks4em.jpg',
           alt: 'Circuit Design Challenge',
-          aspectRatio: '3:4',
+          aspectRatio: '9:16',
           fallback: '🏆'
         },
         detailImage: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095536/Circuir_craft_kks4em.jpg',
           alt: 'Circuit Design Challenge',
-          aspectRatio: '3:4',
+          aspectRatio: '9:16',
           fallback: '🏆'
         },
         gallery: [
@@ -560,7 +560,7 @@ export const APP_DATA = {
         time: "1:30 onwards",
         description: "Test your electronics knowledge in this fun quiz competition.",
         venue: "Conclave 2",
-        prizes: "₹5,000 Total Prizes",
+        prizes: "₹3,000 Total Prizes",
         teamSize: "Individual",
         tags: ["Quiz", "Electronics", "Competition"],
         image: {
