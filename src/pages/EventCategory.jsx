@@ -180,38 +180,6 @@ const EventCategory = () => {
                 </span>
               )}
             </div>
-            
-            {/* Right side - action button */}
-            <button className={`text-xs ${COLORS.accent.primaryText} font-medium group-hover:underline`}>
-              View Details →
-            </button>
-          </div>
-
-          {/* Registration Status and Button */}
-          <div className="flex items-center justify-between pt-2 border-t border-slate-700/30">
-            <div className="flex items-center space-x-2">
-              {event.capacity && event.registered && (
-                <span className={`text-xs ${
-                  event.registered >= event.capacity ? 
-                  'text-blue-400' : 
-                  event.registered >= event.capacity * 0.8 ? 
-                  'text-yellow-400' : 
-                  'text-green-400'
-                }`}>
-                  {event.registered >= event.capacity ? 'Full' : 
-                   event.registered >= event.capacity * 0.8 ? 'Filling Fast' : 
-                   'Available'}
-                </span>
-              )}
-              {event.registrationDeadline && (
-                <span className={`text-xs ${COLORS.primary.textLight}`}>
-                  Deadline: {new Date(event.registrationDeadline).toLocaleDateString()}
-                </span>
-              )}
-            </div>
-            <button className={`text-xs ${COLORS.interactive.buttonPrimary} px-3 py-1 rounded-full hover:scale-105 transition-transform`}>
-              Register Now
-            </button>
           </div>
         </div>
       </div>
