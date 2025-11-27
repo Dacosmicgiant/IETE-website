@@ -310,7 +310,7 @@ export const APP_DATA = {
         title: "Inauguration of IETE and SSC", // Required
         date: "2025-07-15", // Required
         time: "10:00 AM - 4:00 PM", // Required
-        description: "Learn to build IoT applications using Arduino and sensors. Hands-on experience with real projects.",
+        description: "Inauguration ceramony of IETE and SSC,",
         venue: "Auditorium",
         instructor: "Dr. Rajesh Kumar",
         capacity: 30,
