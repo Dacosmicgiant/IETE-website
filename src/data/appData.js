@@ -312,19 +312,8 @@ export const APP_DATA = {
         time: "10:00 AM - 4:00 PM", // Required
         description: "Inauguration ceramony of IETE and SSC,",
         venue: "Auditorium",
-        instructor: "Dr. Rajesh Kumar",
-        capacity: 30,
-        registered: 18,
-        level: "Beginner",
-        duration: "6 hours",
-        fee: "₹500",
-        prerequisites: "Basic programming knowledge",
-        materials: "Arduino kit will be provided",
-        certificate: "IETE Workshop Certificate",
-        registrationDeadline: "2025-07-10",
-        tags: ["IoT", "Arduino", "Sensors", "Hands-on"],
-        targetAudience: "2nd year and above",
-        outcomes: ["Build working IoT prototypes", "Understand sensor interfacing", "Learn Arduino programming"],
+        instructor: "Mrs. Leena Bokil",
+        
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095083/Innogration_ddmusa.jpg',
           alt: 'Inauguration of IETE',
