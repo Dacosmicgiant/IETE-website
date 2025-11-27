@@ -388,7 +388,7 @@ export const APP_DATA = {
         time: "9:00 AM - 5:00 PM",
         instructor: "Prof. Priya Sharma",
         level: "Advanced",
-        fee: "₹800",
+        fee: "₹200",
         description: "Master PCB design using industry-standard tools. Create professional circuit boards from scratch.",
         venue: "Electronics Lab",
         capacity: 25,
@@ -410,7 +410,7 @@ export const APP_DATA = {
         },
   "gallery": [
     {
-      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759565096/IMG_2514_uebc0q.heic",
+      "url": "https://res.cloudinary.com/dggl6xbcg/image/upload/v1764224742/pcb_1_gfhryy.jpg",
       "alt": "PCB Design Workshop",
       "aspectRatio": "16:9"
     },
@@ -420,7 +420,7 @@ export const APP_DATA = {
       "aspectRatio": "16:9"
     },
     {
-      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759565091/IMG_2513_aqqsqo.heic",
+      "url": "https://res.cloudinary.com/dggl6xbcg/image/upload/v1764224850/pcb_3_l3y01z.jpg",
       "alt": "PCB Design Workshop",
       "aspectRatio": "16:9"
     }
