@@ -312,8 +312,13 @@ export const APP_DATA = {
         time: "10:00 AM - 4:00 PM", // Required
         description: "Inauguration ceramony of IETE and SSC,",
         venue: "Auditorium",
-        instructor: "Mrs. Leena Bokil",
-        
+        instructor: "Dr. Rajesh Kumar",
+        level: "Beginner",
+        duration: "6 hours",
+        certificate: "IETE Workshop Certificate",
+        tags: ["IoT", "Arduino", "Sensors", "Hands-on"],
+        targetAudience: "2nd year and above",
+        outcomes: ["Build working IoT prototypes", "Understand sensor interfacing", "Learn Arduino programming"],
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095083/Innogration_ddmusa.jpg',
           alt: 'Inauguration of IETE',
@@ -323,7 +328,7 @@ export const APP_DATA = {
         detailImage: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095083/Innogration_ddmusa.jpg',
           alt: 'Inauguration of IETE',
-          aspectRatio: '3:4',
+          aspectRatio: '1:1',
           fallback: '🛠️'
         },
         gallery: [
@@ -373,16 +378,16 @@ export const APP_DATA = {
       {
         id: 2,
         title: "PCB Design Workshop",
-        date: "2025-07-22",
+        date: "2025-02-02",
         time: "9:00 AM - 5:00 PM",
-        instructor: "Prof. Priya Sharma",
+        instructor: "Prof. Shubham Thakur",
         level: "Advanced",
         fee: "₹200",
         description: "Master PCB design using industry-standard tools. Create professional circuit boards from scratch.",
-        venue: "Electronics Lab",
+        venue: "T304",
         capacity: 25,
         registered: 22,
-        duration: "8 hours",
+        duration: "5 hours",
         prerequisites: "Circuit design basics",
         tags: ["PCB", "Electronics", "Design", "Advanced"],
         image: {
@@ -404,7 +409,7 @@ export const APP_DATA = {
       "aspectRatio": "16:9"
     },
     {
-      "url": "https://res.cloudinary.com/dggl6xbcg/image/upload/v1764231319/group_zvo9hs.jpg",
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759565093/IMG-20250205-WA0016_emf2wl.jpg",
       "alt": "PCB Design Workshop",
       "aspectRatio": "16:9"
     },
@@ -441,7 +446,11 @@ export const APP_DATA = {
     alt: 'LabVIEW workshop - students learning graphical programming',
     aspectRatio: '16:9'
   },
-  
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759658268/IMG-20250327-WA0049_d42ijt.jpg',
+    alt: 'LabVIEW training session - hands-on programming experience',
+    aspectRatio: '16:9'
+  },
   {
     url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759658215/IMG-20250327-WA0012_vdfrik.jpg',
     alt: 'LabVIEW workshop - participants working on lab computers',
@@ -474,11 +483,11 @@ export const APP_DATA = {
     competitions: [
       {
         id: 1,
-        title: "Circuit Craft",
+        title: "Circuit Craft 2.0",
         date: "2025-01-24",
         time: "2:00 AM - 5:00 PM",
         description: "Design innovative electronic circuits to solve real-world problems. Cash prizes for winners.",
-        venue: "Main Auditorium",
+        venue: "T302",
         prizes: "₹3000 Total Prize Pool",
         registrationFee: "₹210 per team",
         teamSize: "2-4 members",
@@ -506,7 +515,11 @@ export const APP_DATA = {
     alt: 'Circuit craft workshop - students working on electronics project',
     aspectRatio: '16:9'
   },
-  
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565278/IMG_20250124_22462374_u2mixd.jpg',
+    alt: 'Circuit craft demonstration - completed electronic circuit',
+    aspectRatio: '16:9'
+  },
   {
     url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565277/IMG20250124143257_sw2arq.jpg',
     alt: 'Circuit craft activity - hands-on electronics assembly',
@@ -543,10 +556,10 @@ export const APP_DATA = {
       {
         id: 2,
         title: "Technical Quiz",
-        date: "2025-08-15",
-        time: "4:00 PM - 5:00 PM",
+        date: "2024-09-20",
+        time: "1:30 onwards",
         description: "Test your electronics knowledge in this fun quiz competition.",
-        venue: "Classroom 101",
+        venue: "Conclave 2",
         prizes: "₹5,000 Total Prizes",
         teamSize: "Individual",
         tags: ["Quiz", "Electronics", "Competition"],
@@ -599,7 +612,7 @@ export const APP_DATA = {
     aspectRatio: '16:9'
   },
   {
-    url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1764226313/tech_quiz8_hf9mro.jpg',
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759567297/IMG_9673_gj3llb.heic',
     alt: 'Technical Quiz - winners celebrating victory',
     aspectRatio: '16:9'
   },
@@ -615,7 +628,7 @@ export const APP_DATA = {
         id: 3,
         title: "HACKROBO",
         date: "2025-09-19",
-        time: "9:00 AM - 6:00 PM",
+        time: "9:00AM onwards",
         description: "2-day long national level hardware hackathon focusing on robotics and embedded systems innovation.",
         venue: "Main Campus",
         prizes: "Exciting prizes for winners",
@@ -623,41 +636,35 @@ export const APP_DATA = {
         duration: "2 days",
         tags: ["Hardware", "Robotics", "Hackathon", "National Level"],
         image: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1764228739/hackrobo_poster-Photoroom_khhsvl.png',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759300637/HackRobo_wlalyz.jpg',
           alt: 'HACKROBO Hardware Hackathon',
           aspectRatio: '3:4',
           fallback: '🤖'
         },
         detailImage: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1764228739/hackrobo_poster-Photoroom_khhsvl.png',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759300637/HackRobo_wlalyz.jpg',
           alt: 'HACKROBO Hardware Hackathon Details',
           aspectRatio: '3:4',
           fallback: '🤖'
         },
-        
-    "gallery": [
-      {
-        "url": "https://res.cloudinary.com/dggl6xbcg/image/upload/v1764227625/hackrobo_1_rffilx.jpg",
-        "alt": "Image 1",
-        "aspectRatio": "16:9"
-      },
-      {
-        "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1763050570/WhatsApp_Image_2025-11-13_at_21.34.38_3_zewrek.jpg",
-        "alt": "Image 2",
-        "aspectRatio": "16:9"
-      },
-      {
-        "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1763050570/WhatsApp_Image_2025-11-13_at_21.34.37_2_cuv9ez.jpg",
-        "alt": "Image 3",
-        "aspectRatio": "16:9"
-      },
-      {
-        "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1763050570/WhatsApp_Image_2025-11-13_at_21.34.37_1_klfpcp.jpg",
-        "alt": "Image 4",
-        "aspectRatio": "16:9"
-      }
-    ],
-    "enabled": true
+        gallery: [
+          {
+            url: 'https://your-image-url-1.jpg',
+            alt: 'Description of first image',
+            aspectRatio: '16:9'
+          },
+          {
+            url: 'https://your-image-url-2.jpg',
+            alt: 'Description of second image',
+            aspectRatio: '16:9'
+          },
+          {
+            url: 'https://your-image-url-3.jpg',
+            alt: 'Description of third image',
+            aspectRatio: '16:9'
+          }
+        ],
+        enabled: true
       },
       {
         id: 4,
@@ -671,15 +678,15 @@ export const APP_DATA = {
         duration: "3 hours",
         tags: ["Hardware"],
         image: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1764229317/circuit_craft_oiexfy.png',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1761306971/WhatsApp_Image_2025-10-24_at_17.21.04_1_gapxwz.jpg',
           alt: 'CIRCUIT CRAFT 3.0',
           aspectRatio: '3:4',
           fallback: '🤖'
         },
         detailImage: {
-          url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1764229317/circuit_craft_oiexfy.png',
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1761306971/WhatsApp_Image_2025-10-24_at_17.21.04_1_gapxwz.jpg',
           alt: 'CIRCUIT CRAFT 3.0',
-          aspectRatio: '3:4',
+          aspectRatio: '1:1',
           fallback: '🤖'
         },
         "gallery": [
@@ -723,10 +730,10 @@ export const APP_DATA = {
         id: 1,
         title: "Satellite Club Talk",
         date: "2024-09-23",
-        time: "3:00 PM - 5:00 PM",
+        time: "2:00PM onwards",
         description: "A technical talk hosted by the Satellite Club to explore advancements and opportunities in space technology and satellite communication.",
-        venue: "Main Auditorium",
-        speaker: "Ms Leena Bokil",
+        venue: "Conclave 1",
+        speaker: "Dr. Umesh Shinde",
         attendance: "Free for all students",
         topics: ["Overview", "Hardware Challenges", "Industry Applications"],
         image: {
@@ -776,8 +783,8 @@ export const APP_DATA = {
   "date": "2025-08-22",
   "time": "3:00 PM - 4:30 PM",
   "description": "A talk on spoken integrity and ethical communication in engineering.",
-  "venue": "Main Auditorium",
-  "speaker": "Guest Speaker",
+  "venue": "Conclave 1",
+  "speaker": "Prof. Priyesh Raghavan",
   "image": {
     "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759656278/Talk_22_aug_25_fcmhqw.png",
     "alt": "Spoken Integrity Talk",
@@ -792,37 +799,37 @@ export const APP_DATA = {
   },
   "gallery": [
     {
-      "url": "https://res.cloudinary.com/dggl6xbcg/image/upload/v1764230114/spoken1_ffuj80.jpg",
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759658471/IMG_6440_x2ksez.heic",
       "alt": "Spoken Integrity",
       "aspectRatio": "16:9"
     },
     {
-      "url": "https://res.cloudinary.com/dggl6xbcg/image/upload/v1764230121/spoken2_u8pc4f.jpg",
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759658467/IMG_6444_dz4s3r.heic",
       "alt": "Spoken Integrity",
       "aspectRatio": "16:9"
     },
     {
-      "url": "https://res.cloudinary.com/dggl6xbcg/image/upload/v1764230124/spoken4_zjbtrs.jpg",
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759658462/IMG_6437_tkwoz1.heic",
       "alt": "Spoken Integrity",
       "aspectRatio": "16:9"
     },
     {
-      "url": "https://res.cloudinary.com/dggl6xbcg/image/upload/v1764230126/spoken7_qwthyy.jpg",
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759658457/IMG_6448_qlojne.heic",
       "alt": "Spoken Integrity",
       "aspectRatio": "16:9"
     },
     {
-      "url": "https://res.cloudinary.com/dggl6xbcg/image/upload/v1764230127/spoken3_ldsejt.jpg",
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759658453/IMG_6455_blclr8.heic",
       "alt": "Spoken Integrity",
       "aspectRatio": "16:9"
     },
     {
-      "url": "https://res.cloudinary.com/dggl6xbcg/image/upload/v1764230130/spoken6_o5crh2.jpg",
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759658448/IMG_6473_r1d6hq.heic",
       "alt": "Spoken Integrity",
       "aspectRatio": "16:9"
     },
     {
-      "url": "https://res.cloudinary.com/dggl6xbcg/image/upload/v1764230129/spoken5_ahn4jy.jpg",
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759658442/IMG_6467_mbt9j1.heic",
       "alt": "Spoken Integrity",
       "aspectRatio": "16:9"
     }
@@ -832,10 +839,10 @@ export const APP_DATA = {
       {
         id: 3,
         title: "Startup Challenges and Breakthrough Talk",
-        date: "2025-10-05",
-        time: "1:00 PM - 2:30 PM",
+        date: "2025-01-30",
+        time: "2:00 PM onwards",
         description: "Discussion on startup challenges and breakthroughs for budding entrepreneurs.",
-        venue: "Seminar Hall B",
+        venue: "Auditorium",
         speaker: "Industry Entrepreneur",
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759651209/WhatsApp_Image_2025-10-05_at_13.27.54_kzw3ji.jpg',
@@ -861,7 +868,7 @@ export const APP_DATA = {
     aspectRatio: '16:9'
   },
   {
-    url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1764230591/speaker_dvfq32.png',
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759655870/1000085232_2ff2ad58b6f0fd6725b67938c4d2df37-03_02_2025_18_51_23_dw6xlj.jpg',
     alt: 'Startup Challenges and Breakthrough - interactive discussion session',
     aspectRatio: '16:9'
   },
@@ -918,7 +925,7 @@ export const APP_DATA = {
     aspectRatio: '16:9'
   },
   {
-    url: 'https://res.cloudinary.com/dggl6xbcg/image/upload/v1764231728/award_digi_jiwzgr.png',
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759567953/IMG-20250310-WA0209_fhdhax.jpg',
     alt: 'Industrial visit to DIGISAT - students observing industrial processes',
     aspectRatio: '16:9'
   },
