@@ -478,6 +478,79 @@ export const APP_DATA = {
     ],
     competitions: [
       {
+        id: 4,
+        title: "CIRCUIT CRAFT 3.0",
+        date: "2025-10-16",
+        time: "2:00 PM - 5:00 PM",
+        description: "Design innovative electronic circuits to solve real-world problems. Cash prizes for winners.",
+        venue: "J-104",
+        prizes: "₹3,000 Total Prizes",
+        registrationFee: "₹210 per team",
+        teamSize: "1-3 members",
+        duration: "3 hours",
+        tags: ["Hardware", "Electronics", "Competition"],
+        image: {
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1761306971/WhatsApp_Image_2025-10-24_at_17.21.04_1_gapxwz.jpg',
+          alt: 'CIRCUIT CRAFT 3.0',
+          aspectRatio: '1:1',
+          fallback: '🤖'
+        },
+        detailImage: {
+          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1761306971/WhatsApp_Image_2025-10-24_at_17.21.04_1_gapxwz.jpg',
+          alt: 'CIRCUIT CRAFT 3.0',
+          aspectRatio: '1:1',
+          fallback: '🤖'
+        },
+        "gallery": [
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565284/IMG_2263_lva9qz.jpg',
+    alt: 'Circuit craft project - electronic components and breadboard setup',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565281/IMG_20250124_161118_sc76pv.jpg',
+    alt: 'Circuit craft workshop - students working on electronics project',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565278/IMG_20250124_22462374_u2mixd.jpg',
+    alt: 'Circuit craft demonstration - completed electronic circuit',
+    aspectRatio: '9:16'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565277/IMG20250124143257_sw2arq.jpg',
+    alt: 'Circuit craft activity - hands-on electronics assembly',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565276/IMG-20250124-WA0005_hegdks.jpg',
+    alt: 'Circuit craft session - participants learning circuit design',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565275/IMG-20250124-WA0020_ziulun.jpg',
+    alt: 'Circuit craft project - working prototype with LED components',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565272/IMG20250124174323_tukfrh.jpg',
+    alt: 'Circuit craft workshop - group collaboration on electronics',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565272/IMG20250124150800_e5kz13.jpg',
+    alt: 'Circuit craft event - testing and troubleshooting circuits',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565271/IMG20250124164321_rwxsj2.jpg',
+    alt: 'Circuit craft activity - final project showcase',
+    aspectRatio: '16:9'
+  }
+  ],
+        enabled: true
+      },
+      {
         id: 1,
         title: "Circuit Craft 2.0",
         date: "2025-01-24",
@@ -660,79 +733,6 @@ export const APP_DATA = {
             aspectRatio: '16:9'
           }
         ],
-        enabled: true
-      },
-      {
-        id: 4,
-        title: "CIRCUIT CRAFT 3.0",
-        date: "2025-10-16",
-        time: "2:00 PM - 5:00 PM",
-        description: "Design innovative electronic circuits to solve real-world problems. Cash prizes for winners.",
-        venue: "J-104",
-        prizes: "₹3,000 Total Prizes",
-        registrationFee: "₹210 per team",
-        teamSize: "1-3 members",
-        duration: "3 hours",
-        tags: ["Hardware", "Electronics", "Competition"],
-        image: {
-          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1761306971/WhatsApp_Image_2025-10-24_at_17.21.04_1_gapxwz.jpg',
-          alt: 'CIRCUIT CRAFT 3.0',
-          aspectRatio: '9:16',
-          fallback: '🤖'
-        },
-        detailImage: {
-          url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1761306971/WhatsApp_Image_2025-10-24_at_17.21.04_1_gapxwz.jpg',
-          alt: 'CIRCUIT CRAFT 3.0',
-          aspectRatio: '9:16',
-          fallback: '🤖'
-        },
-        "gallery": [
-  {
-    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565284/IMG_2263_lva9qz.jpg',
-    alt: 'Circuit craft project - electronic components and breadboard setup',
-    aspectRatio: '16:9'
-  },
-  {
-    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565281/IMG_20250124_161118_sc76pv.jpg',
-    alt: 'Circuit craft workshop - students working on electronics project',
-    aspectRatio: '16:9'
-  },
-  {
-    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565278/IMG_20250124_22462374_u2mixd.jpg',
-    alt: 'Circuit craft demonstration - completed electronic circuit',
-    aspectRatio: '16:9'
-  },
-  {
-    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565277/IMG20250124143257_sw2arq.jpg',
-    alt: 'Circuit craft activity - hands-on electronics assembly',
-    aspectRatio: '16:9'
-  },
-  {
-    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565276/IMG-20250124-WA0005_hegdks.jpg',
-    alt: 'Circuit craft session - participants learning circuit design',
-    aspectRatio: '16:9'
-  },
-  {
-    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565275/IMG-20250124-WA0020_ziulun.jpg',
-    alt: 'Circuit craft project - working prototype with LED components',
-    aspectRatio: '16:9'
-  },
-  {
-    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565272/IMG20250124174323_tukfrh.jpg',
-    alt: 'Circuit craft workshop - group collaboration on electronics',
-    aspectRatio: '16:9'
-  },
-  {
-    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565272/IMG20250124150800_e5kz13.jpg',
-    alt: 'Circuit craft event - testing and troubleshooting circuits',
-    aspectRatio: '16:9'
-  },
-  {
-    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565271/IMG20250124164321_rwxsj2.jpg',
-    alt: 'Circuit craft activity - final project showcase',
-    aspectRatio: '16:9'
-  }
-  ],
         enabled: true
       }
     ],
