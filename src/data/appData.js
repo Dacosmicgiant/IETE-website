@@ -481,7 +481,7 @@ export const APP_DATA = {
         id: 1,
         title: "Circuit Craft 2.0",
         date: "2025-01-24",
-        time: "2:00 AM - 5:00 PM",
+        time: "2:00 PM - 5:00 PM",
         description: "Design innovative electronic circuits to solve real-world problems. Cash prizes for winners.",
         venue: "T302",
         prizes: "₹3000 Total Prize Pool",
@@ -491,13 +491,13 @@ export const APP_DATA = {
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095536/Circuir_craft_kks4em.jpg',
           alt: 'Circuit Design Challenge',
-          aspectRatio: '9:16',
+          aspectRatio: '3:4',
           fallback: '🏆'
         },
         detailImage: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095536/Circuir_craft_kks4em.jpg',
           alt: 'Circuit Design Challenge',
-          aspectRatio: '9:16',
+          aspectRatio: '3:4',
           fallback: '🏆'
         },
         gallery: [
@@ -667,12 +667,13 @@ export const APP_DATA = {
         title: "CIRCUIT CRAFT 3.0",
         date: "2025-10-16",
         time: "2:00 PM - 5:00 PM",
-        description: "2-day long national level hardware hackathon focusing on robotics and embedded systems innovation.",
+        description: "Design innovative electronic circuits to solve real-world problems. Cash prizes for winners.",
         venue: "J-104",
         prizes: "₹3,000 Total Prizes",
+        registrationFee: "₹210 per team",
         teamSize: "1-3 members",
         duration: "3 hours",
-        tags: ["Hardware"],
+        tags: ["Hardware", "Electronics", "Competition"],
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1761306971/WhatsApp_Image_2025-10-24_at_17.21.04_1_gapxwz.jpg',
           alt: 'CIRCUIT CRAFT 3.0',
@@ -841,6 +842,41 @@ export const APP_DATA = {
     {
       "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759658442/IMG_6467_mbt9j1.heic",
       "alt": "Spoken Integrity",
+      "aspectRatio": "16:9"
+    },
+    {
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1764309522/9b1bbdcc-d715-4ade-93e3-4031173376de.png",
+      "alt": "Spoken Integrity Talk",
+      "aspectRatio": "16:9"
+    },
+    {
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1764309537/cf10be3a-f7ac-4390-b18d-aedfbda05495.png",
+      "alt": "Spoken Integrity Talk",
+      "aspectRatio": "16:9"
+    },
+    {
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1764309510/9a362b91-7a48-4b5c-b856-482250ad4eef.png",
+      "alt": "Spoken Integrity Talk",
+      "aspectRatio": "16:9"
+    },
+    {
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1764309529/e3598d6b-f96b-468f-8043-cd008c56b357.png",
+      "alt": "Spoken Integrity Talk",
+      "aspectRatio": "16:9"
+    },
+    {
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1764309494/WhatsApp_Image_2025-11-28_at_11.25.42_7ae1d504_y9nvsi.jpg",
+      "alt": "Spoken Integrity Talk",
+      "aspectRatio": "16:9"
+    },
+    {
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1764309490/WhatsApp_Image_2025-11-28_at_11.25.10_32c47f89_hyyzdw.jpg",
+      "alt": "Spoken Integrity Talk",
+      "aspectRatio": "16:9"
+    },
+    {
+      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1764309485/WhatsApp_Image_2025-11-28_at_11.23.44_95428877_neojvg.jpg",
+      "alt": "Spoken Integrity Talk",
       "aspectRatio": "16:9"
     }
   ],
