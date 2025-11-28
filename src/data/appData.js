@@ -810,41 +810,6 @@ export const APP_DATA = {
   },
   "gallery": [
     {
-      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759658471/IMG_6440_x2ksez.heic",
-      "alt": "Spoken Integrity",
-      "aspectRatio": "16:9"
-    },
-    {
-      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759658467/IMG_6444_dz4s3r.heic",
-      "alt": "Spoken Integrity",
-      "aspectRatio": "16:9"
-    },
-    {
-      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759658462/IMG_6437_tkwoz1.heic",
-      "alt": "Spoken Integrity",
-      "aspectRatio": "16:9"
-    },
-    {
-      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759658457/IMG_6448_qlojne.heic",
-      "alt": "Spoken Integrity",
-      "aspectRatio": "16:9"
-    },
-    {
-      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759658453/IMG_6455_blclr8.heic",
-      "alt": "Spoken Integrity",
-      "aspectRatio": "16:9"
-    },
-    {
-      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759658448/IMG_6473_r1d6hq.heic",
-      "alt": "Spoken Integrity",
-      "aspectRatio": "16:9"
-    },
-    {
-      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1759658442/IMG_6467_mbt9j1.heic",
-      "alt": "Spoken Integrity",
-      "aspectRatio": "16:9"
-    },
-    {
       "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1764309522/9b1bbdcc-d715-4ade-93e3-4031173376de.png",
       "alt": "Spoken Integrity Talk",
       "aspectRatio": "16:9"
