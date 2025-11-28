@@ -100,6 +100,7 @@ const EventDetail = () => {
 
     const showCarouselControls = event.gallery.length > 1
     const currentImage = event.gallery[currentImageIndex]
+    const isTallImage = currentImage?.aspectRatio === '9:16'
 
     return (
       <div className="mb-12">
@@ -109,7 +110,7 @@ const EventDetail = () => {
         
         <div className="relative w-full max-w-5xl mx-auto">
           {/* Main Image Container */}
-          <div className="relative overflow-hidden rounded-2xl">
+          <div className={`relative overflow-hidden rounded-2xl ${isTallImage ? 'md:w-1/2 w-4/5 mx-auto' : 'w-full'}`}>
             <Image 
               imageData={{
                 ...currentImage,
