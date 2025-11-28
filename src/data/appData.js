@@ -587,7 +587,7 @@ export const APP_DATA = {
   {
     url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565278/IMG_20250124_22462374_u2mixd.jpg',
     alt: 'Circuit craft demonstration - completed electronic circuit',
-    aspectRatio: '16:9'
+    aspectRatio: '9:16'
   },
   {
     url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565277/IMG20250124143257_sw2arq.jpg',
@@ -720,11 +720,6 @@ export const APP_DATA = {
           {
             url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1763050570/WhatsApp_Image_2025-11-13_at_21.34.38_3_zewrek.jpg',
             alt: 'HACKROBO - participants working on projects',
-            aspectRatio: '16:9'
-          },
-          {
-            url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1763050570/WhatsApp_Image_2025-11-13_at_21.34.37_2_cuv9ez.jpg',
-            alt: 'HACKROBO - robotics and embedded systems',
             aspectRatio: '16:9'
           },
           {
