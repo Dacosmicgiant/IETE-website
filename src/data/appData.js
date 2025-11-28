@@ -89,7 +89,7 @@ export const APP_DATA = {
       alt: 'IETE-PCE Committee Team Photo',
       aspectRatio: '16:9',
       fallback: '📸',
-      title: "IETE-PCE Core Team 2025",
+      title: "IETE-PCE Head Team 2025",
       description: "Our dedicated team working towards excellence in electronics and telecommunications.",
       year: "2025"
     },
