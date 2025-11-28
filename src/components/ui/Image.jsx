@@ -49,8 +49,25 @@ const Image = ({
     )
   }
 
-  const { url, alt, aspectRatio = '1:1', fallback = '🖼️' } = imageData
+  const { url, alt, aspectRatio = '1:1', fallback = '🖼️', fit = 'cover' } = imageData
   const aspectRatioClass = getAspectRatioClass(aspectRatio)
+
+  const getObjectFitClass = () => {
+    switch (fit) {
+      case 'contain':
+        return 'object-contain'
+      case 'fill':
+        return 'object-fill'
+      case 'none':
+        return 'object-none'
+      case 'scale-down':
+        return 'object-scale-down'
+      default:
+        return 'object-cover'
+    }
+  }
+
+  const objectFitClass = getObjectFitClass()
 
   // If image URL is not provided or image failed to load, show fallback
   if (!url || imageError) {
@@ -94,7 +111,7 @@ const Image = ({
         src={url}
         alt={alt || 'Image'}
         loading={loading}
-        className={`w-full h-full object-cover transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'} ${className}`}
+        className={`w-full h-full ${objectFitClass} transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'} ${className}`}
         onLoad={() => setImageLoaded(true)}
         onError={() => setImageError(true)}
       />
