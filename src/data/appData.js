@@ -5,7 +5,7 @@ export const APP_DATA = {
   site: {
     name: "IETE-PCE",
     fullName: "Institution of Electronics and Telecommunication Engineers",
-    description: "Excellence in Engineering",
+    description: "Learn · Innovate · Collaborate",
     logo: {
       url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095597/IETE_LOGO_Red_xirien.png',
       alt: 'IETE-PCE Logo',

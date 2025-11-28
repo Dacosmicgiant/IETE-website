@@ -34,13 +34,15 @@ const AboutSection = () => {
           </div>
           
           {/* Second Container - IETE About Image */}
-          <div className="flex-1 order-1 lg:order-2 mb-8 lg:mb-0">
-            <img
-              src={siteData.about.url}
-              alt={siteData.about.alt || 'About IETE-PCE'}
-              className="w-full h-auto transition-transform duration-300 hover:scale-105 rounded-lg shadow-lg"
-              loading="lazy"
-            />
+          <div className="flex-1 order-1 lg:order-2 mb-8 lg:mb-0 w-full">
+            <div className="w-full max-w-xl mx-auto rounded-[2rem] border-4 border-slate-200/70 dark:border-slate-700/80 bg-slate-50/70 dark:bg-slate-900/40 p-4 shadow-2xl transition-transform duration-300 hover:scale-[1.02]">
+              <img
+                src={siteData.about.url}
+                alt={siteData.about.alt || 'About IETE-PCE'}
+                className="w-full h-auto rounded-[1.5rem] object-cover"
+                loading="lazy"
+              />
+            </div>
           </div>
           
         </div>

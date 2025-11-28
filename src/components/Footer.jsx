@@ -6,10 +6,10 @@ const Footer = () => {
   const navigate = useNavigate()
   
   const activities = [
-    { name: 'Workshops', route: '/events' },
-    { name: 'Competitions', route: '/events' },
-    { name: 'Seminars', route: '/events' },
-    { name: 'Industrial Visits and Training', route: '/events' },
+    { name: 'Workshops', route: '/events/workshops' },
+    { name: 'Competitions', route: '/events/competitions' },
+    { name: 'Seminars', route: '/events/seminars' },
+    { name: 'Industrial Visits and Training', route: '/events/IV' },
     { name: 'Student Satellite Club', route: '/ssc' },
   ]
 
@@ -34,7 +34,7 @@ const Footer = () => {
               />
               <div>
                 <h3 className={`${COLORS.typography.heading.md} ${COLORS.primary.text}`}>IETE-PCE</h3>
-                <p className={`${COLORS.typography.body.sm} ${COLORS.primary.textMuted}`}>Excellence in Engineering</p>
+                <p className={`${COLORS.typography.body.sm} ${COLORS.primary.textMuted}`}>Learn · Innovate · Collaborate</p>
               </div>
             </div>
             <p className={`${COLORS.primary.textMuted} mb-6 sm:mb-8 leading-relaxed ${COLORS.typography.body.md}`}>

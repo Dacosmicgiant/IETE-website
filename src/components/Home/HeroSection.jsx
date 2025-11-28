@@ -44,7 +44,7 @@ const HeroSection = () => {
         </h2>
         
         <p className="text-base sm:text-lg text-slate-300 mb-8 font-light drop-shadow-md max-w-md mx-auto">
-          Excellence in Engineering
+          Learn · Innovate · Collaborate
         </p>
         
         
@@ -61,7 +61,7 @@ const HeroSection = () => {
         </h2>
         
         <p className="text-xl xl:text-2xl text-slate-300 mb-12 font-light drop-shadow-md max-w-2xl mx-auto">
-          Excellence in Engineering
+          Learn · Innovate · Collaborate
         </p>
         
         
