@@ -308,17 +308,13 @@ export const APP_DATA = {
       {
         id: 1,
         title: "Inauguration of IETE and SSC", // Required
-        date: "2025-07-15", // Required
+        date: "2024-09-23", // Required
         time: "10:00 AM - 4:00 PM", // Required
         description: "Inauguration ceramony of IETE and SSC,",
         venue: "Auditorium",
-        instructor: "Dr. Rajesh Kumar",
-        level: "Beginner",
-        duration: "6 hours",
-        certificate: "IETE Workshop Certificate",
+        instructor: "Mrs. Leena Bokil",
+        duration: "3 hours",
         tags: ["IoT", "Arduino", "Sensors", "Hands-on"],
-        targetAudience: "2nd year and above",
-        outcomes: ["Build working IoT prototypes", "Understand sensor interfacing", "Learn Arduino programming"],
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1753095083/Innogration_ddmusa.jpg',
           alt: 'Inauguration of IETE',
@@ -378,10 +374,10 @@ export const APP_DATA = {
       {
         id: 2,
         title: "PCB Design Workshop",
-        date: "2025-02-02",
+        date: "2025-02-05",
         time: "9:00 AM - 5:00 PM",
         instructor: "Prof. Shubham Thakur",
-        level: "Advanced",
+        level: "Basic",
         fee: "₹200",
         description: "Master PCB design using industry-standard tools. Create professional circuit boards from scratch.",
         venue: "J201",
@@ -424,10 +420,10 @@ export const APP_DATA = {
       {
         id: 3,
         title: "Workshop and Competition on LabVIEW",
-        date: "2025-09-12",
+        date: "2025-03-27",
         time: "10:00 AM - 5:00 PM",
         description: "Hands-on workshop and competition using LabVIEW for measurement and automation.",
-        venue: "Lab Complex A",
+        venue: "J-201",
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759656267/LabView_Workshop_azp5jp.png',
           alt: 'LabVIEW Workshop and Competition',
@@ -612,11 +608,6 @@ export const APP_DATA = {
     aspectRatio: '16:9'
   },
   {
-    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759567297/IMG_9673_gj3llb.heic',
-    alt: 'Technical Quiz - winners celebrating victory',
-    aspectRatio: '16:9'
-  },
-  {
     url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759567297/IMG_5895_uui5ek.jpg',
     alt: 'Technical Quiz - group photo with participants',
     aspectRatio: '16:9'
@@ -631,7 +622,7 @@ export const APP_DATA = {
         time: "9:00AM onwards",
         description: "2-day long national level hardware hackathon focusing on robotics and embedded systems innovation.",
         venue: "Main Campus",
-        prizes: "Exciting prizes for winners",
+        prizes: "Rs. 50,000",
         teamSize: "3-5 members",
         duration: "2 days",
         tags: ["Hardware", "Robotics", "Hackathon", "National Level"],
@@ -649,18 +640,23 @@ export const APP_DATA = {
         },
         gallery: [
           {
-            url: 'https://your-image-url-1.jpg',
-            alt: 'Description of first image',
+            url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1763050570/WhatsApp_Image_2025-11-13_at_21.34.38_4_nj9zvl.jpg',
+            alt: 'HACKROBO - hardware hackathon event',
             aspectRatio: '16:9'
           },
           {
-            url: 'https://your-image-url-2.jpg',
-            alt: 'Description of second image',
+            url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1763050570/WhatsApp_Image_2025-11-13_at_21.34.38_3_zewrek.jpg',
+            alt: 'HACKROBO - participants working on projects',
             aspectRatio: '16:9'
           },
           {
-            url: 'https://your-image-url-3.jpg',
-            alt: 'Description of third image',
+            url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1763050570/WhatsApp_Image_2025-11-13_at_21.34.37_2_cuv9ez.jpg',
+            alt: 'HACKROBO - robotics and embedded systems',
+            aspectRatio: '16:9'
+          },
+          {
+            url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1763050570/WhatsApp_Image_2025-11-13_at_21.34.37_1_klfpcp.jpg',
+            alt: 'HACKROBO - national level hackathon',
             aspectRatio: '16:9'
           }
         ],
@@ -680,47 +676,61 @@ export const APP_DATA = {
         image: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1761306971/WhatsApp_Image_2025-10-24_at_17.21.04_1_gapxwz.jpg',
           alt: 'CIRCUIT CRAFT 3.0',
-          aspectRatio: '3:4',
+          aspectRatio: '9:16',
           fallback: '🤖'
         },
         detailImage: {
           url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1761306971/WhatsApp_Image_2025-10-24_at_17.21.04_1_gapxwz.jpg',
           alt: 'CIRCUIT CRAFT 3.0',
-          aspectRatio: '1:1',
+          aspectRatio: '9:16',
           fallback: '🤖'
         },
         "gallery": [
-    
-    {
-      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1761307086/WhatsApp_Image_2025-10-24_at_17.20.52_1_yq0fm1.jpg",
-      "alt": "circuit craft 3.0",
-      "aspectRatio": "16:9"
-    },
-    {
-      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1761307083/WhatsApp_Image_2025-10-24_at_17.20.51_agel42.jpg",
-      "alt": "circuit craft 3.0",
-      "aspectRatio": "16:9"
-    },
-    {
-      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1761307082/WhatsApp_Image_2025-10-24_at_17.20.49_1_nw0srt.jpg",
-      "alt": "circuit craft 3.0",
-      "aspectRatio": "16:9"
-    },
-    {
-      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1761307082/WhatsApp_Image_2025-10-24_at_17.20.49_mrpfva.jpg",
-      "alt": "circuit craft 3.0",
-      "aspectRatio": "16:9"
-    },
-    {
-      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1761307081/WhatsApp_Image_2025-10-24_at_17.20.47_ndntp0.jpg",
-      "alt": "circuit craft 3.0",
-      "aspectRatio": "16:9"
-    },
-    {
-      "url": "https://res.cloudinary.com/djn79ge3m/image/upload/v1761307080/WhatsApp_Image_2025-10-24_at_17.20.47_1_z6eezc.jpg",
-      "alt": "circuit craft 3.0",
-      "aspectRatio": "16:9"
-    }
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565284/IMG_2263_lva9qz.jpg',
+    alt: 'Circuit craft project - electronic components and breadboard setup',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565281/IMG_20250124_161118_sc76pv.jpg',
+    alt: 'Circuit craft workshop - students working on electronics project',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565278/IMG_20250124_22462374_u2mixd.jpg',
+    alt: 'Circuit craft demonstration - completed electronic circuit',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565277/IMG20250124143257_sw2arq.jpg',
+    alt: 'Circuit craft activity - hands-on electronics assembly',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565276/IMG-20250124-WA0005_hegdks.jpg',
+    alt: 'Circuit craft session - participants learning circuit design',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565275/IMG-20250124-WA0020_ziulun.jpg',
+    alt: 'Circuit craft project - working prototype with LED components',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565272/IMG20250124174323_tukfrh.jpg',
+    alt: 'Circuit craft workshop - group collaboration on electronics',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565272/IMG20250124150800_e5kz13.jpg',
+    alt: 'Circuit craft event - testing and troubleshooting circuits',
+    aspectRatio: '16:9'
+  },
+  {
+    url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759565271/IMG20250124164321_rwxsj2.jpg',
+    alt: 'Circuit craft activity - final project showcase',
+    aspectRatio: '16:9'
+  }
   ],
         enabled: true
       }
@@ -729,7 +739,7 @@ export const APP_DATA = {
       {
         id: 1,
         title: "Satellite Club Talk",
-        date: "2024-09-23",
+        date: "2025-03-06",
         time: "2:00PM onwards",
         description: "A technical talk hosted by the Satellite Club to explore advancements and opportunities in space technology and satellite communication.",
         venue: "Conclave 1",
