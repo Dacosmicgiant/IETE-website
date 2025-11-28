@@ -22,6 +22,8 @@ const Image = ({
         return 'aspect-[3/4]'
       case '4:3':
         return 'aspect-[4/3]'
+      case '3:2':
+        return 'aspect-[3/2]'
       case '9:16':
         return 'aspect-[9/16]'
       case '16:9':

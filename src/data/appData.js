@@ -933,7 +933,7 @@ export const APP_DATA = {
   {
     url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759567953/IMG-20250310-WA0209_fhdhax.jpg',
     alt: 'Industrial visit to DIGISAT - students observing industrial processes',
-    aspectRatio: '16:9'
+    aspectRatio: '3:2'
   },
   {
     url: 'https://res.cloudinary.com/djn79ge3m/image/upload/v1759567952/IMG-20250310-WA0256_rhrmn9.jpg',
